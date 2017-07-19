@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E7079721F1FF593003F2D6F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7079711F1FF593003F2D6F /* main.m */; };
+		1E7079751F1FF593003F2D6F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7079741F1FF593003F2D6F /* AppDelegate.m */; };
+		1E7079781F1FF593003F2D6F /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7079771F1FF593003F2D6F /* MasterViewController.m */; };
+		1E70797B1F1FF593003F2D6F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E70797A1F1FF593003F2D6F /* DetailViewController.m */; };
+		1E70797E1F1FF593003F2D6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E70797C1F1FF593003F2D6F /* Main.storyboard */; };
+		1E7079801F1FF593003F2D6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E70797F1F1FF593003F2D6F /* Assets.xcassets */; };
+		1E7079831F1FF593003F2D6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7079811F1FF593003F2D6F /* LaunchScreen.storyboard */; };
+		1E70798E1F1FF593003F2D6F /* MongoEmbeddedContactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E70798D1F1FF593003F2D6F /* MongoEmbeddedContactsTests.m */; };
+		1E7079991F1FF593003F2D6F /* MongoEmbeddedContactsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7079981F1FF593003F2D6F /* MongoEmbeddedContactsUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E70798A1F1FF593003F2D6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E7079651F1FF593003F2D6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E70796C1F1FF593003F2D6F;
+			remoteInfo = MongoEmbeddedContacts;
+		};
+		1E7079951F1FF593003F2D6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E7079651F1FF593003F2D6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E70796C1F1FF593003F2D6F;
+			remoteInfo = MongoEmbeddedContacts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1E70796D1F1FF593003F2D6F /* MongoEmbeddedContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MongoEmbeddedContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E7079711F1FF593003F2D6F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1E7079731F1FF593003F2D6F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1E7079741F1FF593003F2D6F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1E7079761F1FF593003F2D6F /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		1E7079771F1FF593003F2D6F /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		1E7079791F1FF593003F2D6F /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		1E70797A1F1FF593003F2D6F /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		1E70797D1F1FF593003F2D6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1E70797F1F1FF593003F2D6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E7079821F1FF593003F2D6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1E7079841F1FF593003F2D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E7079891F1FF593003F2D6F /* MongoEmbeddedContactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MongoEmbeddedContactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E70798D1F1FF593003F2D6F /* MongoEmbeddedContactsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MongoEmbeddedContactsTests.m; sourceTree = "<group>"; };
+		1E70798F1F1FF593003F2D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E7079941F1FF593003F2D6F /* MongoEmbeddedContactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MongoEmbeddedContactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E7079981F1FF593003F2D6F /* MongoEmbeddedContactsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MongoEmbeddedContactsUITests.m; sourceTree = "<group>"; };
+		1E70799A1F1FF593003F2D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E70796A1F1FF593003F2D6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E7079861F1FF593003F2D6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E7079911F1FF593003F2D6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E7079641F1FF593003F2D6F = {
+			isa = PBXGroup;
+			children = (
+				1E70796F1F1FF593003F2D6F /* MongoEmbeddedContacts */,
+				1E70798C1F1FF593003F2D6F /* MongoEmbeddedContactsTests */,
+				1E7079971F1FF593003F2D6F /* MongoEmbeddedContactsUITests */,
+				1E70796E1F1FF593003F2D6F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1E70796E1F1FF593003F2D6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E70796D1F1FF593003F2D6F /* MongoEmbeddedContacts.app */,
+				1E7079891F1FF593003F2D6F /* MongoEmbeddedContactsTests.xctest */,
+				1E7079941F1FF593003F2D6F /* MongoEmbeddedContactsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E70796F1F1FF593003F2D6F /* MongoEmbeddedContacts */ = {
+			isa = PBXGroup;
+			children = (
+				1E7079731F1FF593003F2D6F /* AppDelegate.h */,
+				1E7079741F1FF593003F2D6F /* AppDelegate.m */,
+				1E7079761F1FF593003F2D6F /* MasterViewController.h */,
+				1E7079771F1FF593003F2D6F /* MasterViewController.m */,
+				1E7079791F1FF593003F2D6F /* DetailViewController.h */,
+				1E70797A1F1FF593003F2D6F /* DetailViewController.m */,
+				1E70797C1F1FF593003F2D6F /* Main.storyboard */,
+				1E70797F1F1FF593003F2D6F /* Assets.xcassets */,
+				1E7079811F1FF593003F2D6F /* LaunchScreen.storyboard */,
+				1E7079841F1FF593003F2D6F /* Info.plist */,
+				1E7079701F1FF593003F2D6F /* Supporting Files */,
+			);
+			path = MongoEmbeddedContacts;
+			sourceTree = "<group>";
+		};
+		1E7079701F1FF593003F2D6F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E7079711F1FF593003F2D6F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1E70798C1F1FF593003F2D6F /* MongoEmbeddedContactsTests */ = {
+			isa = PBXGroup;
+			children = (
+				1E70798D1F1FF593003F2D6F /* MongoEmbeddedContactsTests.m */,
+				1E70798F1F1FF593003F2D6F /* Info.plist */,
+			);
+			path = MongoEmbeddedContactsTests;
+			sourceTree = "<group>";
+		};
+		1E7079971F1FF593003F2D6F /* MongoEmbeddedContactsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1E7079981F1FF593003F2D6F /* MongoEmbeddedContactsUITests.m */,
+				1E70799A1F1FF593003F2D6F /* Info.plist */,
+			);
+			path = MongoEmbeddedContactsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E70796C1F1FF593003F2D6F /* MongoEmbeddedContacts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E70799D1F1FF593003F2D6F /* Build configuration list for PBXNativeTarget "MongoEmbeddedContacts" */;
+			buildPhases = (
+				1E7079691F1FF593003F2D6F /* Sources */,
+				1E70796A1F1FF593003F2D6F /* Frameworks */,
+				1E70796B1F1FF593003F2D6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MongoEmbeddedContacts;
+			productName = MongoEmbeddedContacts;
+			productReference = 1E70796D1F1FF593003F2D6F /* MongoEmbeddedContacts.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1E7079881F1FF593003F2D6F /* MongoEmbeddedContactsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E7079A01F1FF593003F2D6F /* Build configuration list for PBXNativeTarget "MongoEmbeddedContactsTests" */;
+			buildPhases = (
+				1E7079851F1FF593003F2D6F /* Sources */,
+				1E7079861F1FF593003F2D6F /* Frameworks */,
+				1E7079871F1FF593003F2D6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E70798B1F1FF593003F2D6F /* PBXTargetDependency */,
+			);
+			name = MongoEmbeddedContactsTests;
+			productName = MongoEmbeddedContactsTests;
+			productReference = 1E7079891F1FF593003F2D6F /* MongoEmbeddedContactsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1E7079931F1FF593003F2D6F /* MongoEmbeddedContactsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E7079A31F1FF593003F2D6F /* Build configuration list for PBXNativeTarget "MongoEmbeddedContactsUITests" */;
+			buildPhases = (
+				1E7079901F1FF593003F2D6F /* Sources */,
+				1E7079911F1FF593003F2D6F /* Frameworks */,
+				1E7079921F1FF593003F2D6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E7079961F1FF593003F2D6F /* PBXTargetDependency */,
+			);
+			name = MongoEmbeddedContactsUITests;
+			productName = MongoEmbeddedContactsUITests;
+			productReference = 1E7079941F1FF593003F2D6F /* MongoEmbeddedContactsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E7079651F1FF593003F2D6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = MongoDB;
+				TargetAttributes = {
+					1E70796C1F1FF593003F2D6F = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = T8YB9L4SM5;
+						ProvisioningStyle = Automatic;
+					};
+					1E7079881F1FF593003F2D6F = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = T8YB9L4SM5;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1E70796C1F1FF593003F2D6F;
+					};
+					1E7079931F1FF593003F2D6F = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = T8YB9L4SM5;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1E70796C1F1FF593003F2D6F;
+					};
+				};
+			};
+			buildConfigurationList = 1E7079681F1FF593003F2D6F /* Build configuration list for PBXProject "MongoEmbeddedContacts" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E7079641F1FF593003F2D6F;
+			productRefGroup = 1E70796E1F1FF593003F2D6F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E70796C1F1FF593003F2D6F /* MongoEmbeddedContacts */,
+				1E7079881F1FF593003F2D6F /* MongoEmbeddedContactsTests */,
+				1E7079931F1FF593003F2D6F /* MongoEmbeddedContactsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E70796B1F1FF593003F2D6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E7079831F1FF593003F2D6F /* LaunchScreen.storyboard in Resources */,
+				1E7079801F1FF593003F2D6F /* Assets.xcassets in Resources */,
+				1E70797E1F1FF593003F2D6F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E7079871F1FF593003F2D6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E7079921F1FF593003F2D6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E7079691F1FF593003F2D6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E7079751F1FF593003F2D6F /* AppDelegate.m in Sources */,
+				1E7079781F1FF593003F2D6F /* MasterViewController.m in Sources */,
+				1E7079721F1FF593003F2D6F /* main.m in Sources */,
+				1E70797B1F1FF593003F2D6F /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E7079851F1FF593003F2D6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E70798E1F1FF593003F2D6F /* MongoEmbeddedContactsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E7079901F1FF593003F2D6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E7079991F1FF593003F2D6F /* MongoEmbeddedContactsUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E70798B1F1FF593003F2D6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E70796C1F1FF593003F2D6F /* MongoEmbeddedContacts */;
+			targetProxy = 1E70798A1F1FF593003F2D6F /* PBXContainerItemProxy */;
+		};
+		1E7079961F1FF593003F2D6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E70796C1F1FF593003F2D6F /* MongoEmbeddedContacts */;
+			targetProxy = 1E7079951F1FF593003F2D6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1E70797C1F1FF593003F2D6F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E70797D1F1FF593003F2D6F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1E7079811F1FF593003F2D6F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E7079821F1FF593003F2D6F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E70799B1F1FF593003F2D6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E70799C1F1FF593003F2D6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E70799E1F1FF593003F2D6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T8YB9L4SM5;
+				INFOPLIST_FILE = MongoEmbeddedContacts/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MongoDB.MongoEmbeddedContacts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1E70799F1F1FF593003F2D6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T8YB9L4SM5;
+				INFOPLIST_FILE = MongoEmbeddedContacts/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MongoDB.MongoEmbeddedContacts;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1E7079A11F1FF593003F2D6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = T8YB9L4SM5;
+				INFOPLIST_FILE = MongoEmbeddedContactsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MongoDB.MongoEmbeddedContactsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MongoEmbeddedContacts.app/MongoEmbeddedContacts";
+			};
+			name = Debug;
+		};
+		1E7079A21F1FF593003F2D6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = T8YB9L4SM5;
+				INFOPLIST_FILE = MongoEmbeddedContactsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MongoDB.MongoEmbeddedContactsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MongoEmbeddedContacts.app/MongoEmbeddedContacts";
+			};
+			name = Release;
+		};
+		1E7079A41F1FF593003F2D6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = T8YB9L4SM5;
+				INFOPLIST_FILE = MongoEmbeddedContactsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MongoDB.MongoEmbeddedContactsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MongoEmbeddedContacts;
+			};
+			name = Debug;
+		};
+		1E7079A51F1FF593003F2D6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = T8YB9L4SM5;
+				INFOPLIST_FILE = MongoEmbeddedContactsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MongoDB.MongoEmbeddedContactsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MongoEmbeddedContacts;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E7079681F1FF593003F2D6F /* Build configuration list for PBXProject "MongoEmbeddedContacts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E70799B1F1FF593003F2D6F /* Debug */,
+				1E70799C1F1FF593003F2D6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E70799D1F1FF593003F2D6F /* Build configuration list for PBXNativeTarget "MongoEmbeddedContacts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E70799E1F1FF593003F2D6F /* Debug */,
+				1E70799F1F1FF593003F2D6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1E7079A01F1FF593003F2D6F /* Build configuration list for PBXNativeTarget "MongoEmbeddedContactsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E7079A11F1FF593003F2D6F /* Debug */,
+				1E7079A21F1FF593003F2D6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1E7079A31F1FF593003F2D6F /* Build configuration list for PBXNativeTarget "MongoEmbeddedContactsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E7079A41F1FF593003F2D6F /* Debug */,
+				1E7079A51F1FF593003F2D6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E7079651F1FF593003F2D6F /* Project object */;
+}
