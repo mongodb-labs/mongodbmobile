@@ -17,20 +17,36 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.contactItem) {
-        self.nameLabel.text = [self.contactItem name];
-        self.phoneLabel.text = [self.contactItem phoneNumber];
-        self.addressLabel.text = [self.contactItem address];
-        self.notesLabel.text = [self.contactItem notes];
+        self.nameTextField.text = [self.contactItem name];
+        self.numberTextField.text = [self.contactItem phoneNumber];
+        self.addressTextField.text = [self.contactItem address];
+        [self.notesTextField setText: [self.contactItem notes]];
+        NSLog(@"Noteshere: %@", self.notesTextField.text);
     }
 }
-
+-(void)updateButtonPressed:(id)sender
+{
+    if (![_contactItem.name isEqualToString:_nameTextField.text]) {
+        _contactItem.name = _nameTextField.text;
+    }
+   if (![_contactItem.phoneNumber isEqualToString:_numberTextField.text]) {
+       _contactItem.phoneNumber = _numberTextField.text;
+    }
+    if (![_contactItem.address isEqualToString:_addressTextField.text]) {
+        _contactItem.address = _addressTextField.text;
+    }
+    if (![_contactItem.notes isEqualToString:_notesTextField.text]) {
+        _contactItem.notes = _notesTextField.text;
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    UIBarButtonItem *updateButton = [[UIBarButtonItem alloc] initWithTitle:@"Update" style:UIBarButtonItemStyleDone target:self action:@selector(updateButtonPressed:)];
+    self.navigationItem.rightBarButtonItem = updateButton;
     [self configureView];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -44,7 +60,7 @@
     if (_contactItem != newDetailItem) {
         _contactItem = newDetailItem;         
         // Update the view.
-        [self configureView];
+        //[self configureView];
     }
 }
 
