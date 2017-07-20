@@ -107,6 +107,14 @@
     [self.tableView reloadData];
 }
 
+- (void)removeContactAtIndexPath:(NSIndexPath *)indexPath {
+    if (_contacts) {
+        [_contacts removeObjectAtIndex:indexPath.row];
+        [self.tableView reloadData];
+        NSLog(@"REMOVING CONTACT");
+    }
+}
+
 
 #pragma mark - Segues
 
@@ -151,8 +159,7 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self removeContactAtIndexPath:indexPath];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }

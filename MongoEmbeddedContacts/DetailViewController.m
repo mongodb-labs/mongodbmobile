@@ -42,8 +42,7 @@
 
 - (void)setDetailItem:(Contact *)newDetailItem {
     if (_contactItem != newDetailItem) {
-        _contactItem = newDetailItem;
-        
+        _contactItem = newDetailItem;         
         // Update the view.
         [self configureView];
     }
