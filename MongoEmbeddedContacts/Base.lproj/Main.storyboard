@@ -145,7 +145,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
-                                <outlet property="delegate" destination="7bK-jq-Zjz" id="MiM-Pb-i2c"/>
+                                <outlet property="delegate" destination="7bK-jq-Zjz" id="7bQ-Zy-Y1C"/>
                             </connections>
                         </searchBar>
                         <prototypes>
@@ -179,6 +179,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
                     <connections>
+                        <outlet property="searchBar" destination="08v-1M-w3c" id="98M-lH-ipo"/>
                         <outlet property="searchDisplayController" destination="lTP-Ex-gGL" id="L6q-ib-A9N"/>
                     </connections>
                 </tableViewController>
@@ -186,7 +187,6 @@
                 <searchDisplayController id="lTP-Ex-gGL">
                     <connections>
                         <outlet property="delegate" destination="7bK-jq-Zjz" id="1c5-me-0h6"/>
-                        <outlet property="searchBar" destination="08v-1M-w3c" id="uqd-PG-jJj"/>
                         <outlet property="searchContentsController" destination="7bK-jq-Zjz" id="Fw7-Px-y6N"/>
                         <outlet property="searchResultsDataSource" destination="7bK-jq-Zjz" id="aLm-jj-eXz"/>
                         <outlet property="searchResultsDelegate" destination="7bK-jq-Zjz" id="3WL-iW-1Tj"/>

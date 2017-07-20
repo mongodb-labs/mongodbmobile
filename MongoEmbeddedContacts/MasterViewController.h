@@ -16,6 +16,7 @@
 @property (strong, nonatomic) DetailViewController *detailViewController;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property NSMutableArray *contacts;
+@property NSMutableArray *searchResults;
 
 
 @end

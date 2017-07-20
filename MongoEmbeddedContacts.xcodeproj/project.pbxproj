@@ -84,6 +84,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E109C0B1F2120AB00275D30 /* CDriverContact */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CDriverContact;
+			sourceTree = "<group>";
+		};
 		1E7079641F1FF593003F2D6F = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +114,7 @@
 		1E70796F1F1FF593003F2D6F /* MongoEmbeddedContacts */ = {
 			isa = PBXGroup;
 			children = (
+				1E109C0B1F2120AB00275D30 /* CDriverContact */,
 				1E7079AA1F1FF768003F2D6F /* Models */,
 				1E7079A61F1FF682003F2D6F /* GUI */,
 				1E70797F1F1FF593003F2D6F /* Assets.xcassets */,
@@ -546,6 +554,7 @@
 				1E70799F1F1FF593003F2D6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E7079A01F1FF593003F2D6F /* Build configuration list for PBXNativeTarget "MongoEmbeddedContactsTests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +563,7 @@
 				1E7079A21F1FF593003F2D6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E7079A31F1FF593003F2D6F /* Build configuration list for PBXNativeTarget "MongoEmbeddedContactsUITests" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +572,7 @@
 				1E7079A51F1FF593003F2D6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

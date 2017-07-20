@@ -28,6 +28,7 @@
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     self.title = @"Mongo Contacts";
+    _searchBar.placeholder = @"Search For Contact";
     
     Contact *c1 = [[Contact alloc] initWithName:1 name:@"Tyler Kaye" phoneNumber:@"914-582-9330"  address:@"MongoDB" notes:@"He is cool" ];
     Contact *c2 = [[Contact alloc] initWithName:2 name:@"Nicole Kaye" phoneNumber:@"914-582-9330"  address:@"MongoDB" notes:@"He is cool" ];
@@ -36,12 +37,19 @@
     NSMutableArray *allContacts = [NSMutableArray arrayWithObjects:c1, c2, c3, nil];
     [allContacts sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]]];
     _contacts = allContacts;
+    _searchResults = allContacts;
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    [self filterContentForSearchText:searchText scope:@""];
 }
 
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
+    NSLog(@"New Text: %@", searchText);
     NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"name contains[c] %@", searchText];
-    //_searchResults = [_contacts filteredArrayUsingPredicate:resultPredicate];
+    _searchResults = [_contacts filteredArrayUsingPredicate:resultPredicate];
+    [self.tableView reloadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -96,12 +104,6 @@
         
     }]];
     [self presentViewController:alertController animated:YES completion:nil];
-//    if (!self.objects) {
-//        self.objects = [[NSMutableArray alloc] init];
-//    }
-//    [self.objects insertObject:[NSDate date] atIndex:0];
-//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (void)addNewContact:(Contact *)newContact {
@@ -143,7 +145,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _contacts.count;
+    return _searchResults.count;
 }
 
 
@@ -157,7 +159,7 @@
     }
     
     // Display recipe in the table cell
-    Contact *c = _contacts[indexPath.row];
+    Contact *c = _searchResults[indexPath.row];
     cell.textLabel.text = [c name];
     return cell;
 }
