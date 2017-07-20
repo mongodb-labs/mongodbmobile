@@ -23,6 +23,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    UIBarButtonItem *runCommand = [[UIBarButtonItem alloc] initWithTitle:@"Test" style:UIBarButtonItemStyleDone target:self action:@selector(runCommand:)];
+    self.navigationItem.leftBarButtonItem = runCommand;
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
@@ -30,11 +32,17 @@
     self.title = @"Mongo Contacts";
     _searchBar.placeholder = @"Search For Contact";
     
-    Contact *c1 = [[Contact alloc] initWithName:1 name:@"Tyler Kaye" phoneNumber:@"914-582-9330"  address:@"MongoDB" notes:@"He is cool REALLY" ];
-    Contact *c2 = [[Contact alloc] initWithName:2 name:@"Nicole Kaye" phoneNumber:@"914-582-9330"  address:@"MongoDB" notes:@"He is cool" ];
-    Contact *c3 = [[Contact alloc] initWithName:3 name:@"Sydney Kaye" phoneNumber:@"914-582-9330"  address:@"MongoDB" notes:@"He is cool" ];
+    Contact *c1 = [[Contact alloc] initWithName:1 name:@"Tyler Kaye" phoneNumber:@"914-582-9330"  address:@"Upper West Side, NY" notes:@"He works at mongodb" ];
+    Contact *c2 = [[Contact alloc] initWithName:2 name:@"Ben Shteinfeld" phoneNumber:@"432-567-9989"  address:@"Boston, MA" notes:@"He also works at mongodb" ];
+    Contact *c3 = [[Contact alloc] initWithName:3 name:@"Ted Tuckman" phoneNumber:@"123-456-4321"  address:@"New York, NY" notes:@"Works at mongodb" ];
+    Contact *c4 = [[Contact alloc] initWithName:4 name:@"Andrew Morrow" phoneNumber:@"987-9876-098"  address:@"UWS New York" notes:@"Manager at mongodb" ];
+    Contact *c5 = [[Contact alloc] initWithName:5 name:@"Gabriel Russel" phoneNumber:@"444-555-6666"  address:@"Lower East Side" notes:@"he is the build baron" ];
+    Contact *c6 = [[Contact alloc] initWithName:6 name:@"Sam Ritter" phoneNumber:@"111-222-3333"  address:@"Brooklyn" notes:@"She went to princeton" ];
+    Contact *c7 = [[Contact alloc] initWithName:7 name:@"Mark B" phoneNumber:@"999-888-98767"  address:@"Somewhere" notes:@"uses windows" ];
+    Contact *c8 = [[Contact alloc] initWithName:8 name:@"Spencer Jackson" phoneNumber:@"123-456-78788"  address:@"OPther place" notes:@"loves security work" ];
     
-    NSMutableArray *allContacts = [NSMutableArray arrayWithObjects:c1, c2, c3, nil];
+    
+    NSMutableArray *allContacts = [NSMutableArray arrayWithObjects:c1, c2, c3, c4, c5, c6, c7, c8, nil];
     [allContacts sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]]];
     _contacts = allContacts;
     _searchResults = allContacts;
@@ -70,7 +78,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void)runCommand:(id)sender {
+    NSLog(@"RUNNING COMMAND");
+}
 
 - (void)insertNewObject:(id)sender {
     UIAlertController * alertController = [UIAlertController alertControllerWithTitle: @"Add New Contact"
