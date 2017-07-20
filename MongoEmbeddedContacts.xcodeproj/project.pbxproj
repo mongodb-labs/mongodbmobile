@@ -16,6 +16,7 @@
 		1E7079831F1FF593003F2D6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E7079811F1FF593003F2D6F /* LaunchScreen.storyboard */; };
 		1E70798E1F1FF593003F2D6F /* MongoEmbeddedContactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E70798D1F1FF593003F2D6F /* MongoEmbeddedContactsTests.m */; };
 		1E7079991F1FF593003F2D6F /* MongoEmbeddedContactsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7079981F1FF593003F2D6F /* MongoEmbeddedContactsUITests.m */; };
+		1E7079A91F1FF75F003F2D6F /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7079A81F1FF75F003F2D6F /* Contact.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		1E7079941F1FF593003F2D6F /* MongoEmbeddedContactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MongoEmbeddedContactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7079981F1FF593003F2D6F /* MongoEmbeddedContactsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MongoEmbeddedContactsUITests.m; sourceTree = "<group>"; };
 		1E70799A1F1FF593003F2D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E7079A71F1FF75F003F2D6F /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		1E7079A81F1FF75F003F2D6F /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,16 +107,9 @@
 		1E70796F1F1FF593003F2D6F /* MongoEmbeddedContacts */ = {
 			isa = PBXGroup;
 			children = (
-				1E7079731F1FF593003F2D6F /* AppDelegate.h */,
-				1E7079741F1FF593003F2D6F /* AppDelegate.m */,
-				1E7079761F1FF593003F2D6F /* MasterViewController.h */,
-				1E7079771F1FF593003F2D6F /* MasterViewController.m */,
-				1E7079791F1FF593003F2D6F /* DetailViewController.h */,
-				1E70797A1F1FF593003F2D6F /* DetailViewController.m */,
-				1E70797C1F1FF593003F2D6F /* Main.storyboard */,
+				1E7079AA1F1FF768003F2D6F /* Models */,
+				1E7079A61F1FF682003F2D6F /* GUI */,
 				1E70797F1F1FF593003F2D6F /* Assets.xcassets */,
-				1E7079811F1FF593003F2D6F /* LaunchScreen.storyboard */,
-				1E7079841F1FF593003F2D6F /* Info.plist */,
 				1E7079701F1FF593003F2D6F /* Supporting Files */,
 			);
 			path = MongoEmbeddedContacts;
@@ -122,6 +118,8 @@
 		1E7079701F1FF593003F2D6F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1E7079841F1FF593003F2D6F /* Info.plist */,
+				1E7079811F1FF593003F2D6F /* LaunchScreen.storyboard */,
 				1E7079711F1FF593003F2D6F /* main.m */,
 			);
 			name = "Supporting Files";
@@ -143,6 +141,29 @@
 				1E70799A1F1FF593003F2D6F /* Info.plist */,
 			);
 			path = MongoEmbeddedContactsUITests;
+			sourceTree = "<group>";
+		};
+		1E7079A61F1FF682003F2D6F /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				1E7079731F1FF593003F2D6F /* AppDelegate.h */,
+				1E7079741F1FF593003F2D6F /* AppDelegate.m */,
+				1E7079761F1FF593003F2D6F /* MasterViewController.h */,
+				1E7079771F1FF593003F2D6F /* MasterViewController.m */,
+				1E7079791F1FF593003F2D6F /* DetailViewController.h */,
+				1E70797A1F1FF593003F2D6F /* DetailViewController.m */,
+				1E70797C1F1FF593003F2D6F /* Main.storyboard */,
+			);
+			name = GUI;
+			sourceTree = "<group>";
+		};
+		1E7079AA1F1FF768003F2D6F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1E7079A71F1FF75F003F2D6F /* Contact.h */,
+				1E7079A81F1FF75F003F2D6F /* Contact.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +304,7 @@
 			files = (
 				1E7079751F1FF593003F2D6F /* AppDelegate.m in Sources */,
 				1E7079781F1FF593003F2D6F /* MasterViewController.m in Sources */,
+				1E7079A91F1FF75F003F2D6F /* Contact.m in Sources */,
 				1E7079721F1FF593003F2D6F /* main.m in Sources */,
 				1E70797B1F1FF593003F2D6F /* DetailViewController.m in Sources */,
 			);

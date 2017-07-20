@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  MongoEmbeddedContacts
 //
-//  Created by Tyler KAye on 7/19/17.
+//  Created by Tyler Kaye on 7/19/17.
 //  Copyright © 2017 MongoDB. All rights reserved.
 //
 

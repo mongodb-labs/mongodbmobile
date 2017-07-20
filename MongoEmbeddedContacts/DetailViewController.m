@@ -2,7 +2,7 @@
 //  DetailViewController.m
 //  MongoEmbeddedContacts
 //
-//  Created by Tyler KAye on 7/19/17.
+//  Created by Tyler Kaye on 7/19/17.
 //  Copyright © 2017 MongoDB. All rights reserved.
 //
 
@@ -16,8 +16,11 @@
 
 - (void)configureView {
     // Update the user interface for the detail item.
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+    if (self.contactItem) {
+        self.nameLabel.text = [self.contactItem name];
+        self.phoneLabel.text = [self.contactItem phoneNumber];
+        self.addressLabel.text = [self.contactItem address];
+        self.notesLabel.text = [self.contactItem notes];
     }
 }
 
@@ -37,9 +40,9 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(NSDate *)newDetailItem {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
+- (void)setDetailItem:(Contact *)newDetailItem {
+    if (_contactItem != newDetailItem) {
+        _contactItem = newDetailItem;
         
         // Update the view.
         [self configureView];
