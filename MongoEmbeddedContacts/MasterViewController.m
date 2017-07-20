@@ -45,7 +45,6 @@
 }
 
 
-
 - (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
 {
     if ([searchText length] == 0) {
