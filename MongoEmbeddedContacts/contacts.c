@@ -1,14 +1,31 @@
 #include "contacts.h"
 #include <stdlib.h>
 #include <string.h>
-typedef struct contact {
+typedef struct c_contact {
     char* name;
     char* phoneNumber;
     char* address;
     char* notes;
-} contact;
+} c_contact;
 
-void printContact(contact * c) {
+
+char* c_contact_get_name(c_contact* c) {
+    return c->name;
+}
+
+char* c_contact_get_phone_number(c_contact* c) {
+    return c->phoneNumber;
+}
+
+char* c_contact_get_address(c_contact* c) {
+    return c->address;
+}
+
+char* c_contact_get_notes(c_contact* c) {
+    return c->notes;
+}
+
+void printContact(c_contact * c) {
     printf("Name: %s, phoneNumber: %s, address: %s, notes: %s\n", c->name, c->phoneNumber, c->address, c->notes);
 }
 
@@ -47,11 +64,11 @@ void bundleSetDbCol(mongocBundle* m, const char* db, const char* collection) {
     m->col = mongoc_client_get_collection(m->client, db, collection);
 }
 
-contact* createContact(const char* name,
+c_contact* createContact(const char* name,
                        const char* phoneNumber,
                        const char* address,
                        const char* notes) {
-    contact* c = (contact*)malloc(sizeof(contact));
+    c_contact* c = (c_contact*)malloc(sizeof(c_contact));
     int nameLen = strlen(name) + 1;
     c->name = (char*)malloc(nameLen);
     memcpy(c->name, name, nameLen);
@@ -71,7 +88,7 @@ contact* createContact(const char* name,
     return c;
 }
 
-bson_t* createBsonFromContact(contact* c) {
+bson_t* createBsonFromContact(c_contact* c) {
     bson_t* document = BCON_NEW(
         "name", c->name, "phoneNumber", c->phoneNumber, "address", c->address, "notes", c->notes);
     return document;
@@ -81,7 +98,7 @@ void destroyBson(bson_t* b) {
     bson_destroy(b);
 }
 
-void destroyContact(contact* c) {
+void destroyContact(c_contact* c) {
     free(c->name);
     free(c->phoneNumber);
     free(c->address);
@@ -89,7 +106,7 @@ void destroyContact(contact* c) {
     free(c);
 }
 
-void insertContact(mongocBundle* m, contact* c) {
+void insertContact(mongocBundle* m, c_contact* c) {
     bson_t* bson_doc = createBsonFromContact(c);
     if (!mongoc_collection_insert(m->col, MONGOC_INSERT_NONE, bson_doc, NULL, &(m->error))) {
         // error code
@@ -98,7 +115,7 @@ void insertContact(mongocBundle* m, contact* c) {
     destroyBson(bson_doc);
 }
 
-void deleteContact(mongocBundle* m, contact* c) {
+void deleteContact(mongocBundle* m, c_contact* c) {
     bson_t* bson_doc = createBsonFromContact(c);
     if (!mongoc_collection_remove(
             m->col, MONGOC_REMOVE_SINGLE_REMOVE, bson_doc, NULL, &(m->error))) {
@@ -108,7 +125,7 @@ void deleteContact(mongocBundle* m, contact* c) {
     destroyBson(bson_doc);
 }
 
-void updateContactByField(mongocBundle* m, const char* queryValue, contact* c, const char* field) {
+void updateContactByField(mongocBundle* m, const char* queryValue, c_contact* c, const char* field) {
     bson_t* query = BCON_NEW(field, queryValue);
     bson_t* doc = createBsonFromContact(c);
     if (!mongoc_collection_update(m->col, MONGOC_UPDATE_NONE, query, doc, NULL, &(m->error))) {
@@ -118,11 +135,11 @@ void updateContactByField(mongocBundle* m, const char* queryValue, contact* c, c
     destroyBson(doc);
 }
 
-void updateContactByPhone(mongocBundle* m, const char* number, contact* c) {
+void updateContactByPhone(mongocBundle* m, const char* number, c_contact* c) {
     updateContactByField(m, number, c, "phoneNumber");
 }
 
-void updateContactByName(mongocBundle* m, const char* name, contact* c) {
+void updateContactByName(mongocBundle* m, const char* name, c_contact* c) {
     updateContactByField(m, name, c, "name");
 }
 
@@ -150,7 +167,7 @@ mongoc_cursor_t* searchByName(mongocBundle* m, const char* name) {
     return searchByField(m, name, "name");
 }
 
-contact* makeContactFromBson(const bson_t* doc) {
+c_contact* makeContactFromBson(const bson_t* doc) {
     bson_iter_t iter;
     const char* name;
     const char* number;
@@ -177,7 +194,7 @@ contact* makeContactFromBson(const bson_t* doc) {
     return createContact(name, number, address, notes);
 }
 
-contact* getCursorNext(mongoc_cursor_t* cursor) {
+c_contact* getCursorNext(mongoc_cursor_t* cursor) {
     const bson_t* doc = NULL;
     if(mongoc_cursor_next(cursor, &doc)) {
     makeContactFromBson(doc);
@@ -186,9 +203,25 @@ contact* getCursorNext(mongoc_cursor_t* cursor) {
     return NULL;
 }
 
-int main() {
-    contact* c1 = createContact("test", "test", "2 test rd", "");
-    contact* c2 = createContact("Bob Smith", "123456789", "3 test rd", "");
+char* executeCommand(mongocBundle* m, const char* cmd) {
+    bson_t reply;
+    
+    bson_t* command = BCON_NEW(cmd, mongoc_collection_get_name(m->col)); // m->col may have to be BCON_UTF8("contacts")
+    char* str = NULL;
+    if (mongoc_collection_command_simple (m->col, command, NULL, &reply, &(m->error))) {
+        str = bson_as_json (&reply, NULL);
+    } else {
+        fprintf (stderr, "Failed to run command: %s\n", m->error.message);
+    }
+    destroyBson(command);
+    destroyBson(&reply);
+
+    return str;
+}
+
+int test_main() {
+    c_contact* c1 = createContact("test", "test", "2 test rd", "");
+    c_contact* c2 = createContact("Bob Smith", "123456789", "3 test rd", "");
     int argc = 4;
     const char* argv[] = {"mongo_embedded_transport_layer_test",
                           "--nounixsocket",

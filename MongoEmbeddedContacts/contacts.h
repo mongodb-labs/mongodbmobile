@@ -1,7 +1,12 @@
 #include "embedded_transport_layer.h"
-typedef struct contact contact;
+typedef struct c_contact c_contact;
 
 typedef struct mongocBundle mongocBundle;
+
+char* c_contact_get_name(c_contact*);
+char* c_contact_get_phone_number(c_contact*);
+char* c_contact_get_address(c_contact*);
+char* c_contact_get_notes(c_contact*);
 
 mongocBundle* createMongocBundle(int argc,
                                  const char** argv,
@@ -12,20 +17,20 @@ void deleteMongocBundle(mongocBundle* m);
 
 void bundleSetDbCol(mongocBundle* m, const char* db, const char* collection);
 
-contact* createContact(const char* name,
+c_contact* createContact(const char* name,
                        const char* phoneNumber,
                        const char* address,
                        const char* notes);
 
-void destroyContact(contact* c);
+void destroyContact(c_contact* c);
 
-void insertContact(mongocBundle* m, contact* c);
+void insertContact(mongocBundle* m, c_contact* c);
 
-void deleteContact(mongocBundle* m, contact* c);
+void deleteContact(mongocBundle* m, c_contact* c);
 
-void updateContactByPhone(mongocBundle* m, const char* number, contact* c);
+void updateContactByPhone(mongocBundle* m, const char* number, c_contact* c);
 
-void updateContactByName(mongocBundle* m, const char* name, contact* c);
+void updateContactByName(mongocBundle* m, const char* name, c_contact* c);
 
 mongoc_cursor_t* findAll(mongocBundle* m);
 
@@ -33,4 +38,6 @@ mongoc_cursor_t* searchByPhone(mongocBundle* m, const char* number);
 
 mongoc_cursor_t* searchByName(mongocBundle* m, const char* name);
 
-contact* getCursorNext(mongoc_cursor_t* cursor);
+c_contact* getCursorNext(mongoc_cursor_t* cursor);
+
+char* executeCommand(mongocBundle*, const char*);
