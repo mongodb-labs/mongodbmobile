@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "contacts.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong) NSMutableArray *allContacts;
 
-
+@property mongocBundle *db;
 
 @end
 

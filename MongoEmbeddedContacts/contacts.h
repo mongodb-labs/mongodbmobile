@@ -3,6 +3,7 @@ typedef struct c_contact c_contact;
 
 typedef struct mongocBundle mongocBundle;
 
+const bson_oid_t* c_contact_get_oid(c_contact*);
 char* c_contact_get_name(c_contact*);
 char* c_contact_get_phone_number(c_contact*);
 char* c_contact_get_address(c_contact*);
@@ -17,6 +18,12 @@ void deleteMongocBundle(mongocBundle* m);
 
 void bundleSetDbCol(mongocBundle* m, const char* db, const char* collection);
 
+c_contact* createContactWithOid(const char* name,
+                     const char* phoneNumber,
+                     const char* address,
+                     const char* notes,
+                     const bson_oid_t* oid);
+
 c_contact* createContact(const char* name,
                        const char* phoneNumber,
                        const char* address,
@@ -28,9 +35,7 @@ void insertContact(mongocBundle* m, c_contact* c);
 
 void deleteContact(mongocBundle* m, c_contact* c);
 
-void updateContactByPhone(mongocBundle* m, const char* number, c_contact* c);
-
-void updateContactByName(mongocBundle* m, const char* name, c_contact* c);
+void updateContactByOid(mongocBundle* m, const bson_oid_t* oid, c_contact* c);
 
 mongoc_cursor_t* findAll(mongocBundle* m);
 

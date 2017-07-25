@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AppDelegate.h"
+#import "contacts.h"
+#import "CollStatsViewController.h"
 
 @class DetailViewController;
 
@@ -18,6 +20,9 @@
 @property NSMutableArray *contacts;
 @property NSMutableArray *searchResults;
 
+@property mongocBundle* bundle;
+
+- (void)findAndReload;
 
 @end
 

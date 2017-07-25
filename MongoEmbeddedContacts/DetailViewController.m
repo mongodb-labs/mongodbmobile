@@ -14,14 +14,15 @@
 
 @implementation DetailViewController
 
+@synthesize mvc = _mvc;
+
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.contactItem) {
         self.nameTextField.text = [self.contactItem name];
         self.numberTextField.text = [self.contactItem phoneNumber];
         self.addressTextField.text = [self.contactItem address];
-        [self.notesTextField setText: [self.contactItem notes]];
-        NSLog(@"Noteshere: %@", self.notesTextField.text);
+        self.notesTextField.text = [self.contactItem notes];
     }
 }
 -(void)updateButtonPressed:(id)sender
@@ -29,7 +30,7 @@
     if (![_contactItem.name isEqualToString:_nameTextField.text]) {
         _contactItem.name = _nameTextField.text;
     }
-   if (![_contactItem.phoneNumber isEqualToString:_numberTextField.text]) {
+    if (![_contactItem.phoneNumber isEqualToString:_numberTextField.text]) {
        _contactItem.phoneNumber = _numberTextField.text;
     }
     if (![_contactItem.address isEqualToString:_addressTextField.text]) {
@@ -38,6 +39,9 @@
     if (![_contactItem.notes isEqualToString:_notesTextField.text]) {
         _contactItem.notes = _notesTextField.text;
     }
+    
+    updateContactByOid(self.mvc.bundle, _contactItem.oid, [Contact createC_ContactFromContact:_contactItem]);
+    [self.mvc findAndReload];
 }
 
 - (void)viewDidLoad {

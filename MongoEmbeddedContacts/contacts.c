@@ -2,12 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 typedef struct c_contact {
+    const bson_oid_t* oid;
     char* name;
     char* phoneNumber;
     char* address;
     char* notes;
 } c_contact;
 
+const bson_oid_t* c_contact_get_oid(c_contact* c) {
+    return c->oid;
+}
 
 char* c_contact_get_name(c_contact* c) {
     return c->name;
@@ -64,33 +68,57 @@ void bundleSetDbCol(mongocBundle* m, const char* db, const char* collection) {
     m->col = mongoc_client_get_collection(m->client, db, collection);
 }
 
-c_contact* createContact(const char* name,
-                       const char* phoneNumber,
-                       const char* address,
-                       const char* notes) {
+c_contact* createContactWithOid(const char* name,
+                         const char* phoneNumber,
+                         const char* address,
+                         const char* notes,
+                         const bson_oid_t* oid) {
     c_contact* c = (c_contact*)malloc(sizeof(c_contact));
     int nameLen = strlen(name) + 1;
     c->name = (char*)malloc(nameLen);
     memcpy(c->name, name, nameLen);
-
+    
     int phoneLen = strlen(phoneNumber) + 1;
     c->phoneNumber = (char*)malloc(phoneLen);
     memcpy(c->phoneNumber, phoneNumber, phoneLen);
-
+    
     int addressLen = strlen(address) + 1;
     c->address = (char*)malloc(addressLen);
     memcpy(c->address, address, addressLen);
-
+    
     int notesLen = strlen(notes) + 1;
     c->notes = (char*)malloc(notesLen);
     memcpy(c->notes, notes, notesLen);
+    
+    if (oid) {
+        c->oid = (bson_oid_t*)malloc(sizeof(bson_oid_t));
+        memcpy(c->oid, oid, sizeof(bson_oid_t));
+    }
+    
+    return c;
+}
 
+c_contact* createContact(const char* name,
+                         const char* phoneNumber,
+                         const char* address,
+                         const char* notes) {
+//    bson_oid_t* oid = (bson_oid_t*)malloc(sizeof(bson_oid_t));
+//    bson_oid_init(oid, NULL);
+    c_contact* c = createContactWithOid(name, phoneNumber, address, notes, NULL);
+//    free(oid);
     return c;
 }
 
 bson_t* createBsonFromContact(c_contact* c) {
-    bson_t* document = BCON_NEW(
-        "name", c->name, "phoneNumber", c->phoneNumber, "address", c->address, "notes", c->notes);
+    bson_t* document;
+    if (c->oid) {
+        document = BCON_NEW("_id", BCON_OID(c->oid),
+                            "name", c->name, "phoneNumber", c->phoneNumber, "address", c->address, "notes", c->notes);
+    } else {
+        document = BCON_NEW(
+                 "name", c->name, "phoneNumber", c->phoneNumber, "address", c->address, "notes", c->notes);
+    }
+
     return document;
 }
 
@@ -135,12 +163,14 @@ void updateContactByField(mongocBundle* m, const char* queryValue, c_contact* c,
     destroyBson(doc);
 }
 
-void updateContactByPhone(mongocBundle* m, const char* number, c_contact* c) {
-    updateContactByField(m, number, c, "phoneNumber");
-}
-
-void updateContactByName(mongocBundle* m, const char* name, c_contact* c) {
-    updateContactByField(m, name, c, "name");
+void updateContactByOid(mongocBundle* m, const bson_oid_t* oid, c_contact* c) {
+    bson_t* query = BCON_NEW("_id", BCON_OID(oid));
+    bson_t* doc = createBsonFromContact(c);
+    if (!mongoc_collection_update(m->col, MONGOC_UPDATE_NONE, query, doc, NULL, &(m->error))) {
+        // error code
+        fprintf(stderr, "Error Updating: %s\n", m->error.message);
+    }
+    destroyBson(doc);
 }
 
 mongoc_cursor_t* searchByField(mongocBundle* m, const char* queryValue, const char* field) {
@@ -173,6 +203,7 @@ c_contact* makeContactFromBson(const bson_t* doc) {
     const char* number;
     const char* address;
     const char* notes;
+    const bson_oid_t* oid;
     if (bson_iter_init(&iter, doc)) {
         while (bson_iter_next(&iter)) {
             const char * field = bson_iter_key(&iter);
@@ -185,20 +216,21 @@ c_contact* makeContactFromBson(const bson_t* doc) {
             } else if (strcmp(field, "notes") == 0) {
                 notes = bson_iter_utf8(&iter, NULL);
             } else if (strcmp(field, "_id") == 0) {
+                oid = bson_iter_oid(&iter);
             } else {
                 fprintf(stderr, "INVALID FIELD %s\n", field);
                 return NULL;
             }
         }
     }
-    return createContact(name, number, address, notes);
+    return createContactWithOid(name, number, address, notes, oid);
 }
 
 c_contact* getCursorNext(mongoc_cursor_t* cursor) {
     const bson_t* doc = NULL;
     if(mongoc_cursor_next(cursor, &doc)) {
-    makeContactFromBson(doc);
-    return makeContactFromBson(doc);
+    c_contact* toRet = makeContactFromBson(doc);
+    return toRet;
     }
     return NULL;
 }
@@ -234,7 +266,7 @@ int test_main() {
     insertContact(m, c2);
     deleteContact(m, c1);
     c2->phoneNumber[0] = 78;
-    updateContactByPhone(m, "123456789", c2);
+//    updateContactByPhone(m, "123456789", c2);
     destroyContact(c1);
     mongoc_cursor_t * cursor = findAll(m);
     while ((c1 = getCursorNext(cursor))) {

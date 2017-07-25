@@ -7,16 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "contacts.h"
+#import "mongoc.h"
 
 @interface Contact : NSObject
 
-@property (nonatomic, assign) NSInteger contactId;
+@property bson_oid_t* oid;
 @property (strong) NSString *name;
-@property (assign) NSString *phoneNumber;
-@property (assign) NSString *address;
-@property (assign) NSString *notes;
+@property (strong) NSString *phoneNumber;
+@property (strong) NSString *address;
+@property (strong) NSString *notes;
 
 - (id)initWithName:(NSInteger)contactId name:(NSString*)name phoneNumber:(NSString*)phoneNumber address:(NSString*)address notes:(NSString*)notes;
+
++ (Contact*)createContactFromC_Contact:(c_contact*)c;
++ (c_contact*) createC_ContactFromContact:(Contact*)c;
 
 @end
 
