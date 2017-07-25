@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E463D9B1F27C948002E4C93 /* contacts.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E463D991F27C948002E4C93 /* contacts.c */; };
 		1E7079721F1FF593003F2D6F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7079711F1FF593003F2D6F /* main.m */; };
 		1E7079751F1FF593003F2D6F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7079741F1FF593003F2D6F /* AppDelegate.m */; };
 		1E7079781F1FF593003F2D6F /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7079771F1FF593003F2D6F /* MasterViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E463D991F27C948002E4C93 /* contacts.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = contacts.c; sourceTree = "<group>"; };
+		1E463D9A1F27C948002E4C93 /* contacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contacts.h; sourceTree = "<group>"; };
 		1E70796D1F1FF593003F2D6F /* MongoEmbeddedContacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MongoEmbeddedContacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7079711F1FF593003F2D6F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1E7079731F1FF593003F2D6F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 		1E109C0B1F2120AB00275D30 /* CDriverContact */ = {
 			isa = PBXGroup;
 			children = (
+				1E463D991F27C948002E4C93 /* contacts.c */,
+				1E463D9A1F27C948002E4C93 /* contacts.h */,
 			);
 			name = CDriverContact;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 			files = (
 				1E7079751F1FF593003F2D6F /* AppDelegate.m in Sources */,
 				1E7079781F1FF593003F2D6F /* MasterViewController.m in Sources */,
+				1E463D9B1F27C948002E4C93 /* contacts.c in Sources */,
 				1E7079A91F1FF75F003F2D6F /* Contact.m in Sources */,
 				1E7079721F1FF593003F2D6F /* main.m in Sources */,
 				1E70797B1F1FF593003F2D6F /* DetailViewController.m in Sources */,
