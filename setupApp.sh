@@ -35,6 +35,7 @@ LIBPATH_DIR="$pwd/install/lib"
 # cross compile mongo with the cdriver
 cd ..
 cd mongo
+git reset --hard 847af00b5aff1f0619976f9f823c2682e7518987
 scons -j16 --dbg=on --disable-warnings-as-errors --js-engine=none --variables-files=etc/scons/xcode_ios.vars --mmapv1=off CPPPATH="$LIBBSON_DIR $LIBMONGOC_DIR" LIBPATH=$LIBPATH_DIR embedded_capi
 pwd=$(pwd)
 MONGO_DIR="$pwd/src"
