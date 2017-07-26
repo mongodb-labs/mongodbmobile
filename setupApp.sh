@@ -62,17 +62,4 @@ cp mongo-c-driver/install/lib/libbson-1.0.a objfiles
 cp mongo-c-driver/install/lib/libmongoc-1.0.a objfiles
 
 echo "XCode Installation Instructions:"
-echo "Step 1: Go to the Build Phases Tab and add all of the .a files in the object files path into the Link With Libraries section"
-echo "Step 2: Go to the Build Settings Tab and hit all at the top"
-echo "Step 3: Navigate to Header Search Paths section and add the following links: (all non-recursively)"
-echo "        $LIBBSON_DIR"
-echo "        $LIBMONGOC_DIR"
-echo "        $MONGO_DIR"
-echo "        $MONGO_EMBEDDED_DIR"
-echo "Step 4: Navigate to Library Search Paths section and add the following links: (all non-recursively)"
-echo "        $OBJ_FILES"
-echo "        $LIBPATH_DIR"
-
-
-
-
+echo "Only Step: Go to the Build Phases Tab and add all of the .a files in the object files path into the Link With Libraries section"

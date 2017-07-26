@@ -5,7 +5,12 @@
 ## Build generated
 build/
 DerivedData/
+*.a
 
+## generated files
+mongo/
+objfiles/
+mongo-c-driver/
 ## Various settings
 *.pbxuser
 !default.pbxuser
@@ -22,3 +27,5 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 .DS_Store
+*.tar
+*.tar.gz
