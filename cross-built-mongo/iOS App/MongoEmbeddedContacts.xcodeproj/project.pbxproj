@@ -18,6 +18,7 @@
 		1E7079991F1FF593003F2D6F /* MongoEmbeddedContactsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7079981F1FF593003F2D6F /* MongoEmbeddedContactsUITests.m */; };
 		1E7079A91F1FF75F003F2D6F /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7079A81F1FF75F003F2D6F /* Contact.m */; };
 		1EA612E01F28EDCE0058817D /* contacts.c in Sources */ = {isa = PBXBuildFile; fileRef = 1EA612DE1F28EDCE0058817D /* contacts.c */; };
+		EC908E8E1F2925D9006B32AF /* CollStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC908E8D1F2925D9006B32AF /* CollStatsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		1E7079A81F1FF75F003F2D6F /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 		1EA612DE1F28EDCE0058817D /* contacts.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = contacts.c; sourceTree = "<group>"; };
 		1EA612DF1F28EDCE0058817D /* contacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contacts.h; sourceTree = "<group>"; };
+		EC908E8C1F2925D9006B32AF /* CollStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollStatsViewController.h; sourceTree = "<group>"; };
+		EC908E8D1F2925D9006B32AF /* CollStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollStatsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,8 @@
 				1E7079771F1FF593003F2D6F /* MasterViewController.m */,
 				1E7079791F1FF593003F2D6F /* DetailViewController.h */,
 				1E70797A1F1FF593003F2D6F /* DetailViewController.m */,
+				EC908E8C1F2925D9006B32AF /* CollStatsViewController.h */,
+				EC908E8D1F2925D9006B32AF /* CollStatsViewController.m */,
 				1E70797C1F1FF593003F2D6F /* Main.storyboard */,
 			);
 			name = GUI;
@@ -321,6 +326,7 @@
 				1E7079A91F1FF75F003F2D6F /* Contact.m in Sources */,
 				1E7079721F1FF593003F2D6F /* main.m in Sources */,
 				1E70797B1F1FF593003F2D6F /* DetailViewController.m in Sources */,
+				EC908E8E1F2925D9006B32AF /* CollStatsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
