@@ -477,7 +477,7 @@
 					../mongo/src,
 					../mongo/src/mongo/client/embedded,
 					"../mongo-c-driver/install/include/libbson-1.0",
-					"../mongo-c-driver/install/include/libmongoc-l.0",
+					"../mongo-c-driver/install/include/libmongoc-1.0",
 				);
 				INFOPLIST_FILE = MongoEmbeddedContacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -504,7 +504,7 @@
 					../mongo/src,
 					../mongo/src/mongo/client/embedded,
 					"../mongo-c-driver/install/include/libbson-1.0",
-					"../mongo-c-driver/install/include/libmongoc-l.0",
+					"../mongo-c-driver/install/include/libmongoc-1.0",
 				);
 				INFOPLIST_FILE = MongoEmbeddedContacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
