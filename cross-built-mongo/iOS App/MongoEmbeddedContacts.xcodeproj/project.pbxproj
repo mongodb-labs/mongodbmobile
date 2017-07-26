@@ -470,10 +470,15 @@
 		1E70799E1F1FF593003F2D6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T8YB9L4SM5;
 				INFOPLIST_FILE = MongoEmbeddedContacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-lstdc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = MongoDB.MongoEmbeddedContacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -482,10 +487,15 @@
 		1E70799F1F1FF593003F2D6F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T8YB9L4SM5;
 				INFOPLIST_FILE = MongoEmbeddedContacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-lstdc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = MongoDB.MongoEmbeddedContacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
