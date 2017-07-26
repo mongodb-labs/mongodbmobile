@@ -17,6 +17,7 @@
 		1E70798E1F1FF593003F2D6F /* MongoEmbeddedContactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E70798D1F1FF593003F2D6F /* MongoEmbeddedContactsTests.m */; };
 		1E7079991F1FF593003F2D6F /* MongoEmbeddedContactsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7079981F1FF593003F2D6F /* MongoEmbeddedContactsUITests.m */; };
 		1E7079A91F1FF75F003F2D6F /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7079A81F1FF75F003F2D6F /* Contact.m */; };
+		1EA612E01F28EDCE0058817D /* contacts.c in Sources */ = {isa = PBXBuildFile; fileRef = 1EA612DE1F28EDCE0058817D /* contacts.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		1E70799A1F1FF593003F2D6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E7079A71F1FF75F003F2D6F /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		1E7079A81F1FF75F003F2D6F /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		1EA612DE1F28EDCE0058817D /* contacts.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = contacts.c; sourceTree = "<group>"; };
+		1EA612DF1F28EDCE0058817D /* contacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contacts.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,8 @@
 		1E109C0B1F2120AB00275D30 /* CDriverContact */ = {
 			isa = PBXGroup;
 			children = (
+				1EA612DE1F28EDCE0058817D /* contacts.c */,
+				1EA612DF1F28EDCE0058817D /* contacts.h */,
 			);
 			name = CDriverContact;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 			files = (
 				1E7079751F1FF593003F2D6F /* AppDelegate.m in Sources */,
 				1E7079781F1FF593003F2D6F /* MasterViewController.m in Sources */,
+				1EA612E01F28EDCE0058817D /* contacts.c in Sources */,
 				1E7079A91F1FF75F003F2D6F /* Contact.m in Sources */,
 				1E7079721F1FF593003F2D6F /* main.m in Sources */,
 				1E70797B1F1FF593003F2D6F /* DetailViewController.m in Sources */,
