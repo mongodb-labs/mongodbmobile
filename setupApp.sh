@@ -18,6 +18,7 @@ if [ ! -d "mongo-c-driver" ]; then
     tar xzf mongo-c-driver-$CDRIVER_VERSION.tar.gz
     mv mongo-c-driver-$CDRIVER_VERSION mongo-c-driver
     rm -rf mongo-c-driver-$CDRIVER_VERSION
+    rm mongo-c-driver-$CDRIVER_VERSION.tar.gz
 fi
 cd mongo-c-driver
 
