@@ -27,6 +27,7 @@
 }
 -(void)updateButtonPressed:(id)sender
 {
+    if (_contactItem == nil) return;
     if (![_contactItem.name isEqualToString:_nameTextField.text]) {
         _contactItem.name = _nameTextField.text;
     }
