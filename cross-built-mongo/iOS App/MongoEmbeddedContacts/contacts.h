@@ -45,4 +45,8 @@ mongoc_cursor_t* searchByName(mongocBundle* m, const char* name);
 
 c_contact* getCursorNext(mongoc_cursor_t* cursor);
 
+char * getCharCursorNext(mongoc_cursor_t * cursor);
+
 char* executeCommand(mongocBundle*, const char*);
+
+bson_t * executeCollectionCommand(mongocBundle *, const char *);

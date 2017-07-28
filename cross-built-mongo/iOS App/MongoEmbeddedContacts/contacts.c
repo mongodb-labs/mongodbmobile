@@ -232,7 +232,27 @@ c_contact* getCursorNext(mongoc_cursor_t* cursor) {
     c_contact* toRet = makeContactFromBson(doc);
     return toRet;
     }
+    // mongoc_cursor_destroy(cursor);
     return NULL;
+}
+
+char* getCharCursorNext(mongoc_cursor_t* cursor) {
+    const bson_t* doc = NULL;
+    if(mongoc_cursor_next(cursor, &doc)) {
+        char* toRet = bson_as_json(doc, NULL);
+        return toRet;
+    }
+    mongoc_cursor_destroy(cursor);
+    return NULL;
+}
+
+bson_t * executeCollectionCommand( mongocBundle * m, const char * cmd) {
+    bson_t * doc;
+    doc = bson_new_from_json(cmd, -1, &(m->error));
+    bson_t * reply;
+    bool valid = mongoc_collection_command_simple(m->col, doc, NULL, reply, &(m->error));
+    destroyBson(doc);
+    return reply;
 }
 
 char* executeCommand(mongocBundle* m, const char* cmd) {

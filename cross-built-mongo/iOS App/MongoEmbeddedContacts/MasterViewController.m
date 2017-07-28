@@ -46,16 +46,16 @@
     
     if ([_contacts count] == 0) {
         Contact *c1 = [[Contact alloc] initWithName:NULL name:@"Tyler Kaye" phoneNumber:@"914-582-9330"  address:@"Upper West Side, NY" notes:@"He works at mongodb" ];
-//        Contact *c2 = [[Contact alloc] initWithName:NULL name:@"Ben Shteinfeld" phoneNumber:@"432-567-9989"  address:@"Boston, MA" notes:@"He also works at mongodb" ];
-//        Contact *c3 = [[Contact alloc] initWithName:NULL name:@"Ted Tuckman" phoneNumber:@"123-456-4321"  address:@"New York, NY" notes:@"Works at mongodb" ];
-//        Contact *c4 = [[Contact alloc] initWithName:NULL name:@"Andrew Morrow" phoneNumber:@"987-9876-098"  address:@"UWS New York" notes:@"Manager at mongodb" ];
-//        Contact *c5 = [[Contact alloc] initWithName:NULL name:@"Gabriel Russel" phoneNumber:@"444-555-6666"  address:@"Lower East Side" notes:@"he is the build baron" ];
-//        Contact *c6 = [[Contact alloc] initWithName:NULL name:@"Sam Ritter" phoneNumber:@"111-222-3333"  address:@"Brooklyn" notes:@"She went to princeton" ];
-//        Contact *c7 = [[Contact alloc] initWithName:NULL name:@"Mark B" phoneNumber:@"999-888-98767"  address:@"Somewhere" notes:@"uses windows" ];
-//        Contact *c8 = [[Contact alloc] initWithName:NULL name:@"Spencer Jackson" phoneNumber:@"123-456-78788"  address:@"OPther place" notes:@"loves security work" ];
+        Contact *c2 = [[Contact alloc] initWithName:NULL name:@"Ben Shteinfeld" phoneNumber:@"432-567-9989"  address:@"Boston, MA" notes:@"He also works at mongodb" ];
+        Contact *c3 = [[Contact alloc] initWithName:NULL name:@"Ted Tuckman" phoneNumber:@"123-456-4321"  address:@"New York, NY" notes:@"Works at mongodb" ];
+        Contact *c4 = [[Contact alloc] initWithName:NULL name:@"Andrew Morrow" phoneNumber:@"987-9876-098"  address:@"UWS New York" notes:@"Manager at mongodb" ];
+        Contact *c5 = [[Contact alloc] initWithName:NULL name:@"Gabriel Russel" phoneNumber:@"444-555-6666"  address:@"Lower East Side" notes:@"he is the build baron" ];
+        Contact *c6 = [[Contact alloc] initWithName:NULL name:@"Sam Ritter" phoneNumber:@"111-222-3333"  address:@"Brooklyn" notes:@"She went to princeton" ];
+        Contact *c7 = [[Contact alloc] initWithName:NULL name:@"Mark B" phoneNumber:@"999-888-98767"  address:@"Somewhere" notes:@"uses windows" ];
+        Contact *c8 = [[Contact alloc] initWithName:NULL name:@"Spencer Jackson" phoneNumber:@"123-456-78788"  address:@"OPther place" notes:@"loves security work" ];
         
-//        NSMutableArray *allContacts = [NSMutableArray arrayWithObjects:c1, c2, c3, c4, c5, c6, c7, c8, nil];
-        NSMutableArray *allContacts = [NSMutableArray arrayWithObjects:c1, nil];
+        NSMutableArray *allContacts = [NSMutableArray arrayWithObjects:c1, c2, c3, c4, c5, c6, c7, c8, nil];
+        // NSMutableArray *allContacts = [NSMutableArray arrayWithObjects:c1, nil];
         [allContacts sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]]];
         _contacts = allContacts;
         _searchResults = allContacts;
@@ -114,8 +114,17 @@
 
 - (NSString*) collStats {
     char* reply = executeCommand(self.bundle, "collStats");
+    
+    // begin experiment -- pushed to git for reference later
+//    const unsigned char * cmd ="{ \"collStats\": \"contacts\" }\0";
+//    mongoc_cursor_t * cursor = executeCollectionCommand(self.bundle, cmd);
+//    char * reply = getCharCursorNext(cursor);
+//    bool needFree = true;
+//    if (reply == NULL) {reply = "{}"; needFree = false;}
+    // end experiment
+    
     NSString* s = [NSString stringWithUTF8String:reply];
-    bson_free(reply);
+    if(reply) {bson_free(reply); } else { reply = "{}"; }
 
     NSError* e;
     
