@@ -29,10 +29,17 @@
     NSLog(@"HEREEEEEE %@", [[UIDevice currentDevice] name]);
     
     // Do any additional setup after loading the view, typically from a nib.
+    // collStats Button
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    UIBarButtonItem *runCommand = [[UIBarButtonItem alloc] initWithTitle:@"Test" style:UIBarButtonItemStyleDone target:self action:@selector(runCommand:)];
-    self.navigationItem.leftBarButtonItem = runCommand;
-
+    UIBarButtonItem *runCollStats = [[UIBarButtonItem alloc] initWithTitle:@"collStats" style:UIBarButtonItemStyleDone target:self action:@selector(runCommand:)];
+    // self.navigationItem.leftBarButtonItem = runCollStats;
+    // CustomCommand Button
+    UIBarButtonItem * executeCommand = [[UIBarButtonItem alloc] initWithTitle:@"Command" style:UIBarButtonItemStyleDone target:self action:@selector(executeCommand:)];
+    //self.navigationItem.leftBarButtonItems = [runCollStats, executeCommand];
+    self.navigationItem.leftBarButtonItems = [self.navigationItem.leftBarButtonItems arrayByAddingObject:runCollStats];
+    self.navigationItem.leftBarButtonItems = [self.navigationItem.leftBarButtonItems arrayByAddingObject:executeCommand];
+    
+    // Add button
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
@@ -105,12 +112,19 @@
 
 - (void)runCommand:(id)sender {
     char* reply = executeCommand(self.bundle, "collStats");
-    printf("%s\n", reply);
+    // printf("%s\n", reply);
     
     [self performSegueWithIdentifier:@"collStats" sender:self];
     
     bson_free(reply);
 }
+
+- (void)executeCommand:(id)sender {
+
+    [self performSegueWithIdentifier:@"CustomCommandSegue" sender:self];
+
+}
+
 
 - (NSString*) collStats {
     char* reply = executeCommand(self.bundle, "collStats");
@@ -237,6 +251,10 @@
     if ([[segue identifier] isEqualToString:@"collStats"]) {
         CollStatsViewController *con = (CollStatsViewController*)[segue destinationViewController];
         con.collStats = [self collStats];
+    }
+    if ([[segue identifier] isEqualToString:@"CustomCommandSegue"]) {
+        CustomCommandViewController *con = (CustomCommandViewController*)[segue destinationViewController];
+        con.bundle = [self bundle];
     }
 }
 

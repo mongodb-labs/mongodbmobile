@@ -61,7 +61,8 @@ mongocBundle* createMongocBundle(int argc,
 void deleteMongocBundle(mongocBundle* m) {
     mongoc_collection_destroy(m->col);
     mongoc_client_destroy(m->client);
-    libmongodbcapi_db_destroy(m->db);
+    libmongodbcapi_db_fini(m->db);
+    // libmongodbcapi_db_destroy(m->db);
     free(m);
 }
 void bundleSetDbCol(mongocBundle* m, const char* db, const char* collection) {
@@ -232,7 +233,7 @@ c_contact* getCursorNext(mongoc_cursor_t* cursor) {
     c_contact* toRet = makeContactFromBson(doc);
     return toRet;
     }
-    // mongoc_cursor_destroy(cursor);
+    mongoc_cursor_destroy(cursor);
     return NULL;
 }
 
@@ -246,13 +247,17 @@ char* getCharCursorNext(mongoc_cursor_t* cursor) {
     return NULL;
 }
 
-bson_t * executeCollectionCommand( mongocBundle * m, const char * cmd) {
+char * executeCollectionCommand( mongocBundle * m, const char * cmd) {
     bson_t * doc;
-    doc = bson_new_from_json(cmd, -1, &(m->error));
-    bson_t * reply;
-    bool valid = mongoc_collection_command_simple(m->col, doc, NULL, reply, &(m->error));
+    doc = bson_new_from_json((const unsigned char *)cmd, -1, &(m->error));
+    bson_t reply;
+    char * jsonResult = NULL;
+    if(mongoc_collection_command_simple(m->col, doc, NULL, &reply, &(m->error))) {
+        jsonResult = bson_as_json(&reply, NULL);
+        destroyBson(&reply);
+    }
     destroyBson(doc);
-    return reply;
+    return jsonResult;
 }
 
 char* executeCommand(mongocBundle* m, const char* cmd) {
@@ -262,13 +267,23 @@ char* executeCommand(mongocBundle* m, const char* cmd) {
     char* str = NULL;
     if (mongoc_collection_command_simple (m->col, command, NULL, &reply, &(m->error))) {
         str = bson_as_json (&reply, NULL);
-    } else {
-        fprintf (stderr, "Failed to run command: %s\n", m->error.message);
+        destroyBson(&reply);
     }
     destroyBson(command);
-    destroyBson(&reply);
+    
 
     return str;
+}
+
+bool validateCommand(mongocBundle*m, char * cmd) {
+    bson_t* command = bson_new_from_json(cmd, -1, &(m->error));
+    if (!command) {
+        return false;
+    }
+    size_t offset;
+    bool result = bson_validate(command, BSON_VALIDATE_NONE, &offset);
+    destroyBson(command);
+    return result;
 }
 
 int test_main() {

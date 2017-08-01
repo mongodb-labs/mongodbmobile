@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 #import "contacts.h"
 #import "CollStatsViewController.h"
-
+#import "CustomCommandViewController.h"
 @class DetailViewController;
 
 @interface MasterViewController : UITableViewController

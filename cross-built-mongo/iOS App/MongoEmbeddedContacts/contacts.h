@@ -49,4 +49,6 @@ char * getCharCursorNext(mongoc_cursor_t * cursor);
 
 char* executeCommand(mongocBundle*, const char*);
 
-bson_t * executeCollectionCommand(mongocBundle *, const char *);
+char * executeCollectionCommand(mongocBundle *, const char *);
+
+bool validateCommand(mongocBundle*m, char * cmd);
