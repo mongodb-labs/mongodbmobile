@@ -20,7 +20,7 @@
 @synthesize collStatsButton = _collStatsButton;
 @synthesize serverStatusButton = _serverStatusButton;
 @synthesize countButton = _countButton;
-
+@synthesize validateButton = _validateButton;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -44,7 +44,8 @@
     [_serverStatusButton setTitle:@"serverStatus" forState:UIControlStateNormal];
     [_countButton addTarget:self action:@selector(countFunc:) forControlEvents:UIControlEventTouchUpInside];
     [_countButton setTitle:@"count" forState:UIControlStateNormal];
-    
+    [_validateButton addTarget:self action:@selector(validateFunc:) forControlEvents:UIControlEventTouchUpInside];
+    [_validateButton setTitle:@"validate" forState:UIControlStateNormal];
     printf("Done with load\n");
     
 }
@@ -68,7 +69,8 @@
 
     const char * cmd = [_commandBox.text UTF8String];
 
-    NSString * s = [NSString stringWithUTF8String:executeCollectionCommand(self.bundle, cmd)] ;
+    char * temp = executeCollectionCommand(self.bundle, cmd);
+    NSString * s = [NSString stringWithUTF8String:temp];
 
     if (!s) {_resultBox.text = @"Got NULL from database"; return;}
 
@@ -104,7 +106,10 @@
     _commandBox.text = @"{\"count\": \"contacts\"}";
     _submitCommand.enabled = YES;
 }
-
+-(void) validateFunc:(UIButton *) validate {
+    _commandBox.text = @"{\"validate\": \"contacts\"}";
+    _submitCommand.enabled = YES;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *collStatsButton;
 @property (weak, nonatomic) IBOutlet UIButton *countButton;
 @property (weak, nonatomic) IBOutlet UIButton *serverStatusButton;
+@property (weak, nonatomic) IBOutlet UIButton *validateButton;
 
 
 @end
