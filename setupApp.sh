@@ -36,6 +36,7 @@ LIBPATH_DIR="$pwd/install/lib"
 # cross compile mongo with the cdriver
 cd ..
 cd mongo
+git checkout -b buildBranch
 git reset --hard 63221330aa94f655c9451c597d6bfa3e457464bf
 git apply $rootdir/mongoDiff
 scons -j16 --dbg=on --disable-warnings-as-errors --js-engine=none --variables-files=etc/scons/xcode_ios.vars --mmapv1=off CPPPATH="$LIBBSON_DIR $LIBMONGOC_DIR" LIBPATH=$LIBPATH_DIR embedded_capi
@@ -66,6 +67,4 @@ cp mongo-c-driver/install/lib/libmongoc-1.0.a objfiles
 
 echo "XCode Installation Instructions:"
 echo "Only Step: Go to the Build Phases Tab and add all of the .a files in the object files path into the Link With Libraries section"
-echo "Temporary Instructions:"
-echo "cd to mongo/ and then git apply the diff with libmongodbcapi_fini"
 
