@@ -18,6 +18,7 @@
 		1E7079991F1FF593003F2D6F /* MongoEmbeddedContactsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7079981F1FF593003F2D6F /* MongoEmbeddedContactsUITests.m */; };
 		1E7079A91F1FF75F003F2D6F /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E7079A81F1FF75F003F2D6F /* Contact.m */; };
 		1EA612E01F28EDCE0058817D /* contacts.c in Sources */ = {isa = PBXBuildFile; fileRef = 1EA612DE1F28EDCE0058817D /* contacts.c */; };
+		EC8F103B1F31278E009542EA /* CustomCommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8F10391F31278E009542EA /* CustomCommandViewController.m */; };
 		EC908E8E1F2925D9006B32AF /* CollStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC908E8D1F2925D9006B32AF /* CollStatsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,8 @@
 		1E7079A81F1FF75F003F2D6F /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 		1EA612DE1F28EDCE0058817D /* contacts.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = contacts.c; sourceTree = "<group>"; };
 		1EA612DF1F28EDCE0058817D /* contacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contacts.h; sourceTree = "<group>"; };
+		EC8F10391F31278E009542EA /* CustomCommandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCommandViewController.m; sourceTree = "<group>"; };
+		EC8F103A1F31278E009542EA /* CustomCommandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCommandViewController.h; sourceTree = "<group>"; };
 		EC908E8C1F2925D9006B32AF /* CollStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollStatsViewController.h; sourceTree = "<group>"; };
 		EC908E8D1F2925D9006B32AF /* CollStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollStatsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +165,8 @@
 		1E7079A61F1FF682003F2D6F /* GUI */ = {
 			isa = PBXGroup;
 			children = (
+				EC8F10391F31278E009542EA /* CustomCommandViewController.m */,
+				EC8F103A1F31278E009542EA /* CustomCommandViewController.h */,
 				1E7079731F1FF593003F2D6F /* AppDelegate.h */,
 				1E7079741F1FF593003F2D6F /* AppDelegate.m */,
 				1E7079761F1FF593003F2D6F /* MasterViewController.h */,
@@ -321,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E7079751F1FF593003F2D6F /* AppDelegate.m in Sources */,
+				EC8F103B1F31278E009542EA /* CustomCommandViewController.m in Sources */,
 				1E7079781F1FF593003F2D6F /* MasterViewController.m in Sources */,
 				1EA612E01F28EDCE0058817D /* contacts.c in Sources */,
 				1E7079A91F1FF75F003F2D6F /* Contact.m in Sources */,
