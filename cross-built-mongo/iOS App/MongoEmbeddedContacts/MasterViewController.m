@@ -26,17 +26,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"HEREEEEEE %@", [[UIDevice currentDevice] name]);
+    
     
     // Do any additional setup after loading the view, typically from a nib.
+    
     // collStats Button
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     UIBarButtonItem *runCollStats = [[UIBarButtonItem alloc] initWithTitle:@"collStats" style:UIBarButtonItemStyleDone target:self action:@selector(runCommand:)];
     // self.navigationItem.leftBarButtonItem = runCollStats;
+    
     // CustomCommand Button
     UIBarButtonItem * executeCommand = [[UIBarButtonItem alloc] initWithTitle:@"Command" style:UIBarButtonItemStyleDone target:self action:@selector(executeCommand:)];
     //self.navigationItem.leftBarButtonItems = [runCollStats, executeCommand];
-    self.navigationItem.leftBarButtonItems = [self.navigationItem.leftBarButtonItems arrayByAddingObject:runCollStats];
+    // self.navigationItem.leftBarButtonItems = [self.navigationItem.leftBarButtonItems arrayByAddingObject:runCollStats];
     self.navigationItem.leftBarButtonItems = [self.navigationItem.leftBarButtonItems arrayByAddingObject:executeCommand];
     
     // Add button
@@ -152,8 +154,7 @@
     NSData* prettyJsonData = [NSJSONSerialization dataWithJSONObject:jsonObject options:NSJSONWritingPrettyPrinted error:&e];
     
     //4. convert NSData back to NSString (use NSString init for convenience), later you can convert to String.
-    NSString* prettyPrintedJson = [NSString stringWithUTF8String:[prettyJsonData bytes]];
-    //[NSString initWithData: prettyJsonData encoding:NSUTF8StringEncoding];
+    NSString * prettyPrintedJson = [[NSString alloc] initWithData:prettyJsonData encoding:NSUTF8StringEncoding];
     
     return prettyPrintedJson;
 }

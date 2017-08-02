@@ -31,6 +31,7 @@
     
     // resultBox setup
     _resultBox.text = [NSString stringWithFormat:@"No Results Yet"];
+    _resultBox.editable = NO;
     
     // button -- submit command setup
     _submitCommand.enabled = NO;
@@ -54,24 +55,24 @@
 
     char * cmd = [textField.text UTF8String];
     if (validateCommand(self.bundle, cmd)) {
-        // do something
-        printf("Valid\n");
+        NSLog(@"Valid\n");
         _submitCommand.enabled = YES;
     }
     else {
-        printf("Invalid\n");
+        NSLog(@"Invalid\n");
         _submitCommand.enabled = NO;
     }
 }
 
 -(void) submitCommandFunc:(UIButton *)submitCommand {
     [self.view endEditing:YES];
+    // NSString *settingsString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 
     const char * cmd = [_commandBox.text UTF8String];
 
     char * temp = executeCollectionCommand(self.bundle, cmd);
     NSString * s = [NSString stringWithUTF8String:temp];
-
+    // NSString * s = [[NSString alloc] initWithData:temp encoding:NSUTF8StringEncoding];
     if (!s) {_resultBox.text = @"Got NULL from database"; return;}
 
     NSError* e;
@@ -85,8 +86,8 @@
     NSData* prettyJsonData = [NSJSONSerialization dataWithJSONObject:jsonObject options:NSJSONWritingPrettyPrinted error:&e];
 
     //4. convert NSData back to NSString (use NSString init for convenience), later you can convert to String.
-    NSString* prettyPrintedJson = [NSString stringWithUTF8String:[prettyJsonData bytes]];
-
+    NSString * prettyPrintedJson = [[NSString alloc] initWithData:prettyJsonData encoding:NSUTF8StringEncoding];
+    
     _resultBox.text = prettyPrintedJson;
 
 
