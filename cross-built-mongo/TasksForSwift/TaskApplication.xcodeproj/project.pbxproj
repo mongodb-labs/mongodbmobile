@@ -1,0 +1,1388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E229E071F30F3130045C109 /* cheetah_c.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E229E041F30F3130045C109 /* cheetah_c.c */; };
+		1E229E081F30F3130045C109 /* cheetah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E229E061F30F3130045C109 /* cheetah.swift */; };
+		1E229E0A1F31280F0045C109 /* RunCommandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E229E091F31280F0045C109 /* RunCommandsViewController.swift */; };
+		1E39F5E61F321ADE003E7E71 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E39F5E51F321ADE003E7E71 /* TaskTableViewCell.swift */; };
+		1EC1FF411F30DFAA00023E69 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1FF401F30DFAA00023E69 /* DetailViewController.swift */; };
+		1EC1FF431F30E51B00023E69 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1FF421F30E51B00023E69 /* Task.swift */; };
+		86FF5BB31A6D65FB00A017A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FF5BB21A6D65FB00A017A1 /* AppDelegate.swift */; };
+		86FF5BB51A6D65FB00A017A1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FF5BB41A6D65FB00A017A1 /* FirstViewController.swift */; };
+		86FF5BB71A6D65FB00A017A1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FF5BB61A6D65FB00A017A1 /* SecondViewController.swift */; };
+		86FF5BBA1A6D65FB00A017A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86FF5BB81A6D65FB00A017A1 /* Main.storyboard */; };
+		86FF5BBC1A6D65FB00A017A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86FF5BBB1A6D65FB00A017A1 /* Images.xcassets */; };
+		86FF5BBF1A6D65FB00A017A1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86FF5BBD1A6D65FB00A017A1 /* LaunchScreen.xib */; };
+		86FF5BCB1A6D65FB00A017A1 /* TaskApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FF5BCA1A6D65FB00A017A1 /* TaskApplicationTests.swift */; };
+		86FF5BD51A6D697400A017A1 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FF5BD41A6D697400A017A1 /* TaskManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		86FF5BC51A6D65FB00A017A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86FF5BA51A6D65FB00A017A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86FF5BAC1A6D65FB00A017A1;
+			remoteInfo = TaskApplication;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1E229AB81F30F05F0045C109 /* libbson-1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libbson-1.0.a"; path = "../objfiles/libbson-1.0.a"; sourceTree = "<group>"; };
+		1E229AB91F30F05F0045C109 /* libmongoc-1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libmongoc-1.0.a"; path = "../objfiles/libmongoc-1.0.a"; sourceTree = "<group>"; };
+		1E229ABA1F30F05F0045C109 /* mongo_build_debug_mongo_base_libsecure_allocator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_base_libsecure_allocator.a; path = ../objfiles/mongo_build_debug_mongo_base_libsecure_allocator.a; sourceTree = "<group>"; };
+		1E229ABB1F30F05F0045C109 /* mongo_build_debug_mongo_base_libsystem_error.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_base_libsystem_error.a; path = ../objfiles/mongo_build_debug_mongo_base_libsystem_error.a; sourceTree = "<group>"; };
+		1E229ABC1F30F05F0045C109 /* mongo_build_debug_mongo_bson_mutable_libmutable_bson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_bson_mutable_libmutable_bson.a; path = ../objfiles/mongo_build_debug_mongo_bson_mutable_libmutable_bson.a; sourceTree = "<group>"; };
+		1E229ABD1F30F05F0045C109 /* mongo_build_debug_mongo_bson_util_libbson_extract.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_bson_util_libbson_extract.a; path = ../objfiles/mongo_build_debug_mongo_bson_util_libbson_extract.a; sourceTree = "<group>"; };
+		1E229ABE1F30F05F0045C109 /* mongo_build_debug_mongo_client_embedded_libmongo_embedded_capi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_client_embedded_libmongo_embedded_capi.a; path = ../objfiles/mongo_build_debug_mongo_client_embedded_libmongo_embedded_capi.a; sourceTree = "<group>"; };
+		1E229ABF1F30F05F0045C109 /* mongo_build_debug_mongo_client_embedded_libmongo_embedded_transport.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_client_embedded_libmongo_embedded_transport.a; path = ../objfiles/mongo_build_debug_mongo_client_embedded_libmongo_embedded_transport.a; sourceTree = "<group>"; };
+		1E229AC01F30F05F0045C109 /* mongo_build_debug_mongo_client_libauthentication.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_client_libauthentication.a; path = ../objfiles/mongo_build_debug_mongo_client_libauthentication.a; sourceTree = "<group>"; };
+		1E229AC11F30F05F0045C109 /* mongo_build_debug_mongo_client_libclient_query.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_client_libclient_query.a; path = ../objfiles/mongo_build_debug_mongo_client_libclient_query.a; sourceTree = "<group>"; };
+		1E229AC21F30F05F0045C109 /* mongo_build_debug_mongo_client_libclientdriver.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_client_libclientdriver.a; path = ../objfiles/mongo_build_debug_mongo_client_libclientdriver.a; sourceTree = "<group>"; };
+		1E229AC31F30F05F0045C109 /* mongo_build_debug_mongo_client_libconnection_pool.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_client_libconnection_pool.a; path = ../objfiles/mongo_build_debug_mongo_client_libconnection_pool.a; sourceTree = "<group>"; };
+		1E229AC41F30F05F0045C109 /* mongo_build_debug_mongo_client_libconnection_string.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_client_libconnection_string.a; path = ../objfiles/mongo_build_debug_mongo_client_libconnection_string.a; sourceTree = "<group>"; };
+		1E229AC51F30F05F0045C109 /* mongo_build_debug_mongo_client_libfetcher.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_client_libfetcher.a; path = ../objfiles/mongo_build_debug_mongo_client_libfetcher.a; sourceTree = "<group>"; };
+		1E229AC61F30F05F0045C109 /* mongo_build_debug_mongo_client_libread_preference.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_client_libread_preference.a; path = ../objfiles/mongo_build_debug_mongo_client_libread_preference.a; sourceTree = "<group>"; };
+		1E229AC71F30F05F0045C109 /* mongo_build_debug_mongo_client_libremote_command_retry_scheduler.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_client_libremote_command_retry_scheduler.a; path = ../objfiles/mongo_build_debug_mongo_client_libremote_command_retry_scheduler.a; sourceTree = "<group>"; };
+		1E229AC81F30F05F0045C109 /* mongo_build_debug_mongo_client_libremote_command_targeter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_client_libremote_command_targeter.a; path = ../objfiles/mongo_build_debug_mongo_client_libremote_command_targeter.a; sourceTree = "<group>"; };
+		1E229AC91F30F05F0045C109 /* mongo_build_debug_mongo_client_libsasl_client.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_client_libsasl_client.a; path = ../objfiles/mongo_build_debug_mongo_client_libsasl_client.a; sourceTree = "<group>"; };
+		1E229ACA1F30F05F0045C109 /* mongo_build_debug_mongo_crypto_libscramauth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_crypto_libscramauth.a; path = ../objfiles/mongo_build_debug_mongo_crypto_libscramauth.a; sourceTree = "<group>"; };
+		1E229ACB1F30F05F0045C109 /* mongo_build_debug_mongo_crypto_libsha_block_tom.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_crypto_libsha_block_tom.a; path = ../objfiles/mongo_build_debug_mongo_crypto_libsha_block_tom.a; sourceTree = "<group>"; };
+		1E229ACC1F30F05F0045C109 /* mongo_build_debug_mongo_crypto_libsha1_block.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_crypto_libsha1_block.a; path = ../objfiles/mongo_build_debug_mongo_crypto_libsha1_block.a; sourceTree = "<group>"; };
+		1E229ACD1F30F05F0045C109 /* mongo_build_debug_mongo_crypto_libsha256_block.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_crypto_libsha256_block.a; path = ../objfiles/mongo_build_debug_mongo_crypto_libsha256_block.a; sourceTree = "<group>"; };
+		1E229ACE1F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libaddress_restriction.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_auth_libaddress_restriction.a; path = ../objfiles/mongo_build_debug_mongo_db_auth_libaddress_restriction.a; sourceTree = "<group>"; };
+		1E229ACF1F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libauth_rolename.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_auth_libauth_rolename.a; path = ../objfiles/mongo_build_debug_mongo_db_auth_libauth_rolename.a; sourceTree = "<group>"; };
+		1E229AD01F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libauthcommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_auth_libauthcommon.a; path = ../objfiles/mongo_build_debug_mongo_db_auth_libauthcommon.a; sourceTree = "<group>"; };
+		1E229AD11F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libauthcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_auth_libauthcore.a; path = ../objfiles/mongo_build_debug_mongo_db_auth_libauthcore.a; sourceTree = "<group>"; };
+		1E229AD21F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libauthentication_restriction.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_auth_libauthentication_restriction.a; path = ../objfiles/mongo_build_debug_mongo_db_auth_libauthentication_restriction.a; sourceTree = "<group>"; };
+		1E229AD31F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libauthmocks.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_auth_libauthmocks.a; path = ../objfiles/mongo_build_debug_mongo_db_auth_libauthmocks.a; sourceTree = "<group>"; };
+		1E229AD41F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libauthmongod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_auth_libauthmongod.a; path = ../objfiles/mongo_build_debug_mongo_db_auth_libauthmongod.a; sourceTree = "<group>"; };
+		1E229AD51F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libauthorization_manager_global.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_auth_libauthorization_manager_global.a; path = ../objfiles/mongo_build_debug_mongo_db_auth_libauthorization_manager_global.a; sourceTree = "<group>"; };
+		1E229AD61F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libauthprivilege.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_auth_libauthprivilege.a; path = ../objfiles/mongo_build_debug_mongo_db_auth_libauthprivilege.a; sourceTree = "<group>"; };
+		1E229AD71F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libauthservercommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_auth_libauthservercommon.a; path = ../objfiles/mongo_build_debug_mongo_db_auth_libauthservercommon.a; sourceTree = "<group>"; };
+		1E229AD81F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libsasl_options.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_auth_libsasl_options.a; path = ../objfiles/mongo_build_debug_mongo_db_auth_libsasl_options.a; sourceTree = "<group>"; };
+		1E229AD91F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libsaslauth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_auth_libsaslauth.a; path = ../objfiles/mongo_build_debug_mongo_db_auth_libsaslauth.a; sourceTree = "<group>"; };
+		1E229ADA1F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libsecurity_file.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_auth_libsecurity_file.a; path = ../objfiles/mongo_build_debug_mongo_db_auth_libsecurity_file.a; sourceTree = "<group>"; };
+		1E229ADB1F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libserverauth.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_auth_libserverauth.a; path = ../objfiles/mongo_build_debug_mongo_db_auth_libserverauth.a; sourceTree = "<group>"; };
+		1E229ADC1F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libuser_name.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_auth_libuser_name.a; path = ../objfiles/mongo_build_debug_mongo_db_auth_libuser_name.a; sourceTree = "<group>"; };
+		1E229ADD1F30F05F0045C109 /* mongo_build_debug_mongo_db_bson_libdotted_path_support.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_bson_libdotted_path_support.a; path = ../objfiles/mongo_build_debug_mongo_db_bson_libdotted_path_support.a; sourceTree = "<group>"; };
+		1E229ADE1F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libcatalog_helpers.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_catalog_libcatalog_helpers.a; path = ../objfiles/mongo_build_debug_mongo_db_catalog_libcatalog_helpers.a; sourceTree = "<group>"; };
+		1E229ADF1F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libcatalog.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_catalog_libcatalog.a; path = ../objfiles/mongo_build_debug_mongo_db_catalog_libcatalog.a; sourceTree = "<group>"; };
+		1E229AE01F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libcollection_info_cache.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_catalog_libcollection_info_cache.a; path = ../objfiles/mongo_build_debug_mongo_db_catalog_libcollection_info_cache.a; sourceTree = "<group>"; };
+		1E229AE11F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libcollection_options.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_catalog_libcollection_options.a; path = ../objfiles/mongo_build_debug_mongo_db_catalog_libcollection_options.a; sourceTree = "<group>"; };
+		1E229AE21F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libcollection.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_catalog_libcollection.a; path = ../objfiles/mongo_build_debug_mongo_db_catalog_libcollection.a; sourceTree = "<group>"; };
+		1E229AE31F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libdatabase_holder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_catalog_libdatabase_holder.a; path = ../objfiles/mongo_build_debug_mongo_db_catalog_libdatabase_holder.a; sourceTree = "<group>"; };
+		1E229AE41F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libdatabase.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_catalog_libdatabase.a; path = ../objfiles/mongo_build_debug_mongo_db_catalog_libdatabase.a; sourceTree = "<group>"; };
+		1E229AE51F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libdocument_validation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_catalog_libdocument_validation.a; path = ../objfiles/mongo_build_debug_mongo_db_catalog_libdocument_validation.a; sourceTree = "<group>"; };
+		1E229AE61F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libindex_catalog_entry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_catalog_libindex_catalog_entry.a; path = ../objfiles/mongo_build_debug_mongo_db_catalog_libindex_catalog_entry.a; sourceTree = "<group>"; };
+		1E229AE71F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libindex_catalog.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_catalog_libindex_catalog.a; path = ../objfiles/mongo_build_debug_mongo_db_catalog_libindex_catalog.a; sourceTree = "<group>"; };
+		1E229AE81F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libindex_create.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_catalog_libindex_create.a; path = ../objfiles/mongo_build_debug_mongo_db_catalog_libindex_create.a; sourceTree = "<group>"; };
+		1E229AE91F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libindex_key_validate.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_catalog_libindex_key_validate.a; path = ../objfiles/mongo_build_debug_mongo_db_catalog_libindex_key_validate.a; sourceTree = "<group>"; };
+		1E229AEA1F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libuuid_catalog.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_catalog_libuuid_catalog.a; path = ../objfiles/mongo_build_debug_mongo_db_catalog_libuuid_catalog.a; sourceTree = "<group>"; };
+		1E229AEB1F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_commands_libcore.a; path = ../objfiles/mongo_build_debug_mongo_db_commands_libcore.a; sourceTree = "<group>"; };
+		1E229AEC1F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libcurrent_op_common.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_commands_libcurrent_op_common.a; path = ../objfiles/mongo_build_debug_mongo_db_commands_libcurrent_op_common.a; sourceTree = "<group>"; };
+		1E229AED1F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libdcommands_fcv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_commands_libdcommands_fcv.a; path = ../objfiles/mongo_build_debug_mongo_db_commands_libdcommands_fcv.a; sourceTree = "<group>"; };
+		1E229AEE1F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libdcommands_fsync.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_commands_libdcommands_fsync.a; path = ../objfiles/mongo_build_debug_mongo_db_commands_libdcommands_fsync.a; sourceTree = "<group>"; };
+		1E229AEF1F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libdcommands.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_commands_libdcommands.a; path = ../objfiles/mongo_build_debug_mongo_db_commands_libdcommands.a; sourceTree = "<group>"; };
+		1E229AF01F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libkillcursors_common.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_commands_libkillcursors_common.a; path = ../objfiles/mongo_build_debug_mongo_db_commands_libkillcursors_common.a; sourceTree = "<group>"; };
+		1E229AF11F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_liblist_collections_filter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_commands_liblist_collections_filter.a; path = ../objfiles/mongo_build_debug_mongo_db_commands_liblist_collections_filter.a; sourceTree = "<group>"; };
+		1E229AF21F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libserver_status_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_commands_libserver_status_core.a; path = ../objfiles/mongo_build_debug_mongo_db_commands_libserver_status_core.a; sourceTree = "<group>"; };
+		1E229AF31F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libserver_status.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_commands_libserver_status.a; path = ../objfiles/mongo_build_debug_mongo_db_commands_libserver_status.a; sourceTree = "<group>"; };
+		1E229AF41F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libtest_commands_enabled.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_commands_libtest_commands_enabled.a; path = ../objfiles/mongo_build_debug_mongo_db_commands_libtest_commands_enabled.a; sourceTree = "<group>"; };
+		1E229AF51F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libwrite_commands_common.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_commands_libwrite_commands_common.a; path = ../objfiles/mongo_build_debug_mongo_db_commands_libwrite_commands_common.a; sourceTree = "<group>"; };
+		1E229AF61F30F05F0045C109 /* mongo_build_debug_mongo_db_concurrency_libglobal_lock_acquisition_tracker.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_concurrency_libglobal_lock_acquisition_tracker.a; path = ../objfiles/mongo_build_debug_mongo_db_concurrency_libglobal_lock_acquisition_tracker.a; sourceTree = "<group>"; };
+		1E229AF71F30F05F0045C109 /* mongo_build_debug_mongo_db_concurrency_liblock_manager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_concurrency_liblock_manager.a; path = ../objfiles/mongo_build_debug_mongo_db_concurrency_liblock_manager.a; sourceTree = "<group>"; };
+		1E229AF81F30F05F0045C109 /* mongo_build_debug_mongo_db_concurrency_libwrite_conflict_exception.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_concurrency_libwrite_conflict_exception.a; path = ../objfiles/mongo_build_debug_mongo_db_concurrency_libwrite_conflict_exception.a; sourceTree = "<group>"; };
+		1E229AF91F30F05F0045C109 /* mongo_build_debug_mongo_db_exec_libexec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_exec_libexec.a; path = ../objfiles/mongo_build_debug_mongo_db_exec_libexec.a; sourceTree = "<group>"; };
+		1E229AFA1F30F05F0045C109 /* mongo_build_debug_mongo_db_exec_libscoped_timer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_exec_libscoped_timer.a; path = ../objfiles/mongo_build_debug_mongo_db_exec_libscoped_timer.a; sourceTree = "<group>"; };
+		1E229AFB1F30F05F0045C109 /* mongo_build_debug_mongo_db_exec_libworking_set.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_exec_libworking_set.a; path = ../objfiles/mongo_build_debug_mongo_db_exec_libworking_set.a; sourceTree = "<group>"; };
+		1E229AFC1F30F05F0045C109 /* mongo_build_debug_mongo_db_ftdc_libftdc_mongod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_ftdc_libftdc_mongod.a; path = ../objfiles/mongo_build_debug_mongo_db_ftdc_libftdc_mongod.a; sourceTree = "<group>"; };
+		1E229AFD1F30F05F0045C109 /* mongo_build_debug_mongo_db_ftdc_libftdc_server.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_ftdc_libftdc_server.a; path = ../objfiles/mongo_build_debug_mongo_db_ftdc_libftdc_server.a; sourceTree = "<group>"; };
+		1E229AFE1F30F05F0045C109 /* mongo_build_debug_mongo_db_ftdc_libftdc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_ftdc_libftdc.a; path = ../objfiles/mongo_build_debug_mongo_db_ftdc_libftdc.a; sourceTree = "<group>"; };
+		1E229AFF1F30F05F0045C109 /* mongo_build_debug_mongo_db_fts_libbase.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_fts_libbase.a; path = ../objfiles/mongo_build_debug_mongo_db_fts_libbase.a; sourceTree = "<group>"; };
+		1E229B001F30F05F0045C109 /* mongo_build_debug_mongo_db_fts_libfts_query_noop.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_fts_libfts_query_noop.a; path = ../objfiles/mongo_build_debug_mongo_db_fts_libfts_query_noop.a; sourceTree = "<group>"; };
+		1E229B011F30F05F0045C109 /* mongo_build_debug_mongo_db_fts_libftsmongod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_fts_libftsmongod.a; path = ../objfiles/mongo_build_debug_mongo_db_fts_libftsmongod.a; sourceTree = "<group>"; };
+		1E229B021F30F05F0045C109 /* mongo_build_debug_mongo_db_fts_unicode_libunicode.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_fts_unicode_libunicode.a; path = ../objfiles/mongo_build_debug_mongo_db_fts_unicode_libunicode.a; sourceTree = "<group>"; };
+		1E229B031F30F05F0045C109 /* mongo_build_debug_mongo_db_geo_libgeometry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_geo_libgeometry.a; path = ../objfiles/mongo_build_debug_mongo_db_geo_libgeometry.a; sourceTree = "<group>"; };
+		1E229B041F30F05F0045C109 /* mongo_build_debug_mongo_db_geo_libgeoparser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_geo_libgeoparser.a; path = ../objfiles/mongo_build_debug_mongo_db_geo_libgeoparser.a; sourceTree = "<group>"; };
+		1E229B051F30F05F0045C109 /* mongo_build_debug_mongo_db_index_libexpression_params.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_index_libexpression_params.a; path = ../objfiles/mongo_build_debug_mongo_db_index_libexpression_params.a; sourceTree = "<group>"; };
+		1E229B061F30F05F0045C109 /* mongo_build_debug_mongo_db_index_libindex_access_methods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_index_libindex_access_methods.a; path = ../objfiles/mongo_build_debug_mongo_db_index_libindex_access_methods.a; sourceTree = "<group>"; };
+		1E229B071F30F05F0045C109 /* mongo_build_debug_mongo_db_index_libindex_descriptor.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_index_libindex_descriptor.a; path = ../objfiles/mongo_build_debug_mongo_db_index_libindex_descriptor.a; sourceTree = "<group>"; };
+		1E229B081F30F05F0045C109 /* mongo_build_debug_mongo_db_index_libkey_generator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_index_libkey_generator.a; path = ../objfiles/mongo_build_debug_mongo_db_index_libkey_generator.a; sourceTree = "<group>"; };
+		1E229B091F30F05F0045C109 /* mongo_build_debug_mongo_db_libaudit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libaudit.a; path = ../objfiles/mongo_build_debug_mongo_db_libaudit.a; sourceTree = "<group>"; };
+		1E229B0A1F30F05F0045C109 /* mongo_build_debug_mongo_db_libauthz_manager_external_state_factory_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libauthz_manager_external_state_factory_d.a; path = ../objfiles/mongo_build_debug_mongo_db_libauthz_manager_external_state_factory_d.a; sourceTree = "<group>"; };
+		1E229B0B1F30F05F0045C109 /* mongo_build_debug_mongo_db_libbackground.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libbackground.a; path = ../objfiles/mongo_build_debug_mongo_db_libbackground.a; sourceTree = "<group>"; };
+		1E229B0C1F30F05F0045C109 /* mongo_build_debug_mongo_db_libclientcursor.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libclientcursor.a; path = ../objfiles/mongo_build_debug_mongo_db_libclientcursor.a; sourceTree = "<group>"; };
+		1E229B0D1F30F05F0045C109 /* mongo_build_debug_mongo_db_libcloner.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libcloner.a; path = ../objfiles/mongo_build_debug_mongo_db_libcloner.a; sourceTree = "<group>"; };
+		1E229B0E1F30F05F0045C109 /* mongo_build_debug_mongo_db_libcollection_index_usage_tracker.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libcollection_index_usage_tracker.a; path = ../objfiles/mongo_build_debug_mongo_db_libcollection_index_usage_tracker.a; sourceTree = "<group>"; };
+		1E229B0F1F30F05F0045C109 /* mongo_build_debug_mongo_db_libcommands.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libcommands.a; path = ../objfiles/mongo_build_debug_mongo_db_libcommands.a; sourceTree = "<group>"; };
+		1E229B101F30F05F0045C109 /* mongo_build_debug_mongo_db_libcommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libcommon.a; path = ../objfiles/mongo_build_debug_mongo_db_libcommon.a; sourceTree = "<group>"; };
+		1E229B111F30F05F0045C109 /* mongo_build_debug_mongo_db_libconn_pool_options.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libconn_pool_options.a; path = ../objfiles/mongo_build_debug_mongo_db_libconn_pool_options.a; sourceTree = "<group>"; };
+		1E229B121F30F05F0045C109 /* mongo_build_debug_mongo_db_libcurop_metrics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libcurop_metrics.a; path = ../objfiles/mongo_build_debug_mongo_db_libcurop_metrics.a; sourceTree = "<group>"; };
+		1E229B131F30F05F0045C109 /* mongo_build_debug_mongo_db_libcurop.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libcurop.a; path = ../objfiles/mongo_build_debug_mongo_db_libcurop.a; sourceTree = "<group>"; };
+		1E229B141F30F05F0045C109 /* mongo_build_debug_mongo_db_libdb_raii.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libdb_raii.a; path = ../objfiles/mongo_build_debug_mongo_db_libdb_raii.a; sourceTree = "<group>"; };
+		1E229B151F30F05F0045C109 /* mongo_build_debug_mongo_db_libdbdirectclient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libdbdirectclient.a; path = ../objfiles/mongo_build_debug_mongo_db_libdbdirectclient.a; sourceTree = "<group>"; };
+		1E229B161F30F05F0045C109 /* mongo_build_debug_mongo_db_libdbhelpers.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libdbhelpers.a; path = ../objfiles/mongo_build_debug_mongo_db_libdbhelpers.a; sourceTree = "<group>"; };
+		1E229B171F30F05F0045C109 /* mongo_build_debug_mongo_db_libdbmessage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libdbmessage.a; path = ../objfiles/mongo_build_debug_mongo_db_libdbmessage.a; sourceTree = "<group>"; };
+		1E229B181F30F05F0045C109 /* mongo_build_debug_mongo_db_libdiag_log.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libdiag_log.a; path = ../objfiles/mongo_build_debug_mongo_db_libdiag_log.a; sourceTree = "<group>"; };
+		1E229B191F30F05F0045C109 /* mongo_build_debug_mongo_db_libindex_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libindex_d.a; path = ../objfiles/mongo_build_debug_mongo_db_libindex_d.a; sourceTree = "<group>"; };
+		1E229B1A1F30F05F0045C109 /* mongo_build_debug_mongo_db_libindex_names.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libindex_names.a; path = ../objfiles/mongo_build_debug_mongo_db_libindex_names.a; sourceTree = "<group>"; };
+		1E229B1B1F30F05F0045C109 /* mongo_build_debug_mongo_db_libinitialize_snmp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libinitialize_snmp.a; path = ../objfiles/mongo_build_debug_mongo_db_libinitialize_snmp.a; sourceTree = "<group>"; };
+		1E229B1C1F30F05F0045C109 /* mongo_build_debug_mongo_db_libintrospect.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libintrospect.a; path = ../objfiles/mongo_build_debug_mongo_db_libintrospect.a; sourceTree = "<group>"; };
+		1E229B1D1F30F05F0045C109 /* mongo_build_debug_mongo_db_libkeys_collection_document.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libkeys_collection_document.a; path = ../objfiles/mongo_build_debug_mongo_db_libkeys_collection_document.a; sourceTree = "<group>"; };
+		1E229B1E1F30F05F0045C109 /* mongo_build_debug_mongo_db_libkeys_collection_manager_direct.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libkeys_collection_manager_direct.a; path = ../objfiles/mongo_build_debug_mongo_db_libkeys_collection_manager_direct.a; sourceTree = "<group>"; };
+		1E229B1F1F30F05F0045C109 /* mongo_build_debug_mongo_db_libkeys_collection_manager_sharding.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libkeys_collection_manager_sharding.a; path = ../objfiles/mongo_build_debug_mongo_db_libkeys_collection_manager_sharding.a; sourceTree = "<group>"; };
+		1E229B201F30F05F0045C109 /* mongo_build_debug_mongo_db_libkeys_collection_manager_zero.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libkeys_collection_manager_zero.a; path = ../objfiles/mongo_build_debug_mongo_db_libkeys_collection_manager_zero.a; sourceTree = "<group>"; };
+		1E229B211F30F05F0045C109 /* mongo_build_debug_mongo_db_libkeys_collection_manager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libkeys_collection_manager.a; path = ../objfiles/mongo_build_debug_mongo_db_libkeys_collection_manager.a; sourceTree = "<group>"; };
+		1E229B221F30F05F0045C109 /* mongo_build_debug_mongo_db_liblasterror.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_liblasterror.a; path = ../objfiles/mongo_build_debug_mongo_db_liblasterror.a; sourceTree = "<group>"; };
+		1E229B231F30F05F0045C109 /* mongo_build_debug_mongo_db_liblog_process_details.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_liblog_process_details.a; path = ../objfiles/mongo_build_debug_mongo_db_liblog_process_details.a; sourceTree = "<group>"; };
+		1E229B241F30F05F0045C109 /* mongo_build_debug_mongo_db_liblogical_clock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_liblogical_clock.a; path = ../objfiles/mongo_build_debug_mongo_db_liblogical_clock.a; sourceTree = "<group>"; };
+		1E229B251F30F05F0045C109 /* mongo_build_debug_mongo_db_liblogical_session_cache_factory_mongod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_liblogical_session_cache_factory_mongod.a; path = ../objfiles/mongo_build_debug_mongo_db_liblogical_session_cache_factory_mongod.a; sourceTree = "<group>"; };
+		1E229B261F30F05F0045C109 /* mongo_build_debug_mongo_db_liblogical_session_cache_factory_mongos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_liblogical_session_cache_factory_mongos.a; path = ../objfiles/mongo_build_debug_mongo_db_liblogical_session_cache_factory_mongos.a; sourceTree = "<group>"; };
+		1E229B271F30F05F0045C109 /* mongo_build_debug_mongo_db_liblogical_session_cache.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_liblogical_session_cache.a; path = ../objfiles/mongo_build_debug_mongo_db_liblogical_session_cache.a; sourceTree = "<group>"; };
+		1E229B281F30F05F0045C109 /* mongo_build_debug_mongo_db_liblogical_session_id_helpers.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_liblogical_session_id_helpers.a; path = ../objfiles/mongo_build_debug_mongo_db_liblogical_session_id_helpers.a; sourceTree = "<group>"; };
+		1E229B291F30F05F0045C109 /* mongo_build_debug_mongo_db_liblogical_session_id.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_liblogical_session_id.a; path = ../objfiles/mongo_build_debug_mongo_db_liblogical_session_id.a; sourceTree = "<group>"; };
+		1E229B2A1F30F05F0045C109 /* mongo_build_debug_mongo_db_liblogical_time_metadata_hook.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_liblogical_time_metadata_hook.a; path = ../objfiles/mongo_build_debug_mongo_db_liblogical_time_metadata_hook.a; sourceTree = "<group>"; };
+		1E229B2B1F30F05F0045C109 /* mongo_build_debug_mongo_db_liblogical_time_validator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_liblogical_time_validator.a; path = ../objfiles/mongo_build_debug_mongo_db_liblogical_time_validator.a; sourceTree = "<group>"; };
+		1E229B2C1F30F05F0045C109 /* mongo_build_debug_mongo_db_liblogical_time.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_liblogical_time.a; path = ../objfiles/mongo_build_debug_mongo_db_liblogical_time.a; sourceTree = "<group>"; };
+		1E229B2D1F30F05F0045C109 /* mongo_build_debug_mongo_db_libmongod_options.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libmongod_options.a; path = ../objfiles/mongo_build_debug_mongo_db_libmongod_options.a; sourceTree = "<group>"; };
+		1E229B2E1F30F05F0045C109 /* mongo_build_debug_mongo_db_libmongodandmongos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libmongodandmongos.a; path = ../objfiles/mongo_build_debug_mongo_db_libmongodandmongos.a; sourceTree = "<group>"; };
+		1E229B2F1F30F05F0045C109 /* mongo_build_debug_mongo_db_libmongohasher.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libmongohasher.a; path = ../objfiles/mongo_build_debug_mongo_db_libmongohasher.a; sourceTree = "<group>"; };
+		1E229B301F30F05F0045C109 /* mongo_build_debug_mongo_db_libnamespace_string.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libnamespace_string.a; path = ../objfiles/mongo_build_debug_mongo_db_libnamespace_string.a; sourceTree = "<group>"; };
+		1E229B311F30F05F0045C109 /* mongo_build_debug_mongo_db_libop_observer_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libop_observer_d.a; path = ../objfiles/mongo_build_debug_mongo_db_libop_observer_d.a; sourceTree = "<group>"; };
+		1E229B321F30F05F0045C109 /* mongo_build_debug_mongo_db_libprefetch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libprefetch.a; path = ../objfiles/mongo_build_debug_mongo_db_libprefetch.a; sourceTree = "<group>"; };
+		1E229B331F30F05F0045C109 /* mongo_build_debug_mongo_db_librange_arithmetic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_librange_arithmetic.a; path = ../objfiles/mongo_build_debug_mongo_db_librange_arithmetic.a; sourceTree = "<group>"; };
+		1E229B341F30F05F0045C109 /* mongo_build_debug_mongo_db_librepair_database.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_librepair_database.a; path = ../objfiles/mongo_build_debug_mongo_db_librepair_database.a; sourceTree = "<group>"; };
+		1E229B351F30F05F0045C109 /* mongo_build_debug_mongo_db_librw_concern_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_librw_concern_d.a; path = ../objfiles/mongo_build_debug_mongo_db_librw_concern_d.a; sourceTree = "<group>"; };
+		1E229B361F30F05F0045C109 /* mongo_build_debug_mongo_db_libserver_options_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libserver_options_core.a; path = ../objfiles/mongo_build_debug_mongo_db_libserver_options_core.a; sourceTree = "<group>"; };
+		1E229B371F30F05F0045C109 /* mongo_build_debug_mongo_db_libserver_options.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libserver_options.a; path = ../objfiles/mongo_build_debug_mongo_db_libserver_options.a; sourceTree = "<group>"; };
+		1E229B381F30F05F0045C109 /* mongo_build_debug_mongo_db_libserver_parameters.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libserver_parameters.a; path = ../objfiles/mongo_build_debug_mongo_db_libserver_parameters.a; sourceTree = "<group>"; };
+		1E229B391F30F05F0045C109 /* mongo_build_debug_mongo_db_libserveronly.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libserveronly.a; path = ../objfiles/mongo_build_debug_mongo_db_libserveronly.a; sourceTree = "<group>"; };
+		1E229B3A1F30F05F0045C109 /* mongo_build_debug_mongo_db_libservice_context_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libservice_context_d.a; path = ../objfiles/mongo_build_debug_mongo_db_libservice_context_d.a; sourceTree = "<group>"; };
+		1E229B3B1F30F05F0045C109 /* mongo_build_debug_mongo_db_libservice_context.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libservice_context.a; path = ../objfiles/mongo_build_debug_mongo_db_libservice_context.a; sourceTree = "<group>"; };
+		1E229B3C1F30F05F0045C109 /* mongo_build_debug_mongo_db_libservice_liason_mongod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libservice_liason_mongod.a; path = ../objfiles/mongo_build_debug_mongo_db_libservice_liason_mongod.a; sourceTree = "<group>"; };
+		1E229B3D1F30F05F0045C109 /* mongo_build_debug_mongo_db_libservice_liason_mongos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libservice_liason_mongos.a; path = ../objfiles/mongo_build_debug_mongo_db_libservice_liason_mongos.a; sourceTree = "<group>"; };
+		1E229B3E1F30F05F0045C109 /* mongo_build_debug_mongo_db_libservice_liason.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libservice_liason.a; path = ../objfiles/mongo_build_debug_mongo_db_libservice_liason.a; sourceTree = "<group>"; };
+		1E229B3F1F30F05F0045C109 /* mongo_build_debug_mongo_db_libsessions_collection_mock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libsessions_collection_mock.a; path = ../objfiles/mongo_build_debug_mongo_db_libsessions_collection_mock.a; sourceTree = "<group>"; };
+		1E229B401F30F05F0045C109 /* mongo_build_debug_mongo_db_libsessions_collection.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libsessions_collection.a; path = ../objfiles/mongo_build_debug_mongo_db_libsessions_collection.a; sourceTree = "<group>"; };
+		1E229B411F30F05F0045C109 /* mongo_build_debug_mongo_db_libsigned_logical_time.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libsigned_logical_time.a; path = ../objfiles/mongo_build_debug_mongo_db_libsigned_logical_time.a; sourceTree = "<group>"; };
+		1E229B421F30F05F0045C109 /* mongo_build_debug_mongo_db_libstartup_warnings_common.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libstartup_warnings_common.a; path = ../objfiles/mongo_build_debug_mongo_db_libstartup_warnings_common.a; sourceTree = "<group>"; };
+		1E229B431F30F05F0045C109 /* mongo_build_debug_mongo_db_libstartup_warnings_mongod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libstartup_warnings_mongod.a; path = ../objfiles/mongo_build_debug_mongo_db_libstartup_warnings_mongod.a; sourceTree = "<group>"; };
+		1E229B441F30F05F0045C109 /* mongo_build_debug_mongo_db_libsystem_index.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libsystem_index.a; path = ../objfiles/mongo_build_debug_mongo_db_libsystem_index.a; sourceTree = "<group>"; };
+		1E229B451F30F05F0045C109 /* mongo_build_debug_mongo_db_libtime_proof_service.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libtime_proof_service.a; path = ../objfiles/mongo_build_debug_mongo_db_libtime_proof_service.a; sourceTree = "<group>"; };
+		1E229B461F30F05F0045C109 /* mongo_build_debug_mongo_db_libttl_collection_cache.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libttl_collection_cache.a; path = ../objfiles/mongo_build_debug_mongo_db_libttl_collection_cache.a; sourceTree = "<group>"; };
+		1E229B471F30F05F0045C109 /* mongo_build_debug_mongo_db_libttl_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libttl_d.a; path = ../objfiles/mongo_build_debug_mongo_db_libttl_d.a; sourceTree = "<group>"; };
+		1E229B481F30F05F0045C109 /* mongo_build_debug_mongo_db_libupdate_index_data.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libupdate_index_data.a; path = ../objfiles/mongo_build_debug_mongo_db_libupdate_index_data.a; sourceTree = "<group>"; };
+		1E229B491F30F05F0045C109 /* mongo_build_debug_mongo_db_libwire_version.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libwire_version.a; path = ../objfiles/mongo_build_debug_mongo_db_libwire_version.a; sourceTree = "<group>"; };
+		1E229B4A1F30F05F0045C109 /* mongo_build_debug_mongo_db_libwrite_concern_options.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libwrite_concern_options.a; path = ../objfiles/mongo_build_debug_mongo_db_libwrite_concern_options.a; sourceTree = "<group>"; };
+		1E229B4B1F30F05F0045C109 /* mongo_build_debug_mongo_db_libwrite_ops.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_libwrite_ops.a; path = ../objfiles/mongo_build_debug_mongo_db_libwrite_ops.a; sourceTree = "<group>"; };
+		1E229B4C1F30F05F0045C109 /* mongo_build_debug_mongo_db_matcher_libexpression_algo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_matcher_libexpression_algo.a; path = ../objfiles/mongo_build_debug_mongo_db_matcher_libexpression_algo.a; sourceTree = "<group>"; };
+		1E229B4D1F30F05F0045C109 /* mongo_build_debug_mongo_db_matcher_libexpressions_mongod_only.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_matcher_libexpressions_mongod_only.a; path = ../objfiles/mongo_build_debug_mongo_db_matcher_libexpressions_mongod_only.a; sourceTree = "<group>"; };
+		1E229B4E1F30F05F0045C109 /* mongo_build_debug_mongo_db_matcher_libexpressions.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_matcher_libexpressions.a; path = ../objfiles/mongo_build_debug_mongo_db_matcher_libexpressions.a; sourceTree = "<group>"; };
+		1E229B4F1F30F05F0045C109 /* mongo_build_debug_mongo_db_matcher_libpath.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_matcher_libpath.a; path = ../objfiles/mongo_build_debug_mongo_db_matcher_libpath.a; sourceTree = "<group>"; };
+		1E229B501F30F05F0045C109 /* mongo_build_debug_mongo_db_ops_libupdate.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_ops_libupdate.a; path = ../objfiles/mongo_build_debug_mongo_db_ops_libupdate.a; sourceTree = "<group>"; };
+		1E229B511F30F05F0045C109 /* mongo_build_debug_mongo_db_ops_libwrite_ops_parsers.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_ops_libwrite_ops_parsers.a; path = ../objfiles/mongo_build_debug_mongo_db_ops_libwrite_ops_parsers.a; sourceTree = "<group>"; };
+		1E229B521F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libaccumulator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_pipeline_libaccumulator.a; path = ../objfiles/mongo_build_debug_mongo_db_pipeline_libaccumulator.a; sourceTree = "<group>"; };
+		1E229B531F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libaggregation_request.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_pipeline_libaggregation_request.a; path = ../objfiles/mongo_build_debug_mongo_db_pipeline_libaggregation_request.a; sourceTree = "<group>"; };
+		1E229B541F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libaggregation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_pipeline_libaggregation.a; path = ../objfiles/mongo_build_debug_mongo_db_pipeline_libaggregation.a; sourceTree = "<group>"; };
+		1E229B551F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libdependencies.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_pipeline_libdependencies.a; path = ../objfiles/mongo_build_debug_mongo_db_pipeline_libdependencies.a; sourceTree = "<group>"; };
+		1E229B561F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libdocument_source_facet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_pipeline_libdocument_source_facet.a; path = ../objfiles/mongo_build_debug_mongo_db_pipeline_libdocument_source_facet.a; sourceTree = "<group>"; };
+		1E229B571F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libdocument_source_lookup.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_pipeline_libdocument_source_lookup.a; path = ../objfiles/mongo_build_debug_mongo_db_pipeline_libdocument_source_lookup.a; sourceTree = "<group>"; };
+		1E229B581F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libdocument_source.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_pipeline_libdocument_source.a; path = ../objfiles/mongo_build_debug_mongo_db_pipeline_libdocument_source.a; sourceTree = "<group>"; };
+		1E229B591F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libdocument_value.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_pipeline_libdocument_value.a; path = ../objfiles/mongo_build_debug_mongo_db_pipeline_libdocument_value.a; sourceTree = "<group>"; };
+		1E229B5A1F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libexpression_context.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_pipeline_libexpression_context.a; path = ../objfiles/mongo_build_debug_mongo_db_pipeline_libexpression_context.a; sourceTree = "<group>"; };
+		1E229B5B1F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libexpression.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_pipeline_libexpression.a; path = ../objfiles/mongo_build_debug_mongo_db_pipeline_libexpression.a; sourceTree = "<group>"; };
+		1E229B5C1F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libfield_path.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_pipeline_libfield_path.a; path = ../objfiles/mongo_build_debug_mongo_db_pipeline_libfield_path.a; sourceTree = "<group>"; };
+		1E229B5D1F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libgranularity_rounder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_pipeline_libgranularity_rounder.a; path = ../objfiles/mongo_build_debug_mongo_db_pipeline_libgranularity_rounder.a; sourceTree = "<group>"; };
+		1E229B5E1F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_liblite_parsed_document_source.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_pipeline_liblite_parsed_document_source.a; path = ../objfiles/mongo_build_debug_mongo_db_pipeline_liblite_parsed_document_source.a; sourceTree = "<group>"; };
+		1E229B5F1F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libparsed_aggregation_projection.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_pipeline_libparsed_aggregation_projection.a; path = ../objfiles/mongo_build_debug_mongo_db_pipeline_libparsed_aggregation_projection.a; sourceTree = "<group>"; };
+		1E229B601F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libpipeline.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_pipeline_libpipeline.a; path = ../objfiles/mongo_build_debug_mongo_db_pipeline_libpipeline.a; sourceTree = "<group>"; };
+		1E229B611F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libserveronly.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_pipeline_libserveronly.a; path = ../objfiles/mongo_build_debug_mongo_db_pipeline_libserveronly.a; sourceTree = "<group>"; };
+		1E229B621F30F05F0045C109 /* mongo_build_debug_mongo_db_query_collation_libcollator_factory_interface.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_query_collation_libcollator_factory_interface.a; path = ../objfiles/mongo_build_debug_mongo_db_query_collation_libcollator_factory_interface.a; sourceTree = "<group>"; };
+		1E229B631F30F05F0045C109 /* mongo_build_debug_mongo_db_query_collation_libcollator_factory_mock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_query_collation_libcollator_factory_mock.a; path = ../objfiles/mongo_build_debug_mongo_db_query_collation_libcollator_factory_mock.a; sourceTree = "<group>"; };
+		1E229B641F30F05F0045C109 /* mongo_build_debug_mongo_db_query_collation_libcollator_icu.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_query_collation_libcollator_icu.a; path = ../objfiles/mongo_build_debug_mongo_db_query_collation_libcollator_icu.a; sourceTree = "<group>"; };
+		1E229B651F30F05F0045C109 /* mongo_build_debug_mongo_db_query_collation_libcollator_interface_mock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_query_collation_libcollator_interface_mock.a; path = ../objfiles/mongo_build_debug_mongo_db_query_collation_libcollator_interface_mock.a; sourceTree = "<group>"; };
+		1E229B661F30F05F0045C109 /* mongo_build_debug_mongo_db_query_collation_libcollator_interface.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_query_collation_libcollator_interface.a; path = ../objfiles/mongo_build_debug_mongo_db_query_collation_libcollator_interface.a; sourceTree = "<group>"; };
+		1E229B671F30F05F0045C109 /* mongo_build_debug_mongo_db_query_datetime_libdate_time_support.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_query_datetime_libdate_time_support.a; path = ../objfiles/mongo_build_debug_mongo_db_query_datetime_libdate_time_support.a; sourceTree = "<group>"; };
+		1E229B681F30F05F0045C109 /* mongo_build_debug_mongo_db_query_datetime_libinit_timezone_data.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_query_datetime_libinit_timezone_data.a; path = ../objfiles/mongo_build_debug_mongo_db_query_datetime_libinit_timezone_data.a; sourceTree = "<group>"; };
+		1E229B691F30F05F0045C109 /* mongo_build_debug_mongo_db_query_libcommand_request_response.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_query_libcommand_request_response.a; path = ../objfiles/mongo_build_debug_mongo_db_query_libcommand_request_response.a; sourceTree = "<group>"; };
+		1E229B6A1F30F05F0045C109 /* mongo_build_debug_mongo_db_query_libexplain_options.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_query_libexplain_options.a; path = ../objfiles/mongo_build_debug_mongo_db_query_libexplain_options.a; sourceTree = "<group>"; };
+		1E229B6B1F30F05F0045C109 /* mongo_build_debug_mongo_db_query_libindex_bounds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_query_libindex_bounds.a; path = ../objfiles/mongo_build_debug_mongo_db_query_libindex_bounds.a; sourceTree = "<group>"; };
+		1E229B6C1F30F05F0045C109 /* mongo_build_debug_mongo_db_query_libinternal_plans.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_query_libinternal_plans.a; path = ../objfiles/mongo_build_debug_mongo_db_query_libinternal_plans.a; sourceTree = "<group>"; };
+		1E229B6D1F30F05F0045C109 /* mongo_build_debug_mongo_db_query_libquery_common.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_query_libquery_common.a; path = ../objfiles/mongo_build_debug_mongo_db_query_libquery_common.a; sourceTree = "<group>"; };
+		1E229B6E1F30F05F0045C109 /* mongo_build_debug_mongo_db_query_libquery_planner_test_lib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_query_libquery_planner_test_lib.a; path = ../objfiles/mongo_build_debug_mongo_db_query_libquery_planner_test_lib.a; sourceTree = "<group>"; };
+		1E229B6F1F30F05F0045C109 /* mongo_build_debug_mongo_db_query_libquery_planner.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_query_libquery_planner.a; path = ../objfiles/mongo_build_debug_mongo_db_query_libquery_planner.a; sourceTree = "<group>"; };
+		1E229B701F30F05F0045C109 /* mongo_build_debug_mongo_db_query_libquery_request.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_query_libquery_request.a; path = ../objfiles/mongo_build_debug_mongo_db_query_libquery_request.a; sourceTree = "<group>"; };
+		1E229B711F30F05F0045C109 /* mongo_build_debug_mongo_db_query_libquery.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_query_libquery.a; path = ../objfiles/mongo_build_debug_mongo_db_query_libquery.a; sourceTree = "<group>"; };
+		1E229B721F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libabstract_async_component.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libabstract_async_component.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libabstract_async_component.a; sourceTree = "<group>"; };
+		1E229B731F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libabstract_oplog_fetcher.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libabstract_oplog_fetcher.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libabstract_oplog_fetcher.a; sourceTree = "<group>"; };
+		1E229B741F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libbgsync.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libbgsync.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libbgsync.a; sourceTree = "<group>"; };
+		1E229B751F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libcollection_cloner.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libcollection_cloner.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libcollection_cloner.a; sourceTree = "<group>"; };
+		1E229B761F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libdata_replicator_external_state_impl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libdata_replicator_external_state_impl.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libdata_replicator_external_state_impl.a; sourceTree = "<group>"; };
+		1E229B771F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libdata_replicator_external_state_initial_sync.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libdata_replicator_external_state_initial_sync.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libdata_replicator_external_state_initial_sync.a; sourceTree = "<group>"; };
+		1E229B781F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libdatabase_cloner.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libdatabase_cloner.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libdatabase_cloner.a; sourceTree = "<group>"; };
+		1E229B791F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libdatabases_cloner.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libdatabases_cloner.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libdatabases_cloner.a; sourceTree = "<group>"; };
+		1E229B7A1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libdrop_pending_collection_reaper.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libdrop_pending_collection_reaper.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libdrop_pending_collection_reaper.a; sourceTree = "<group>"; };
+		1E229B7B1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libinitial_syncer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libinitial_syncer.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libinitial_syncer.a; sourceTree = "<group>"; };
+		1E229B7C1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libisself.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libisself.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libisself.a; sourceTree = "<group>"; };
+		1E229B7D1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libmultiapplier.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libmultiapplier.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libmultiapplier.a; sourceTree = "<group>"; };
+		1E229B7E1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_liboplog_buffer_blocking_queue.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_liboplog_buffer_blocking_queue.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_liboplog_buffer_blocking_queue.a; sourceTree = "<group>"; };
+		1E229B7F1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_liboplog_buffer_collection.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_liboplog_buffer_collection.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_liboplog_buffer_collection.a; sourceTree = "<group>"; };
+		1E229B801F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_liboplog_buffer_proxy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_liboplog_buffer_proxy.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_liboplog_buffer_proxy.a; sourceTree = "<group>"; };
+		1E229B811F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_liboplog_entry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_liboplog_entry.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_liboplog_entry.a; sourceTree = "<group>"; };
+		1E229B821F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_liboplog_fetcher.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_liboplog_fetcher.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_liboplog_fetcher.a; sourceTree = "<group>"; };
+		1E229B831F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_liboplog_interface_local.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_liboplog_interface_local.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_liboplog_interface_local.a; sourceTree = "<group>"; };
+		1E229B841F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_liboplog_interface_remote.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_liboplog_interface_remote.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_liboplog_interface_remote.a; sourceTree = "<group>"; };
+		1E229B851F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_liboplog.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_liboplog.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_liboplog.a; sourceTree = "<group>"; };
+		1E229B861F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_liboptime.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_liboptime.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_liboptime.a; sourceTree = "<group>"; };
+		1E229B871F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libread_concern_args.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libread_concern_args.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libread_concern_args.a; sourceTree = "<group>"; };
+		1E229B881F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librepl_coordinator_global.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_librepl_coordinator_global.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_librepl_coordinator_global.a; sourceTree = "<group>"; };
+		1E229B891F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librepl_coordinator_impl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_librepl_coordinator_impl.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_librepl_coordinator_impl.a; sourceTree = "<group>"; };
+		1E229B8A1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librepl_coordinator_interface.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_librepl_coordinator_interface.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_librepl_coordinator_interface.a; sourceTree = "<group>"; };
+		1E229B8B1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librepl_set_commands.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_librepl_set_commands.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_librepl_set_commands.a; sourceTree = "<group>"; };
+		1E229B8C1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librepl_settings.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_librepl_settings.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_librepl_settings.a; sourceTree = "<group>"; };
+		1E229B8D1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libreplica_set_messages.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libreplica_set_messages.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libreplica_set_messages.a; sourceTree = "<group>"; };
+		1E229B8E1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libreplication_consistency_markers_idl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libreplication_consistency_markers_idl.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libreplication_consistency_markers_idl.a; sourceTree = "<group>"; };
+		1E229B8F1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libreplication_consistency_markers_impl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libreplication_consistency_markers_impl.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libreplication_consistency_markers_impl.a; sourceTree = "<group>"; };
+		1E229B901F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libreplication_process.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libreplication_process.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libreplication_process.a; sourceTree = "<group>"; };
+		1E229B911F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libreporter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libreporter.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libreporter.a; sourceTree = "<group>"; };
+		1E229B921F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libroll_back_local_operations.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libroll_back_local_operations.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libroll_back_local_operations.a; sourceTree = "<group>"; };
+		1E229B931F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librollback_checker.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_librollback_checker.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_librollback_checker.a; sourceTree = "<group>"; };
+		1E229B941F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librollback_idl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_librollback_idl.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_librollback_idl.a; sourceTree = "<group>"; };
+		1E229B951F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librollback_impl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_librollback_impl.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_librollback_impl.a; sourceTree = "<group>"; };
+		1E229B961F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librollback_source_impl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_librollback_source_impl.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_librollback_source_impl.a; sourceTree = "<group>"; };
+		1E229B971F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librs_rollback_no_uuid.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_librs_rollback_no_uuid.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_librs_rollback_no_uuid.a; sourceTree = "<group>"; };
+		1E229B981F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librs_rollback.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_librs_rollback.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_librs_rollback.a; sourceTree = "<group>"; };
+		1E229B991F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librslog.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_librslog.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_librslog.a; sourceTree = "<group>"; };
+		1E229B9A1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libscatter_gather.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libscatter_gather.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libscatter_gather.a; sourceTree = "<group>"; };
+		1E229B9B1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libserveronly.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libserveronly.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libserveronly.a; sourceTree = "<group>"; };
+		1E229B9C1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libstorage_interface_impl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libstorage_interface_impl.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libstorage_interface_impl.a; sourceTree = "<group>"; };
+		1E229B9D1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libstorage_interface.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libstorage_interface.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libstorage_interface.a; sourceTree = "<group>"; };
+		1E229B9E1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libsync_source_resolver.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libsync_source_resolver.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libsync_source_resolver.a; sourceTree = "<group>"; };
+		1E229B9F1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libsync_tail.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libsync_tail.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libsync_tail.a; sourceTree = "<group>"; };
+		1E229BA01F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libtask_runner.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libtask_runner.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libtask_runner.a; sourceTree = "<group>"; };
+		1E229BA11F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libtopology_coordinator_impl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libtopology_coordinator_impl.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libtopology_coordinator_impl.a; sourceTree = "<group>"; };
+		1E229BA21F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libtopology_coordinator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_repl_libtopology_coordinator.a; path = ../objfiles/mongo_build_debug_mongo_db_repl_libtopology_coordinator.a; sourceTree = "<group>"; };
+		1E229BA31F30F05F0045C109 /* mongo_build_debug_mongo_db_s_libbalancer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_s_libbalancer.a; path = ../objfiles/mongo_build_debug_mongo_db_s_libbalancer.a; sourceTree = "<group>"; };
+		1E229BA41F30F05F0045C109 /* mongo_build_debug_mongo_db_s_libcollection_metadata.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_s_libcollection_metadata.a; path = ../objfiles/mongo_build_debug_mongo_db_s_libcollection_metadata.a; sourceTree = "<group>"; };
+		1E229BA51F30F05F0045C109 /* mongo_build_debug_mongo_db_s_libcommands.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_s_libcommands.a; path = ../objfiles/mongo_build_debug_mongo_db_s_libcommands.a; sourceTree = "<group>"; };
+		1E229BA61F30F05F0045C109 /* mongo_build_debug_mongo_db_s_libmigration_types.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_s_libmigration_types.a; path = ../objfiles/mongo_build_debug_mongo_db_s_libmigration_types.a; sourceTree = "<group>"; };
+		1E229BA71F30F05F0045C109 /* mongo_build_debug_mongo_db_s_libsharding_task_executor.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_s_libsharding_task_executor.a; path = ../objfiles/mongo_build_debug_mongo_db_s_libsharding_task_executor.a; sourceTree = "<group>"; };
+		1E229BA81F30F05F0045C109 /* mongo_build_debug_mongo_db_s_libsharding.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_s_libsharding.a; path = ../objfiles/mongo_build_debug_mongo_db_s_libsharding.a; sourceTree = "<group>"; };
+		1E229BA91F30F05F0045C109 /* mongo_build_debug_mongo_db_s_libsplit_chunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_s_libsplit_chunk.a; path = ../objfiles/mongo_build_debug_mongo_db_s_libsplit_chunk.a; sourceTree = "<group>"; };
+		1E229BAA1F30F05F0045C109 /* mongo_build_debug_mongo_db_s_libsplit_vector.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_s_libsplit_vector.a; path = ../objfiles/mongo_build_debug_mongo_db_s_libsplit_vector.a; sourceTree = "<group>"; };
+		1E229BAB1F30F05F0045C109 /* mongo_build_debug_mongo_db_s_libtype_shard_identity.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_s_libtype_shard_identity.a; path = ../objfiles/mongo_build_debug_mongo_db_s_libtype_shard_identity.a; sourceTree = "<group>"; };
+		1E229BAC1F30F05F0045C109 /* mongo_build_debug_mongo_db_stats_libcounters.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_stats_libcounters.a; path = ../objfiles/mongo_build_debug_mongo_db_stats_libcounters.a; sourceTree = "<group>"; };
+		1E229BAD1F30F05F0045C109 /* mongo_build_debug_mongo_db_stats_libfill_locker_info.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_stats_libfill_locker_info.a; path = ../objfiles/mongo_build_debug_mongo_db_stats_libfill_locker_info.a; sourceTree = "<group>"; };
+		1E229BAE1F30F05F0045C109 /* mongo_build_debug_mongo_db_stats_libserveronly.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_stats_libserveronly.a; path = ../objfiles/mongo_build_debug_mongo_db_stats_libserveronly.a; sourceTree = "<group>"; };
+		1E229BAF1F30F05F0045C109 /* mongo_build_debug_mongo_db_stats_libtimer_stats.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_stats_libtimer_stats.a; path = ../objfiles/mongo_build_debug_mongo_db_stats_libtimer_stats.a; sourceTree = "<group>"; };
+		1E229BB01F30F05F0045C109 /* mongo_build_debug_mongo_db_stats_libtop.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_stats_libtop.a; path = ../objfiles/mongo_build_debug_mongo_db_stats_libtop.a; sourceTree = "<group>"; };
+		1E229BB11F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_devnull_libstorage_devnull_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_devnull_libstorage_devnull_core.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_devnull_libstorage_devnull_core.a; sourceTree = "<group>"; };
+		1E229BB21F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_devnull_libstorage_devnull.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_devnull_libstorage_devnull.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_devnull_libstorage_devnull.a; sourceTree = "<group>"; };
+		1E229BB31F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_ephemeral_for_test_libephemeral_for_test_record_store.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_ephemeral_for_test_libephemeral_for_test_record_store.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_ephemeral_for_test_libephemeral_for_test_record_store.a; sourceTree = "<group>"; };
+		1E229BB41F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_ephemeral_for_test_libstorage_ephemeral_for_test_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_ephemeral_for_test_libstorage_ephemeral_for_test_core.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_ephemeral_for_test_libstorage_ephemeral_for_test_core.a; sourceTree = "<group>"; };
+		1E229BB51F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_ephemeral_for_test_libstorage_ephemeral_for_test.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_ephemeral_for_test_libstorage_ephemeral_for_test.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_ephemeral_for_test_libstorage_ephemeral_for_test.a; sourceTree = "<group>"; };
+		1E229BB61F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_kv_libkv_database_catalog_entry_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_kv_libkv_database_catalog_entry_core.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_kv_libkv_database_catalog_entry_core.a; sourceTree = "<group>"; };
+		1E229BB71F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_kv_libkv_engine_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_kv_libkv_engine_core.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_kv_libkv_engine_core.a; sourceTree = "<group>"; };
+		1E229BB81F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_kv_libkv_engine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_kv_libkv_engine.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_kv_libkv_engine.a; sourceTree = "<group>"; };
+		1E229BB91F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_kv_libkv_prefix.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_kv_libkv_prefix.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_kv_libkv_prefix.a; sourceTree = "<group>"; };
+		1E229BBA1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_kv_libkv_storage_engine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_kv_libkv_storage_engine.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_kv_libkv_storage_engine.a; sourceTree = "<group>"; };
+		1E229BBB1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_libbson_collection_catalog_entry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_libbson_collection_catalog_entry.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_libbson_collection_catalog_entry.a; sourceTree = "<group>"; };
+		1E229BBC1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_libencryption_hooks.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_libencryption_hooks.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_libencryption_hooks.a; sourceTree = "<group>"; };
+		1E229BBD1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_libindex_entry_comparison.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_libindex_entry_comparison.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_libindex_entry_comparison.a; sourceTree = "<group>"; };
+		1E229BBE1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_libjournal_listener.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_libjournal_listener.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_libjournal_listener.a; sourceTree = "<group>"; };
+		1E229BBF1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_libkey_string.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_libkey_string.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_libkey_string.a; sourceTree = "<group>"; };
+		1E229BC01F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_liboplog_hack.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_liboplog_hack.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_liboplog_hack.a; sourceTree = "<group>"; };
+		1E229BC11F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_libstorage_engine_lock_file.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_libstorage_engine_lock_file.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_libstorage_engine_lock_file.a; sourceTree = "<group>"; };
+		1E229BC21F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_libstorage_engine_metadata.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_libstorage_engine_metadata.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_libstorage_engine_metadata.a; sourceTree = "<group>"; };
+		1E229BC31F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_libstorage_init_d.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_libstorage_init_d.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_libstorage_init_d.a; sourceTree = "<group>"; };
+		1E229BC41F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_libstorage_options.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_libstorage_options.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_libstorage_options.a; sourceTree = "<group>"; };
+		1E229BC51F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_libbtree.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_mmap_v1_libbtree.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_mmap_v1_libbtree.a; sourceTree = "<group>"; };
+		1E229BC61F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_libcompress.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_mmap_v1_libcompress.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_mmap_v1_libcompress.a; sourceTree = "<group>"; };
+		1E229BC71F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_libextent.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_mmap_v1_libextent.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_mmap_v1_libextent.a; sourceTree = "<group>"; };
+		1E229BC81F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_libfile_allocator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_mmap_v1_libfile_allocator.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_mmap_v1_libfile_allocator.a; sourceTree = "<group>"; };
+		1E229BC91F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_liblogfile.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_mmap_v1_liblogfile.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_mmap_v1_liblogfile.a; sourceTree = "<group>"; };
+		1E229BCA1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_libmmap_v1_options.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_mmap_v1_libmmap_v1_options.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_mmap_v1_libmmap_v1_options.a; sourceTree = "<group>"; };
+		1E229BCB1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_libmmap.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_mmap_v1_libmmap.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_mmap_v1_libmmap.a; sourceTree = "<group>"; };
+		1E229BCC1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_libpaths.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_mmap_v1_libpaths.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_mmap_v1_libpaths.a; sourceTree = "<group>"; };
+		1E229BCD1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_librecord_access_tracker.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_mmap_v1_librecord_access_tracker.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_mmap_v1_librecord_access_tracker.a; sourceTree = "<group>"; };
+		1E229BCE1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_librecord_store_v1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_mmap_v1_librecord_store_v1.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_mmap_v1_librecord_store_v1.a; sourceTree = "<group>"; };
+		1E229BCF1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_libstorage_mmapv1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_mmap_v1_libstorage_mmapv1.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_mmap_v1_libstorage_mmapv1.a; sourceTree = "<group>"; };
+		1E229BD01F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_wiredtiger_libstorage_wiredtiger_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_wiredtiger_libstorage_wiredtiger_core.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_wiredtiger_libstorage_wiredtiger_core.a; sourceTree = "<group>"; };
+		1E229BD11F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_wiredtiger_libstorage_wiredtiger_customization_hooks.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_wiredtiger_libstorage_wiredtiger_customization_hooks.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_wiredtiger_libstorage_wiredtiger_customization_hooks.a; sourceTree = "<group>"; };
+		1E229BD21F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_wiredtiger_libstorage_wiredtiger.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_storage_wiredtiger_libstorage_wiredtiger.a; path = ../objfiles/mongo_build_debug_mongo_db_storage_wiredtiger_libstorage_wiredtiger.a; sourceTree = "<group>"; };
+		1E229BD31F30F05F0045C109 /* mongo_build_debug_mongo_db_update_libupdate_common.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_update_libupdate_common.a; path = ../objfiles/mongo_build_debug_mongo_db_update_libupdate_common.a; sourceTree = "<group>"; };
+		1E229BD41F30F05F0045C109 /* mongo_build_debug_mongo_db_update_libupdate_driver.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_update_libupdate_driver.a; path = ../objfiles/mongo_build_debug_mongo_db_update_libupdate_driver.a; sourceTree = "<group>"; };
+		1E229BD51F30F05F0045C109 /* mongo_build_debug_mongo_db_update_libupdate.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_update_libupdate.a; path = ../objfiles/mongo_build_debug_mongo_db_update_libupdate.a; sourceTree = "<group>"; };
+		1E229BD61F30F05F0045C109 /* mongo_build_debug_mongo_db_views_libviews_mongod.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_views_libviews_mongod.a; path = ../objfiles/mongo_build_debug_mongo_db_views_libviews_mongod.a; sourceTree = "<group>"; };
+		1E229BD71F30F05F0045C109 /* mongo_build_debug_mongo_db_views_libviews.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_db_views_libviews.a; path = ../objfiles/mongo_build_debug_mongo_db_views_libviews.a; sourceTree = "<group>"; };
+		1E229BD81F30F05F0045C109 /* mongo_build_debug_mongo_executor_libasync_stream.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_executor_libasync_stream.a; path = ../objfiles/mongo_build_debug_mongo_executor_libasync_stream.a; sourceTree = "<group>"; };
+		1E229BD91F30F05F0045C109 /* mongo_build_debug_mongo_executor_libasync_timer_asio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_executor_libasync_timer_asio.a; path = ../objfiles/mongo_build_debug_mongo_executor_libasync_timer_asio.a; sourceTree = "<group>"; };
+		1E229BDA1F30F05F0045C109 /* mongo_build_debug_mongo_executor_libconnection_pool_stats.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_executor_libconnection_pool_stats.a; path = ../objfiles/mongo_build_debug_mongo_executor_libconnection_pool_stats.a; sourceTree = "<group>"; };
+		1E229BDB1F30F05F0045C109 /* mongo_build_debug_mongo_executor_libconnection_pool.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_executor_libconnection_pool.a; path = ../objfiles/mongo_build_debug_mongo_executor_libconnection_pool.a; sourceTree = "<group>"; };
+		1E229BDC1F30F05F0045C109 /* mongo_build_debug_mongo_executor_libnetwork_interface_asio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_executor_libnetwork_interface_asio.a; path = ../objfiles/mongo_build_debug_mongo_executor_libnetwork_interface_asio.a; sourceTree = "<group>"; };
+		1E229BDD1F30F05F0045C109 /* mongo_build_debug_mongo_executor_libnetwork_interface_factory.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_executor_libnetwork_interface_factory.a; path = ../objfiles/mongo_build_debug_mongo_executor_libnetwork_interface_factory.a; sourceTree = "<group>"; };
+		1E229BDE1F30F05F0045C109 /* mongo_build_debug_mongo_executor_libnetwork_interface_thread_pool.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_executor_libnetwork_interface_thread_pool.a; path = ../objfiles/mongo_build_debug_mongo_executor_libnetwork_interface_thread_pool.a; sourceTree = "<group>"; };
+		1E229BDF1F30F05F0045C109 /* mongo_build_debug_mongo_executor_libnetwork_interface.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_executor_libnetwork_interface.a; path = ../objfiles/mongo_build_debug_mongo_executor_libnetwork_interface.a; sourceTree = "<group>"; };
+		1E229BE01F30F05F0045C109 /* mongo_build_debug_mongo_executor_libremote_command.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_executor_libremote_command.a; path = ../objfiles/mongo_build_debug_mongo_executor_libremote_command.a; sourceTree = "<group>"; };
+		1E229BE11F30F05F0045C109 /* mongo_build_debug_mongo_executor_libtask_executor_interface.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_executor_libtask_executor_interface.a; path = ../objfiles/mongo_build_debug_mongo_executor_libtask_executor_interface.a; sourceTree = "<group>"; };
+		1E229BE21F30F05F0045C109 /* mongo_build_debug_mongo_executor_libtask_executor_pool.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_executor_libtask_executor_pool.a; path = ../objfiles/mongo_build_debug_mongo_executor_libtask_executor_pool.a; sourceTree = "<group>"; };
+		1E229BE31F30F05F0045C109 /* mongo_build_debug_mongo_executor_libthread_pool_task_executor.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_executor_libthread_pool_task_executor.a; path = ../objfiles/mongo_build_debug_mongo_executor_libthread_pool_task_executor.a; sourceTree = "<group>"; };
+		1E229BE41F30F05F0045C109 /* mongo_build_debug_mongo_idl_libidl_parser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_idl_libidl_parser.a; path = ../objfiles/mongo_build_debug_mongo_idl_libidl_parser.a; sourceTree = "<group>"; };
+		1E229BE51F30F05F0045C109 /* mongo_build_debug_mongo_libbase.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_libbase.a; path = ../objfiles/mongo_build_debug_mongo_libbase.a; sourceTree = "<group>"; };
+		1E229BE61F30F05F0045C109 /* mongo_build_debug_mongo_liblinenoise_utf8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_liblinenoise_utf8.a; path = ../objfiles/mongo_build_debug_mongo_liblinenoise_utf8.a; sourceTree = "<group>"; };
+		1E229BE71F30F05F0045C109 /* mongo_build_debug_mongo_libmongodmain.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_libmongodmain.a; path = ../objfiles/mongo_build_debug_mongo_libmongodmain.a; sourceTree = "<group>"; };
+		1E229BE81F30F05F0045C109 /* mongo_build_debug_mongo_logger_libparse_log_component_settings.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_logger_libparse_log_component_settings.a; path = ../objfiles/mongo_build_debug_mongo_logger_libparse_log_component_settings.a; sourceTree = "<group>"; };
+		1E229BE91F30F05F0045C109 /* mongo_build_debug_mongo_rpc_libclient_metadata.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_rpc_libclient_metadata.a; path = ../objfiles/mongo_build_debug_mongo_rpc_libclient_metadata.a; sourceTree = "<group>"; };
+		1E229BEA1F30F05F0045C109 /* mongo_build_debug_mongo_rpc_libcommand_reply.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_rpc_libcommand_reply.a; path = ../objfiles/mongo_build_debug_mongo_rpc_libcommand_reply.a; sourceTree = "<group>"; };
+		1E229BEB1F30F05F0045C109 /* mongo_build_debug_mongo_rpc_libcommand_request.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_rpc_libcommand_request.a; path = ../objfiles/mongo_build_debug_mongo_rpc_libcommand_request.a; sourceTree = "<group>"; };
+		1E229BEC1F30F05F0045C109 /* mongo_build_debug_mongo_rpc_libcommand_status.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_rpc_libcommand_status.a; path = ../objfiles/mongo_build_debug_mongo_rpc_libcommand_status.a; sourceTree = "<group>"; };
+		1E229BED1F30F05F0045C109 /* mongo_build_debug_mongo_rpc_liblegacy_reply.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_rpc_liblegacy_reply.a; path = ../objfiles/mongo_build_debug_mongo_rpc_liblegacy_reply.a; sourceTree = "<group>"; };
+		1E229BEE1F30F05F0045C109 /* mongo_build_debug_mongo_rpc_liblegacy_request.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_rpc_liblegacy_request.a; path = ../objfiles/mongo_build_debug_mongo_rpc_liblegacy_request.a; sourceTree = "<group>"; };
+		1E229BEF1F30F05F0045C109 /* mongo_build_debug_mongo_rpc_libmetadata.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_rpc_libmetadata.a; path = ../objfiles/mongo_build_debug_mongo_rpc_libmetadata.a; sourceTree = "<group>"; };
+		1E229BF01F30F05F0045C109 /* mongo_build_debug_mongo_rpc_libobject_check.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_rpc_libobject_check.a; path = ../objfiles/mongo_build_debug_mongo_rpc_libobject_check.a; sourceTree = "<group>"; };
+		1E229BF11F30F05F0045C109 /* mongo_build_debug_mongo_rpc_libprotocol.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_rpc_libprotocol.a; path = ../objfiles/mongo_build_debug_mongo_rpc_libprotocol.a; sourceTree = "<group>"; };
+		1E229BF21F30F05F0045C109 /* mongo_build_debug_mongo_rpc_librpc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_rpc_librpc.a; path = ../objfiles/mongo_build_debug_mongo_rpc_librpc.a; sourceTree = "<group>"; };
+		1E229BF31F30F05F0045C109 /* mongo_build_debug_mongo_s_catalog_libdist_lock_catalog_impl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_catalog_libdist_lock_catalog_impl.a; path = ../objfiles/mongo_build_debug_mongo_s_catalog_libdist_lock_catalog_impl.a; sourceTree = "<group>"; };
+		1E229BF41F30F05F0045C109 /* mongo_build_debug_mongo_s_catalog_libdist_lock_catalog_interface.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_catalog_libdist_lock_catalog_interface.a; path = ../objfiles/mongo_build_debug_mongo_s_catalog_libdist_lock_catalog_interface.a; sourceTree = "<group>"; };
+		1E229BF51F30F05F0045C109 /* mongo_build_debug_mongo_s_catalog_libdist_lock_manager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_catalog_libdist_lock_manager.a; path = ../objfiles/mongo_build_debug_mongo_s_catalog_libdist_lock_manager.a; sourceTree = "<group>"; };
+		1E229BF61F30F05F0045C109 /* mongo_build_debug_mongo_s_catalog_libreplset_dist_lock_manager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_catalog_libreplset_dist_lock_manager.a; path = ../objfiles/mongo_build_debug_mongo_s_catalog_libreplset_dist_lock_manager.a; sourceTree = "<group>"; };
+		1E229BF71F30F05F0045C109 /* mongo_build_debug_mongo_s_catalog_libsharding_catalog_client_impl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_catalog_libsharding_catalog_client_impl.a; path = ../objfiles/mongo_build_debug_mongo_s_catalog_libsharding_catalog_client_impl.a; sourceTree = "<group>"; };
+		1E229BF81F30F05F0045C109 /* mongo_build_debug_mongo_s_catalog_libsharding_catalog_client.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_catalog_libsharding_catalog_client.a; path = ../objfiles/mongo_build_debug_mongo_s_catalog_libsharding_catalog_client.a; sourceTree = "<group>"; };
+		1E229BF91F30F05F0045C109 /* mongo_build_debug_mongo_s_catalog_libsharding_catalog_manager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_catalog_libsharding_catalog_manager.a; path = ../objfiles/mongo_build_debug_mongo_s_catalog_libsharding_catalog_manager.a; sourceTree = "<group>"; };
+		1E229BFA1F30F05F0045C109 /* mongo_build_debug_mongo_s_client_libparallel.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_client_libparallel.a; path = ../objfiles/mongo_build_debug_mongo_s_client_libparallel.a; sourceTree = "<group>"; };
+		1E229BFB1F30F05F0045C109 /* mongo_build_debug_mongo_s_client_libshard_interface.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_client_libshard_interface.a; path = ../objfiles/mongo_build_debug_mongo_s_client_libshard_interface.a; sourceTree = "<group>"; };
+		1E229BFC1F30F05F0045C109 /* mongo_build_debug_mongo_s_client_libshard_local.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_client_libshard_local.a; path = ../objfiles/mongo_build_debug_mongo_s_client_libshard_local.a; sourceTree = "<group>"; };
+		1E229BFD1F30F05F0045C109 /* mongo_build_debug_mongo_s_client_libsharding_client.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_client_libsharding_client.a; path = ../objfiles/mongo_build_debug_mongo_s_client_libsharding_client.a; sourceTree = "<group>"; };
+		1E229BFE1F30F05F0045C109 /* mongo_build_debug_mongo_s_client_libsharding_connection_hook.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_client_libsharding_connection_hook.a; path = ../objfiles/mongo_build_debug_mongo_s_client_libsharding_connection_hook.a; sourceTree = "<group>"; };
+		1E229BFF1F30F05F0045C109 /* mongo_build_debug_mongo_s_commands_libshared_cluster_commands.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_commands_libshared_cluster_commands.a; path = ../objfiles/mongo_build_debug_mongo_s_commands_libshared_cluster_commands.a; sourceTree = "<group>"; };
+		1E229C001F30F05F0045C109 /* mongo_build_debug_mongo_s_libasync_requests_sender.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_libasync_requests_sender.a; path = ../objfiles/mongo_build_debug_mongo_s_libasync_requests_sender.a; sourceTree = "<group>"; };
+		1E229C011F30F05F0045C109 /* mongo_build_debug_mongo_s_libcluster_last_error_info.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_libcluster_last_error_info.a; path = ../objfiles/mongo_build_debug_mongo_s_libcluster_last_error_info.a; sourceTree = "<group>"; };
+		1E229C021F30F05F0045C109 /* mongo_build_debug_mongo_s_libcommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_libcommon.a; path = ../objfiles/mongo_build_debug_mongo_s_libcommon.a; sourceTree = "<group>"; };
+		1E229C031F30F05F0045C109 /* mongo_build_debug_mongo_s_libcoreshard.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_libcoreshard.a; path = ../objfiles/mongo_build_debug_mongo_s_libcoreshard.a; sourceTree = "<group>"; };
+		1E229C041F30F05F0045C109 /* mongo_build_debug_mongo_s_libis_mongos.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_libis_mongos.a; path = ../objfiles/mongo_build_debug_mongo_s_libis_mongos.a; sourceTree = "<group>"; };
+		1E229C051F30F05F0045C109 /* mongo_build_debug_mongo_s_librouting_table.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_librouting_table.a; path = ../objfiles/mongo_build_debug_mongo_s_librouting_table.a; sourceTree = "<group>"; };
+		1E229C061F30F05F0045C109 /* mongo_build_debug_mongo_s_libshard_id.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_libshard_id.a; path = ../objfiles/mongo_build_debug_mongo_s_libshard_id.a; sourceTree = "<group>"; };
+		1E229C071F30F05F0045C109 /* mongo_build_debug_mongo_s_libsharding_initialization.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_libsharding_initialization.a; path = ../objfiles/mongo_build_debug_mongo_s_libsharding_initialization.a; sourceTree = "<group>"; };
+		1E229C081F30F05F0045C109 /* mongo_build_debug_mongo_s_libsharding_request_types.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_libsharding_request_types.a; path = ../objfiles/mongo_build_debug_mongo_s_libsharding_request_types.a; sourceTree = "<group>"; };
+		1E229C091F30F05F0045C109 /* mongo_build_debug_mongo_s_query_libasync_results_merger.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_query_libasync_results_merger.a; path = ../objfiles/mongo_build_debug_mongo_s_query_libasync_results_merger.a; sourceTree = "<group>"; };
+		1E229C0A1F30F05F0045C109 /* mongo_build_debug_mongo_s_query_libcluster_cursor_manager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_query_libcluster_cursor_manager.a; path = ../objfiles/mongo_build_debug_mongo_s_query_libcluster_cursor_manager.a; sourceTree = "<group>"; };
+		1E229C0B1F30F05F0045C109 /* mongo_build_debug_mongo_s_write_ops_libbatch_write_types.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_s_write_ops_libbatch_write_types.a; path = ../objfiles/mongo_build_debug_mongo_s_write_ops_libbatch_write_types.a; sourceTree = "<group>"; };
+		1E229C0C1F30F05F0045C109 /* mongo_build_debug_mongo_scripting_libbson_template_evaluator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_scripting_libbson_template_evaluator.a; path = ../objfiles/mongo_build_debug_mongo_scripting_libbson_template_evaluator.a; sourceTree = "<group>"; };
+		1E229C0D1F30F05F0045C109 /* mongo_build_debug_mongo_scripting_libscripting_common.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_scripting_libscripting_common.a; path = ../objfiles/mongo_build_debug_mongo_scripting_libscripting_common.a; sourceTree = "<group>"; };
+		1E229C0E1F30F05F0045C109 /* mongo_build_debug_mongo_scripting_libscripting_none.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_scripting_libscripting_none.a; path = ../objfiles/mongo_build_debug_mongo_scripting_libscripting_none.a; sourceTree = "<group>"; };
+		1E229C0F1F30F05F0045C109 /* mongo_build_debug_mongo_scripting_libscripting_server.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_scripting_libscripting_server.a; path = ../objfiles/mongo_build_debug_mongo_scripting_libscripting_server.a; sourceTree = "<group>"; };
+		1E229C101F30F05F0045C109 /* mongo_build_debug_mongo_scripting_libscripting.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_scripting_libscripting.a; path = ../objfiles/mongo_build_debug_mongo_scripting_libscripting.a; sourceTree = "<group>"; };
+		1E229C111F30F05F0045C109 /* mongo_build_debug_mongo_shell_libmongojs.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_shell_libmongojs.a; path = ../objfiles/mongo_build_debug_mongo_shell_libmongojs.a; sourceTree = "<group>"; };
+		1E229C121F30F05F0045C109 /* mongo_build_debug_mongo_transport_libmessage_compressor.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_transport_libmessage_compressor.a; path = ../objfiles/mongo_build_debug_mongo_transport_libmessage_compressor.a; sourceTree = "<group>"; };
+		1E229C131F30F0600045C109 /* mongo_build_debug_mongo_transport_libservice_entry_point.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_transport_libservice_entry_point.a; path = ../objfiles/mongo_build_debug_mongo_transport_libservice_entry_point.a; sourceTree = "<group>"; };
+		1E229C141F30F0600045C109 /* mongo_build_debug_mongo_transport_libservice_executor.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_transport_libservice_executor.a; path = ../objfiles/mongo_build_debug_mongo_transport_libservice_executor.a; sourceTree = "<group>"; };
+		1E229C151F30F0600045C109 /* mongo_build_debug_mongo_transport_libtransport_layer_common.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_transport_libtransport_layer_common.a; path = ../objfiles/mongo_build_debug_mongo_transport_libtransport_layer_common.a; sourceTree = "<group>"; };
+		1E229C161F30F0600045C109 /* mongo_build_debug_mongo_transport_libtransport_layer_manager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_transport_libtransport_layer_manager.a; path = ../objfiles/mongo_build_debug_mongo_transport_libtransport_layer_manager.a; sourceTree = "<group>"; };
+		1E229C171F30F0600045C109 /* mongo_build_debug_mongo_transport_libtransport_layer_mock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_transport_libtransport_layer_mock.a; path = ../objfiles/mongo_build_debug_mongo_transport_libtransport_layer_mock.a; sourceTree = "<group>"; };
+		1E229C181F30F0600045C109 /* mongo_build_debug_mongo_transport_libtransport_layer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_transport_libtransport_layer.a; path = ../objfiles/mongo_build_debug_mongo_transport_libtransport_layer.a; sourceTree = "<group>"; };
+		1E229C191F30F0600045C109 /* mongo_build_debug_mongo_unittest_libunittest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_unittest_libunittest.a; path = ../objfiles/mongo_build_debug_mongo_unittest_libunittest.a; sourceTree = "<group>"; };
+		1E229C1A1F30F0600045C109 /* mongo_build_debug_mongo_util_cmdline_utils_libcmdline_utils.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_cmdline_utils_libcmdline_utils.a; path = ../objfiles/mongo_build_debug_mongo_util_cmdline_utils_libcmdline_utils.a; sourceTree = "<group>"; };
+		1E229C1B1F30F0600045C109 /* mongo_build_debug_mongo_util_concurrency_libspin_lock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_concurrency_libspin_lock.a; path = ../objfiles/mongo_build_debug_mongo_util_concurrency_libspin_lock.a; sourceTree = "<group>"; };
+		1E229C1C1F30F0600045C109 /* mongo_build_debug_mongo_util_concurrency_libthread_pool.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_concurrency_libthread_pool.a; path = ../objfiles/mongo_build_debug_mongo_util_concurrency_libthread_pool.a; sourceTree = "<group>"; };
+		1E229C1D1F30F0600045C109 /* mongo_build_debug_mongo_util_concurrency_libticketholder.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_concurrency_libticketholder.a; path = ../objfiles/mongo_build_debug_mongo_util_concurrency_libticketholder.a; sourceTree = "<group>"; };
+		1E229C1E1F30F0600045C109 /* mongo_build_debug_mongo_util_libbackground_job.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libbackground_job.a; path = ../objfiles/mongo_build_debug_mongo_util_libbackground_job.a; sourceTree = "<group>"; };
+		1E229C1F1F30F0600045C109 /* mongo_build_debug_mongo_util_libclock_sources.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libclock_sources.a; path = ../objfiles/mongo_build_debug_mongo_util_libclock_sources.a; sourceTree = "<group>"; };
+		1E229C201F30F0600045C109 /* mongo_build_debug_mongo_util_libdebugger.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libdebugger.a; path = ../objfiles/mongo_build_debug_mongo_util_libdebugger.a; sourceTree = "<group>"; };
+		1E229C211F30F0600045C109 /* mongo_build_debug_mongo_util_libdecorable.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libdecorable.a; path = ../objfiles/mongo_build_debug_mongo_util_libdecorable.a; sourceTree = "<group>"; };
+		1E229C221F30F0600045C109 /* mongo_build_debug_mongo_util_libelapsed_tracker.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libelapsed_tracker.a; path = ../objfiles/mongo_build_debug_mongo_util_libelapsed_tracker.a; sourceTree = "<group>"; };
+		1E229C231F30F0600045C109 /* mongo_build_debug_mongo_util_libfail_point.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libfail_point.a; path = ../objfiles/mongo_build_debug_mongo_util_libfail_point.a; sourceTree = "<group>"; };
+		1E229C241F30F0600045C109 /* mongo_build_debug_mongo_util_libintrusive_counter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libintrusive_counter.a; path = ../objfiles/mongo_build_debug_mongo_util_libintrusive_counter.a; sourceTree = "<group>"; };
+		1E229C251F30F0600045C109 /* mongo_build_debug_mongo_util_libmd5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libmd5.a; path = ../objfiles/mongo_build_debug_mongo_util_libmd5.a; sourceTree = "<group>"; };
+		1E229C261F30F0600045C109 /* mongo_build_debug_mongo_util_libntservice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libntservice.a; path = ../objfiles/mongo_build_debug_mongo_util_libntservice.a; sourceTree = "<group>"; };
+		1E229C271F30F0600045C109 /* mongo_build_debug_mongo_util_libperiodic_runner_asio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libperiodic_runner_asio.a; path = ../objfiles/mongo_build_debug_mongo_util_libperiodic_runner_asio.a; sourceTree = "<group>"; };
+		1E229C281F30F0600045C109 /* mongo_build_debug_mongo_util_libperiodic_runner_factory.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libperiodic_runner_factory.a; path = ../objfiles/mongo_build_debug_mongo_util_libperiodic_runner_factory.a; sourceTree = "<group>"; };
+		1E229C291F30F0600045C109 /* mongo_build_debug_mongo_util_libperiodic_runner.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libperiodic_runner.a; path = ../objfiles/mongo_build_debug_mongo_util_libperiodic_runner.a; sourceTree = "<group>"; };
+		1E229C2A1F30F0600045C109 /* mongo_build_debug_mongo_util_libprocessinfo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libprocessinfo.a; path = ../objfiles/mongo_build_debug_mongo_util_libprocessinfo.a; sourceTree = "<group>"; };
+		1E229C2B1F30F0600045C109 /* mongo_build_debug_mongo_util_libprogress_meter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libprogress_meter.a; path = ../objfiles/mongo_build_debug_mongo_util_libprogress_meter.a; sourceTree = "<group>"; };
+		1E229C2C1F30F0600045C109 /* mongo_build_debug_mongo_util_libquick_exit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libquick_exit.a; path = ../objfiles/mongo_build_debug_mongo_util_libquick_exit.a; sourceTree = "<group>"; };
+		1E229C2D1F30F0600045C109 /* mongo_build_debug_mongo_util_libsafe_num.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libsafe_num.a; path = ../objfiles/mongo_build_debug_mongo_util_libsafe_num.a; sourceTree = "<group>"; };
+		1E229C2E1F30F0600045C109 /* mongo_build_debug_mongo_util_libsecure_compare_memory.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libsecure_compare_memory.a; path = ../objfiles/mongo_build_debug_mongo_util_libsecure_compare_memory.a; sourceTree = "<group>"; };
+		1E229C2F1F30F0600045C109 /* mongo_build_debug_mongo_util_libsecure_zero_memory.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libsecure_zero_memory.a; path = ../objfiles/mongo_build_debug_mongo_util_libsecure_zero_memory.a; sourceTree = "<group>"; };
+		1E229C301F30F0600045C109 /* mongo_build_debug_mongo_util_libsignal_handlers.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libsignal_handlers.a; path = ../objfiles/mongo_build_debug_mongo_util_libsignal_handlers.a; sourceTree = "<group>"; };
+		1E229C311F30F0600045C109 /* mongo_build_debug_mongo_util_libsummation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libsummation.a; path = ../objfiles/mongo_build_debug_mongo_util_libsummation.a; sourceTree = "<group>"; };
+		1E229C321F30F0600045C109 /* mongo_build_debug_mongo_util_libuuid.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libuuid.a; path = ../objfiles/mongo_build_debug_mongo_util_libuuid.a; sourceTree = "<group>"; };
+		1E229C331F30F0600045C109 /* mongo_build_debug_mongo_util_libversion_impl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_libversion_impl.a; path = ../objfiles/mongo_build_debug_mongo_util_libversion_impl.a; sourceTree = "<group>"; };
+		1E229C341F30F0600045C109 /* mongo_build_debug_mongo_util_net_libnetwork.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_net_libnetwork.a; path = ../objfiles/mongo_build_debug_mongo_util_net_libnetwork.a; sourceTree = "<group>"; };
+		1E229C351F30F0600045C109 /* mongo_build_debug_mongo_util_options_parser_liboptions_parser_init.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_options_parser_liboptions_parser_init.a; path = ../objfiles/mongo_build_debug_mongo_util_options_parser_liboptions_parser_init.a; sourceTree = "<group>"; };
+		1E229C361F30F0600045C109 /* mongo_build_debug_mongo_util_options_parser_liboptions_parser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_util_options_parser_liboptions_parser.a; path = ../objfiles/mongo_build_debug_mongo_util_options_parser_liboptions_parser.a; sourceTree = "<group>"; };
+		1E229C371F30F0600045C109 /* mongo_build_debug_third_party_asio-master_libasio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "mongo_build_debug_third_party_asio-master_libasio.a"; path = "../objfiles/mongo_build_debug_third_party_asio-master_libasio.a"; sourceTree = "<group>"; };
+		1E229C381F30F0600045C109 /* mongo_build_debug_third_party_boost-1.60.0_libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "mongo_build_debug_third_party_boost-1.60.0_libboost_filesystem.a"; path = "../objfiles/mongo_build_debug_third_party_boost-1.60.0_libboost_filesystem.a"; sourceTree = "<group>"; };
+		1E229C391F30F0600045C109 /* mongo_build_debug_third_party_boost-1.60.0_libboost_iostreams.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "mongo_build_debug_third_party_boost-1.60.0_libboost_iostreams.a"; path = "../objfiles/mongo_build_debug_third_party_boost-1.60.0_libboost_iostreams.a"; sourceTree = "<group>"; };
+		1E229C3A1F30F0600045C109 /* mongo_build_debug_third_party_boost-1.60.0_libboost_program_options.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "mongo_build_debug_third_party_boost-1.60.0_libboost_program_options.a"; path = "../objfiles/mongo_build_debug_third_party_boost-1.60.0_libboost_program_options.a"; sourceTree = "<group>"; };
+		1E229C3B1F30F0600045C109 /* mongo_build_debug_third_party_boost-1.60.0_libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "mongo_build_debug_third_party_boost-1.60.0_libboost_system.a"; path = "../objfiles/mongo_build_debug_third_party_boost-1.60.0_libboost_system.a"; sourceTree = "<group>"; };
+		1E229C3C1F30F0600045C109 /* mongo_build_debug_third_party_boost-1.60.0_libboost_thread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "mongo_build_debug_third_party_boost-1.60.0_libboost_thread.a"; path = "../objfiles/mongo_build_debug_third_party_boost-1.60.0_libboost_thread.a"; sourceTree = "<group>"; };
+		1E229C3D1F30F0600045C109 /* mongo_build_debug_third_party_icu4c-57.1_source_libicu_common.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "mongo_build_debug_third_party_icu4c-57.1_source_libicu_common.a"; path = "../objfiles/mongo_build_debug_third_party_icu4c-57.1_source_libicu_common.a"; sourceTree = "<group>"; };
+		1E229C3E1F30F0600045C109 /* mongo_build_debug_third_party_icu4c-57.1_source_libicu_data.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "mongo_build_debug_third_party_icu4c-57.1_source_libicu_data.a"; path = "../objfiles/mongo_build_debug_third_party_icu4c-57.1_source_libicu_data.a"; sourceTree = "<group>"; };
+		1E229C3F1F30F0600045C109 /* mongo_build_debug_third_party_icu4c-57.1_source_libicu_i18n.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "mongo_build_debug_third_party_icu4c-57.1_source_libicu_i18n.a"; path = "../objfiles/mongo_build_debug_third_party_icu4c-57.1_source_libicu_i18n.a"; sourceTree = "<group>"; };
+		1E229C401F30F0600045C109 /* mongo_build_debug_third_party_IntelRDFPMathLib20U1_libintel_decimal128.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_IntelRDFPMathLib20U1_libintel_decimal128.a; path = ../objfiles/mongo_build_debug_third_party_IntelRDFPMathLib20U1_libintel_decimal128.a; sourceTree = "<group>"; };
+		1E229C411F30F0600045C109 /* mongo_build_debug_third_party_libshim_allocator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_libshim_allocator.a; path = ../objfiles/mongo_build_debug_third_party_libshim_allocator.a; sourceTree = "<group>"; };
+		1E229C421F30F0600045C109 /* mongo_build_debug_third_party_libshim_asio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_libshim_asio.a; path = ../objfiles/mongo_build_debug_third_party_libshim_asio.a; sourceTree = "<group>"; };
+		1E229C431F30F0600045C109 /* mongo_build_debug_third_party_libshim_boost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_libshim_boost.a; path = ../objfiles/mongo_build_debug_third_party_libshim_boost.a; sourceTree = "<group>"; };
+		1E229C441F30F0600045C109 /* mongo_build_debug_third_party_libshim_icu.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_libshim_icu.a; path = ../objfiles/mongo_build_debug_third_party_libshim_icu.a; sourceTree = "<group>"; };
+		1E229C451F30F0600045C109 /* mongo_build_debug_third_party_libshim_intel_decimal128.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_libshim_intel_decimal128.a; path = ../objfiles/mongo_build_debug_third_party_libshim_intel_decimal128.a; sourceTree = "<group>"; };
+		1E229C461F30F0600045C109 /* mongo_build_debug_third_party_libshim_pcrecpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_libshim_pcrecpp.a; path = ../objfiles/mongo_build_debug_third_party_libshim_pcrecpp.a; sourceTree = "<group>"; };
+		1E229C471F30F0600045C109 /* mongo_build_debug_third_party_libshim_snappy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_libshim_snappy.a; path = ../objfiles/mongo_build_debug_third_party_libshim_snappy.a; sourceTree = "<group>"; };
+		1E229C481F30F0600045C109 /* mongo_build_debug_third_party_libshim_stemmer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_libshim_stemmer.a; path = ../objfiles/mongo_build_debug_third_party_libshim_stemmer.a; sourceTree = "<group>"; };
+		1E229C491F30F0600045C109 /* mongo_build_debug_third_party_libshim_timelib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_libshim_timelib.a; path = ../objfiles/mongo_build_debug_third_party_libshim_timelib.a; sourceTree = "<group>"; };
+		1E229C4A1F30F0600045C109 /* mongo_build_debug_third_party_libshim_tomcrypt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_libshim_tomcrypt.a; path = ../objfiles/mongo_build_debug_third_party_libshim_tomcrypt.a; sourceTree = "<group>"; };
+		1E229C4B1F30F0600045C109 /* mongo_build_debug_third_party_libshim_tz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_libshim_tz.a; path = ../objfiles/mongo_build_debug_third_party_libshim_tz.a; sourceTree = "<group>"; };
+		1E229C4C1F30F0600045C109 /* mongo_build_debug_third_party_libshim_wiredtiger.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_libshim_wiredtiger.a; path = ../objfiles/mongo_build_debug_third_party_libshim_wiredtiger.a; sourceTree = "<group>"; };
+		1E229C4D1F30F0600045C109 /* mongo_build_debug_third_party_libshim_yaml.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_libshim_yaml.a; path = ../objfiles/mongo_build_debug_third_party_libshim_yaml.a; sourceTree = "<group>"; };
+		1E229C4E1F30F0600045C109 /* mongo_build_debug_third_party_libshim_zlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_libshim_zlib.a; path = ../objfiles/mongo_build_debug_third_party_libshim_zlib.a; sourceTree = "<group>"; };
+		1E229C4F1F30F0600045C109 /* mongo_build_debug_third_party_libstemmer_c_libstemmer.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_libstemmer_c_libstemmer.a; path = ../objfiles/mongo_build_debug_third_party_libstemmer_c_libstemmer.a; sourceTree = "<group>"; };
+		1E229C501F30F0600045C109 /* mongo_build_debug_third_party_murmurhash3_libmurmurhash3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_murmurhash3_libmurmurhash3.a; path = ../objfiles/mongo_build_debug_third_party_murmurhash3_libmurmurhash3.a; sourceTree = "<group>"; };
+		1E229C511F30F0600045C109 /* mongo_build_debug_third_party_pcre-8.39_libpcrecpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "mongo_build_debug_third_party_pcre-8.39_libpcrecpp.a"; path = "../objfiles/mongo_build_debug_third_party_pcre-8.39_libpcrecpp.a"; sourceTree = "<group>"; };
+		1E229C521F30F0600045C109 /* mongo_build_debug_third_party_s2_base_libbase.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_s2_base_libbase.a; path = ../objfiles/mongo_build_debug_third_party_s2_base_libbase.a; sourceTree = "<group>"; };
+		1E229C531F30F0600045C109 /* mongo_build_debug_third_party_s2_libs2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_s2_libs2.a; path = ../objfiles/mongo_build_debug_third_party_s2_libs2.a; sourceTree = "<group>"; };
+		1E229C541F30F0600045C109 /* mongo_build_debug_third_party_s2_strings_libstrings.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_s2_strings_libstrings.a; path = ../objfiles/mongo_build_debug_third_party_s2_strings_libstrings.a; sourceTree = "<group>"; };
+		1E229C551F30F0600045C109 /* mongo_build_debug_third_party_s2_util_coding_libcoding.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_s2_util_coding_libcoding.a; path = ../objfiles/mongo_build_debug_third_party_s2_util_coding_libcoding.a; sourceTree = "<group>"; };
+		1E229C561F30F0600045C109 /* mongo_build_debug_third_party_s2_util_math_libmath.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_s2_util_math_libmath.a; path = ../objfiles/mongo_build_debug_third_party_s2_util_math_libmath.a; sourceTree = "<group>"; };
+		1E229C571F30F0600045C109 /* mongo_build_debug_third_party_snappy-1.1.3_libsnappy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "mongo_build_debug_third_party_snappy-1.1.3_libsnappy.a"; path = "../objfiles/mongo_build_debug_third_party_snappy-1.1.3_libsnappy.a"; sourceTree = "<group>"; };
+		1E229C581F30F0600045C109 /* mongo_build_debug_third_party_timelib-2017.05beta5_libtimelib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "mongo_build_debug_third_party_timelib-2017.05beta5_libtimelib.a"; path = "../objfiles/mongo_build_debug_third_party_timelib-2017.05beta5_libtimelib.a"; sourceTree = "<group>"; };
+		1E229C591F30F0600045C109 /* mongo_build_debug_third_party_tomcrypt-1.18.0-rc2_libtomcrypt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "mongo_build_debug_third_party_tomcrypt-1.18.0-rc2_libtomcrypt.a"; path = "../objfiles/mongo_build_debug_third_party_tomcrypt-1.18.0-rc2_libtomcrypt.a"; sourceTree = "<group>"; };
+		1E229C5A1F30F0600045C109 /* mongo_build_debug_third_party_wiredtiger_libwiredtiger.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_third_party_wiredtiger_libwiredtiger.a; path = ../objfiles/mongo_build_debug_third_party_wiredtiger_libwiredtiger.a; sourceTree = "<group>"; };
+		1E229C5B1F30F0600045C109 /* mongo_build_debug_third_party_yaml-cpp-0.5.3_libyaml.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "mongo_build_debug_third_party_yaml-cpp-0.5.3_libyaml.a"; path = "../objfiles/mongo_build_debug_third_party_yaml-cpp-0.5.3_libyaml.a"; sourceTree = "<group>"; };
+		1E229C5C1F30F0600045C109 /* mongo_build_debug_third_party_zlib-1.2.8_libzlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "mongo_build_debug_third_party_zlib-1.2.8_libzlib.a"; path = "../objfiles/mongo_build_debug_third_party_zlib-1.2.8_libzlib.a"; sourceTree = "<group>"; };
+		1E229E021F30F2A00045C109 /* TaskApplication-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TaskApplication-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		1E229E041F30F3130045C109 /* cheetah_c.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = cheetah_c.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
+		1E229E051F30F3130045C109 /* cheetah_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = cheetah_c.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1E229E061F30F3130045C109 /* cheetah.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = cheetah.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		1E229E091F31280F0045C109 /* RunCommandsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunCommandsViewController.swift; sourceTree = "<group>"; };
+		1E39F5E51F321ADE003E7E71 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		1EC1FF401F30DFAA00023E69 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1EC1FF421F30E51B00023E69 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		86FF5BAD1A6D65FB00A017A1 /* TaskApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86FF5BB11A6D65FB00A017A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86FF5BB21A6D65FB00A017A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		86FF5BB41A6D65FB00A017A1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FirstViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		86FF5BB61A6D65FB00A017A1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		86FF5BB91A6D65FB00A017A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		86FF5BBB1A6D65FB00A017A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		86FF5BBE1A6D65FB00A017A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		86FF5BC41A6D65FB00A017A1 /* TaskApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86FF5BC91A6D65FB00A017A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86FF5BCA1A6D65FB00A017A1 /* TaskApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskApplicationTests.swift; sourceTree = "<group>"; };
+		86FF5BD41A6D697400A017A1 /* TaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86FF5BAA1A6D65FB00A017A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86FF5BC11A6D65FB00A017A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E229AB71F30F05E0045C109 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E229AB81F30F05F0045C109 /* libbson-1.0.a */,
+				1E229AB91F30F05F0045C109 /* libmongoc-1.0.a */,
+				1E229ABA1F30F05F0045C109 /* mongo_build_debug_mongo_base_libsecure_allocator.a */,
+				1E229ABB1F30F05F0045C109 /* mongo_build_debug_mongo_base_libsystem_error.a */,
+				1E229ABC1F30F05F0045C109 /* mongo_build_debug_mongo_bson_mutable_libmutable_bson.a */,
+				1E229ABD1F30F05F0045C109 /* mongo_build_debug_mongo_bson_util_libbson_extract.a */,
+				1E229ABE1F30F05F0045C109 /* mongo_build_debug_mongo_client_embedded_libmongo_embedded_capi.a */,
+				1E229ABF1F30F05F0045C109 /* mongo_build_debug_mongo_client_embedded_libmongo_embedded_transport.a */,
+				1E229AC01F30F05F0045C109 /* mongo_build_debug_mongo_client_libauthentication.a */,
+				1E229AC11F30F05F0045C109 /* mongo_build_debug_mongo_client_libclient_query.a */,
+				1E229AC21F30F05F0045C109 /* mongo_build_debug_mongo_client_libclientdriver.a */,
+				1E229AC31F30F05F0045C109 /* mongo_build_debug_mongo_client_libconnection_pool.a */,
+				1E229AC41F30F05F0045C109 /* mongo_build_debug_mongo_client_libconnection_string.a */,
+				1E229AC51F30F05F0045C109 /* mongo_build_debug_mongo_client_libfetcher.a */,
+				1E229AC61F30F05F0045C109 /* mongo_build_debug_mongo_client_libread_preference.a */,
+				1E229AC71F30F05F0045C109 /* mongo_build_debug_mongo_client_libremote_command_retry_scheduler.a */,
+				1E229AC81F30F05F0045C109 /* mongo_build_debug_mongo_client_libremote_command_targeter.a */,
+				1E229AC91F30F05F0045C109 /* mongo_build_debug_mongo_client_libsasl_client.a */,
+				1E229ACA1F30F05F0045C109 /* mongo_build_debug_mongo_crypto_libscramauth.a */,
+				1E229ACB1F30F05F0045C109 /* mongo_build_debug_mongo_crypto_libsha_block_tom.a */,
+				1E229ACC1F30F05F0045C109 /* mongo_build_debug_mongo_crypto_libsha1_block.a */,
+				1E229ACD1F30F05F0045C109 /* mongo_build_debug_mongo_crypto_libsha256_block.a */,
+				1E229ACE1F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libaddress_restriction.a */,
+				1E229ACF1F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libauth_rolename.a */,
+				1E229AD01F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libauthcommon.a */,
+				1E229AD11F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libauthcore.a */,
+				1E229AD21F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libauthentication_restriction.a */,
+				1E229AD31F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libauthmocks.a */,
+				1E229AD41F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libauthmongod.a */,
+				1E229AD51F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libauthorization_manager_global.a */,
+				1E229AD61F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libauthprivilege.a */,
+				1E229AD71F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libauthservercommon.a */,
+				1E229AD81F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libsasl_options.a */,
+				1E229AD91F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libsaslauth.a */,
+				1E229ADA1F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libsecurity_file.a */,
+				1E229ADB1F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libserverauth.a */,
+				1E229ADC1F30F05F0045C109 /* mongo_build_debug_mongo_db_auth_libuser_name.a */,
+				1E229ADD1F30F05F0045C109 /* mongo_build_debug_mongo_db_bson_libdotted_path_support.a */,
+				1E229ADE1F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libcatalog_helpers.a */,
+				1E229ADF1F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libcatalog.a */,
+				1E229AE01F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libcollection_info_cache.a */,
+				1E229AE11F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libcollection_options.a */,
+				1E229AE21F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libcollection.a */,
+				1E229AE31F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libdatabase_holder.a */,
+				1E229AE41F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libdatabase.a */,
+				1E229AE51F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libdocument_validation.a */,
+				1E229AE61F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libindex_catalog_entry.a */,
+				1E229AE71F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libindex_catalog.a */,
+				1E229AE81F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libindex_create.a */,
+				1E229AE91F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libindex_key_validate.a */,
+				1E229AEA1F30F05F0045C109 /* mongo_build_debug_mongo_db_catalog_libuuid_catalog.a */,
+				1E229AEB1F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libcore.a */,
+				1E229AEC1F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libcurrent_op_common.a */,
+				1E229AED1F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libdcommands_fcv.a */,
+				1E229AEE1F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libdcommands_fsync.a */,
+				1E229AEF1F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libdcommands.a */,
+				1E229AF01F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libkillcursors_common.a */,
+				1E229AF11F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_liblist_collections_filter.a */,
+				1E229AF21F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libserver_status_core.a */,
+				1E229AF31F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libserver_status.a */,
+				1E229AF41F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libtest_commands_enabled.a */,
+				1E229AF51F30F05F0045C109 /* mongo_build_debug_mongo_db_commands_libwrite_commands_common.a */,
+				1E229AF61F30F05F0045C109 /* mongo_build_debug_mongo_db_concurrency_libglobal_lock_acquisition_tracker.a */,
+				1E229AF71F30F05F0045C109 /* mongo_build_debug_mongo_db_concurrency_liblock_manager.a */,
+				1E229AF81F30F05F0045C109 /* mongo_build_debug_mongo_db_concurrency_libwrite_conflict_exception.a */,
+				1E229AF91F30F05F0045C109 /* mongo_build_debug_mongo_db_exec_libexec.a */,
+				1E229AFA1F30F05F0045C109 /* mongo_build_debug_mongo_db_exec_libscoped_timer.a */,
+				1E229AFB1F30F05F0045C109 /* mongo_build_debug_mongo_db_exec_libworking_set.a */,
+				1E229AFC1F30F05F0045C109 /* mongo_build_debug_mongo_db_ftdc_libftdc_mongod.a */,
+				1E229AFD1F30F05F0045C109 /* mongo_build_debug_mongo_db_ftdc_libftdc_server.a */,
+				1E229AFE1F30F05F0045C109 /* mongo_build_debug_mongo_db_ftdc_libftdc.a */,
+				1E229AFF1F30F05F0045C109 /* mongo_build_debug_mongo_db_fts_libbase.a */,
+				1E229B001F30F05F0045C109 /* mongo_build_debug_mongo_db_fts_libfts_query_noop.a */,
+				1E229B011F30F05F0045C109 /* mongo_build_debug_mongo_db_fts_libftsmongod.a */,
+				1E229B021F30F05F0045C109 /* mongo_build_debug_mongo_db_fts_unicode_libunicode.a */,
+				1E229B031F30F05F0045C109 /* mongo_build_debug_mongo_db_geo_libgeometry.a */,
+				1E229B041F30F05F0045C109 /* mongo_build_debug_mongo_db_geo_libgeoparser.a */,
+				1E229B051F30F05F0045C109 /* mongo_build_debug_mongo_db_index_libexpression_params.a */,
+				1E229B061F30F05F0045C109 /* mongo_build_debug_mongo_db_index_libindex_access_methods.a */,
+				1E229B071F30F05F0045C109 /* mongo_build_debug_mongo_db_index_libindex_descriptor.a */,
+				1E229B081F30F05F0045C109 /* mongo_build_debug_mongo_db_index_libkey_generator.a */,
+				1E229B091F30F05F0045C109 /* mongo_build_debug_mongo_db_libaudit.a */,
+				1E229B0A1F30F05F0045C109 /* mongo_build_debug_mongo_db_libauthz_manager_external_state_factory_d.a */,
+				1E229B0B1F30F05F0045C109 /* mongo_build_debug_mongo_db_libbackground.a */,
+				1E229B0C1F30F05F0045C109 /* mongo_build_debug_mongo_db_libclientcursor.a */,
+				1E229B0D1F30F05F0045C109 /* mongo_build_debug_mongo_db_libcloner.a */,
+				1E229B0E1F30F05F0045C109 /* mongo_build_debug_mongo_db_libcollection_index_usage_tracker.a */,
+				1E229B0F1F30F05F0045C109 /* mongo_build_debug_mongo_db_libcommands.a */,
+				1E229B101F30F05F0045C109 /* mongo_build_debug_mongo_db_libcommon.a */,
+				1E229B111F30F05F0045C109 /* mongo_build_debug_mongo_db_libconn_pool_options.a */,
+				1E229B121F30F05F0045C109 /* mongo_build_debug_mongo_db_libcurop_metrics.a */,
+				1E229B131F30F05F0045C109 /* mongo_build_debug_mongo_db_libcurop.a */,
+				1E229B141F30F05F0045C109 /* mongo_build_debug_mongo_db_libdb_raii.a */,
+				1E229B151F30F05F0045C109 /* mongo_build_debug_mongo_db_libdbdirectclient.a */,
+				1E229B161F30F05F0045C109 /* mongo_build_debug_mongo_db_libdbhelpers.a */,
+				1E229B171F30F05F0045C109 /* mongo_build_debug_mongo_db_libdbmessage.a */,
+				1E229B181F30F05F0045C109 /* mongo_build_debug_mongo_db_libdiag_log.a */,
+				1E229B191F30F05F0045C109 /* mongo_build_debug_mongo_db_libindex_d.a */,
+				1E229B1A1F30F05F0045C109 /* mongo_build_debug_mongo_db_libindex_names.a */,
+				1E229B1B1F30F05F0045C109 /* mongo_build_debug_mongo_db_libinitialize_snmp.a */,
+				1E229B1C1F30F05F0045C109 /* mongo_build_debug_mongo_db_libintrospect.a */,
+				1E229B1D1F30F05F0045C109 /* mongo_build_debug_mongo_db_libkeys_collection_document.a */,
+				1E229B1E1F30F05F0045C109 /* mongo_build_debug_mongo_db_libkeys_collection_manager_direct.a */,
+				1E229B1F1F30F05F0045C109 /* mongo_build_debug_mongo_db_libkeys_collection_manager_sharding.a */,
+				1E229B201F30F05F0045C109 /* mongo_build_debug_mongo_db_libkeys_collection_manager_zero.a */,
+				1E229B211F30F05F0045C109 /* mongo_build_debug_mongo_db_libkeys_collection_manager.a */,
+				1E229B221F30F05F0045C109 /* mongo_build_debug_mongo_db_liblasterror.a */,
+				1E229B231F30F05F0045C109 /* mongo_build_debug_mongo_db_liblog_process_details.a */,
+				1E229B241F30F05F0045C109 /* mongo_build_debug_mongo_db_liblogical_clock.a */,
+				1E229B251F30F05F0045C109 /* mongo_build_debug_mongo_db_liblogical_session_cache_factory_mongod.a */,
+				1E229B261F30F05F0045C109 /* mongo_build_debug_mongo_db_liblogical_session_cache_factory_mongos.a */,
+				1E229B271F30F05F0045C109 /* mongo_build_debug_mongo_db_liblogical_session_cache.a */,
+				1E229B281F30F05F0045C109 /* mongo_build_debug_mongo_db_liblogical_session_id_helpers.a */,
+				1E229B291F30F05F0045C109 /* mongo_build_debug_mongo_db_liblogical_session_id.a */,
+				1E229B2A1F30F05F0045C109 /* mongo_build_debug_mongo_db_liblogical_time_metadata_hook.a */,
+				1E229B2B1F30F05F0045C109 /* mongo_build_debug_mongo_db_liblogical_time_validator.a */,
+				1E229B2C1F30F05F0045C109 /* mongo_build_debug_mongo_db_liblogical_time.a */,
+				1E229B2D1F30F05F0045C109 /* mongo_build_debug_mongo_db_libmongod_options.a */,
+				1E229B2E1F30F05F0045C109 /* mongo_build_debug_mongo_db_libmongodandmongos.a */,
+				1E229B2F1F30F05F0045C109 /* mongo_build_debug_mongo_db_libmongohasher.a */,
+				1E229B301F30F05F0045C109 /* mongo_build_debug_mongo_db_libnamespace_string.a */,
+				1E229B311F30F05F0045C109 /* mongo_build_debug_mongo_db_libop_observer_d.a */,
+				1E229B321F30F05F0045C109 /* mongo_build_debug_mongo_db_libprefetch.a */,
+				1E229B331F30F05F0045C109 /* mongo_build_debug_mongo_db_librange_arithmetic.a */,
+				1E229B341F30F05F0045C109 /* mongo_build_debug_mongo_db_librepair_database.a */,
+				1E229B351F30F05F0045C109 /* mongo_build_debug_mongo_db_librw_concern_d.a */,
+				1E229B361F30F05F0045C109 /* mongo_build_debug_mongo_db_libserver_options_core.a */,
+				1E229B371F30F05F0045C109 /* mongo_build_debug_mongo_db_libserver_options.a */,
+				1E229B381F30F05F0045C109 /* mongo_build_debug_mongo_db_libserver_parameters.a */,
+				1E229B391F30F05F0045C109 /* mongo_build_debug_mongo_db_libserveronly.a */,
+				1E229B3A1F30F05F0045C109 /* mongo_build_debug_mongo_db_libservice_context_d.a */,
+				1E229B3B1F30F05F0045C109 /* mongo_build_debug_mongo_db_libservice_context.a */,
+				1E229B3C1F30F05F0045C109 /* mongo_build_debug_mongo_db_libservice_liason_mongod.a */,
+				1E229B3D1F30F05F0045C109 /* mongo_build_debug_mongo_db_libservice_liason_mongos.a */,
+				1E229B3E1F30F05F0045C109 /* mongo_build_debug_mongo_db_libservice_liason.a */,
+				1E229B3F1F30F05F0045C109 /* mongo_build_debug_mongo_db_libsessions_collection_mock.a */,
+				1E229B401F30F05F0045C109 /* mongo_build_debug_mongo_db_libsessions_collection.a */,
+				1E229B411F30F05F0045C109 /* mongo_build_debug_mongo_db_libsigned_logical_time.a */,
+				1E229B421F30F05F0045C109 /* mongo_build_debug_mongo_db_libstartup_warnings_common.a */,
+				1E229B431F30F05F0045C109 /* mongo_build_debug_mongo_db_libstartup_warnings_mongod.a */,
+				1E229B441F30F05F0045C109 /* mongo_build_debug_mongo_db_libsystem_index.a */,
+				1E229B451F30F05F0045C109 /* mongo_build_debug_mongo_db_libtime_proof_service.a */,
+				1E229B461F30F05F0045C109 /* mongo_build_debug_mongo_db_libttl_collection_cache.a */,
+				1E229B471F30F05F0045C109 /* mongo_build_debug_mongo_db_libttl_d.a */,
+				1E229B481F30F05F0045C109 /* mongo_build_debug_mongo_db_libupdate_index_data.a */,
+				1E229B491F30F05F0045C109 /* mongo_build_debug_mongo_db_libwire_version.a */,
+				1E229B4A1F30F05F0045C109 /* mongo_build_debug_mongo_db_libwrite_concern_options.a */,
+				1E229B4B1F30F05F0045C109 /* mongo_build_debug_mongo_db_libwrite_ops.a */,
+				1E229B4C1F30F05F0045C109 /* mongo_build_debug_mongo_db_matcher_libexpression_algo.a */,
+				1E229B4D1F30F05F0045C109 /* mongo_build_debug_mongo_db_matcher_libexpressions_mongod_only.a */,
+				1E229B4E1F30F05F0045C109 /* mongo_build_debug_mongo_db_matcher_libexpressions.a */,
+				1E229B4F1F30F05F0045C109 /* mongo_build_debug_mongo_db_matcher_libpath.a */,
+				1E229B501F30F05F0045C109 /* mongo_build_debug_mongo_db_ops_libupdate.a */,
+				1E229B511F30F05F0045C109 /* mongo_build_debug_mongo_db_ops_libwrite_ops_parsers.a */,
+				1E229B521F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libaccumulator.a */,
+				1E229B531F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libaggregation_request.a */,
+				1E229B541F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libaggregation.a */,
+				1E229B551F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libdependencies.a */,
+				1E229B561F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libdocument_source_facet.a */,
+				1E229B571F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libdocument_source_lookup.a */,
+				1E229B581F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libdocument_source.a */,
+				1E229B591F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libdocument_value.a */,
+				1E229B5A1F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libexpression_context.a */,
+				1E229B5B1F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libexpression.a */,
+				1E229B5C1F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libfield_path.a */,
+				1E229B5D1F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libgranularity_rounder.a */,
+				1E229B5E1F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_liblite_parsed_document_source.a */,
+				1E229B5F1F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libparsed_aggregation_projection.a */,
+				1E229B601F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libpipeline.a */,
+				1E229B611F30F05F0045C109 /* mongo_build_debug_mongo_db_pipeline_libserveronly.a */,
+				1E229B621F30F05F0045C109 /* mongo_build_debug_mongo_db_query_collation_libcollator_factory_interface.a */,
+				1E229B631F30F05F0045C109 /* mongo_build_debug_mongo_db_query_collation_libcollator_factory_mock.a */,
+				1E229B641F30F05F0045C109 /* mongo_build_debug_mongo_db_query_collation_libcollator_icu.a */,
+				1E229B651F30F05F0045C109 /* mongo_build_debug_mongo_db_query_collation_libcollator_interface_mock.a */,
+				1E229B661F30F05F0045C109 /* mongo_build_debug_mongo_db_query_collation_libcollator_interface.a */,
+				1E229B671F30F05F0045C109 /* mongo_build_debug_mongo_db_query_datetime_libdate_time_support.a */,
+				1E229B681F30F05F0045C109 /* mongo_build_debug_mongo_db_query_datetime_libinit_timezone_data.a */,
+				1E229B691F30F05F0045C109 /* mongo_build_debug_mongo_db_query_libcommand_request_response.a */,
+				1E229B6A1F30F05F0045C109 /* mongo_build_debug_mongo_db_query_libexplain_options.a */,
+				1E229B6B1F30F05F0045C109 /* mongo_build_debug_mongo_db_query_libindex_bounds.a */,
+				1E229B6C1F30F05F0045C109 /* mongo_build_debug_mongo_db_query_libinternal_plans.a */,
+				1E229B6D1F30F05F0045C109 /* mongo_build_debug_mongo_db_query_libquery_common.a */,
+				1E229B6E1F30F05F0045C109 /* mongo_build_debug_mongo_db_query_libquery_planner_test_lib.a */,
+				1E229B6F1F30F05F0045C109 /* mongo_build_debug_mongo_db_query_libquery_planner.a */,
+				1E229B701F30F05F0045C109 /* mongo_build_debug_mongo_db_query_libquery_request.a */,
+				1E229B711F30F05F0045C109 /* mongo_build_debug_mongo_db_query_libquery.a */,
+				1E229B721F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libabstract_async_component.a */,
+				1E229B731F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libabstract_oplog_fetcher.a */,
+				1E229B741F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libbgsync.a */,
+				1E229B751F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libcollection_cloner.a */,
+				1E229B761F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libdata_replicator_external_state_impl.a */,
+				1E229B771F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libdata_replicator_external_state_initial_sync.a */,
+				1E229B781F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libdatabase_cloner.a */,
+				1E229B791F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libdatabases_cloner.a */,
+				1E229B7A1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libdrop_pending_collection_reaper.a */,
+				1E229B7B1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libinitial_syncer.a */,
+				1E229B7C1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libisself.a */,
+				1E229B7D1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libmultiapplier.a */,
+				1E229B7E1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_liboplog_buffer_blocking_queue.a */,
+				1E229B7F1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_liboplog_buffer_collection.a */,
+				1E229B801F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_liboplog_buffer_proxy.a */,
+				1E229B811F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_liboplog_entry.a */,
+				1E229B821F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_liboplog_fetcher.a */,
+				1E229B831F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_liboplog_interface_local.a */,
+				1E229B841F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_liboplog_interface_remote.a */,
+				1E229B851F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_liboplog.a */,
+				1E229B861F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_liboptime.a */,
+				1E229B871F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libread_concern_args.a */,
+				1E229B881F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librepl_coordinator_global.a */,
+				1E229B891F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librepl_coordinator_impl.a */,
+				1E229B8A1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librepl_coordinator_interface.a */,
+				1E229B8B1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librepl_set_commands.a */,
+				1E229B8C1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librepl_settings.a */,
+				1E229B8D1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libreplica_set_messages.a */,
+				1E229B8E1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libreplication_consistency_markers_idl.a */,
+				1E229B8F1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libreplication_consistency_markers_impl.a */,
+				1E229B901F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libreplication_process.a */,
+				1E229B911F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libreporter.a */,
+				1E229B921F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libroll_back_local_operations.a */,
+				1E229B931F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librollback_checker.a */,
+				1E229B941F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librollback_idl.a */,
+				1E229B951F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librollback_impl.a */,
+				1E229B961F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librollback_source_impl.a */,
+				1E229B971F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librs_rollback_no_uuid.a */,
+				1E229B981F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librs_rollback.a */,
+				1E229B991F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_librslog.a */,
+				1E229B9A1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libscatter_gather.a */,
+				1E229B9B1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libserveronly.a */,
+				1E229B9C1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libstorage_interface_impl.a */,
+				1E229B9D1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libstorage_interface.a */,
+				1E229B9E1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libsync_source_resolver.a */,
+				1E229B9F1F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libsync_tail.a */,
+				1E229BA01F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libtask_runner.a */,
+				1E229BA11F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libtopology_coordinator_impl.a */,
+				1E229BA21F30F05F0045C109 /* mongo_build_debug_mongo_db_repl_libtopology_coordinator.a */,
+				1E229BA31F30F05F0045C109 /* mongo_build_debug_mongo_db_s_libbalancer.a */,
+				1E229BA41F30F05F0045C109 /* mongo_build_debug_mongo_db_s_libcollection_metadata.a */,
+				1E229BA51F30F05F0045C109 /* mongo_build_debug_mongo_db_s_libcommands.a */,
+				1E229BA61F30F05F0045C109 /* mongo_build_debug_mongo_db_s_libmigration_types.a */,
+				1E229BA71F30F05F0045C109 /* mongo_build_debug_mongo_db_s_libsharding_task_executor.a */,
+				1E229BA81F30F05F0045C109 /* mongo_build_debug_mongo_db_s_libsharding.a */,
+				1E229BA91F30F05F0045C109 /* mongo_build_debug_mongo_db_s_libsplit_chunk.a */,
+				1E229BAA1F30F05F0045C109 /* mongo_build_debug_mongo_db_s_libsplit_vector.a */,
+				1E229BAB1F30F05F0045C109 /* mongo_build_debug_mongo_db_s_libtype_shard_identity.a */,
+				1E229BAC1F30F05F0045C109 /* mongo_build_debug_mongo_db_stats_libcounters.a */,
+				1E229BAD1F30F05F0045C109 /* mongo_build_debug_mongo_db_stats_libfill_locker_info.a */,
+				1E229BAE1F30F05F0045C109 /* mongo_build_debug_mongo_db_stats_libserveronly.a */,
+				1E229BAF1F30F05F0045C109 /* mongo_build_debug_mongo_db_stats_libtimer_stats.a */,
+				1E229BB01F30F05F0045C109 /* mongo_build_debug_mongo_db_stats_libtop.a */,
+				1E229BB11F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_devnull_libstorage_devnull_core.a */,
+				1E229BB21F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_devnull_libstorage_devnull.a */,
+				1E229BB31F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_ephemeral_for_test_libephemeral_for_test_record_store.a */,
+				1E229BB41F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_ephemeral_for_test_libstorage_ephemeral_for_test_core.a */,
+				1E229BB51F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_ephemeral_for_test_libstorage_ephemeral_for_test.a */,
+				1E229BB61F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_kv_libkv_database_catalog_entry_core.a */,
+				1E229BB71F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_kv_libkv_engine_core.a */,
+				1E229BB81F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_kv_libkv_engine.a */,
+				1E229BB91F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_kv_libkv_prefix.a */,
+				1E229BBA1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_kv_libkv_storage_engine.a */,
+				1E229BBB1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_libbson_collection_catalog_entry.a */,
+				1E229BBC1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_libencryption_hooks.a */,
+				1E229BBD1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_libindex_entry_comparison.a */,
+				1E229BBE1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_libjournal_listener.a */,
+				1E229BBF1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_libkey_string.a */,
+				1E229BC01F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_liboplog_hack.a */,
+				1E229BC11F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_libstorage_engine_lock_file.a */,
+				1E229BC21F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_libstorage_engine_metadata.a */,
+				1E229BC31F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_libstorage_init_d.a */,
+				1E229BC41F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_libstorage_options.a */,
+				1E229BC51F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_libbtree.a */,
+				1E229BC61F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_libcompress.a */,
+				1E229BC71F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_libextent.a */,
+				1E229BC81F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_libfile_allocator.a */,
+				1E229BC91F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_liblogfile.a */,
+				1E229BCA1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_libmmap_v1_options.a */,
+				1E229BCB1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_libmmap.a */,
+				1E229BCC1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_libpaths.a */,
+				1E229BCD1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_librecord_access_tracker.a */,
+				1E229BCE1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_librecord_store_v1.a */,
+				1E229BCF1F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_mmap_v1_libstorage_mmapv1.a */,
+				1E229BD01F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_wiredtiger_libstorage_wiredtiger_core.a */,
+				1E229BD11F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_wiredtiger_libstorage_wiredtiger_customization_hooks.a */,
+				1E229BD21F30F05F0045C109 /* mongo_build_debug_mongo_db_storage_wiredtiger_libstorage_wiredtiger.a */,
+				1E229BD31F30F05F0045C109 /* mongo_build_debug_mongo_db_update_libupdate_common.a */,
+				1E229BD41F30F05F0045C109 /* mongo_build_debug_mongo_db_update_libupdate_driver.a */,
+				1E229BD51F30F05F0045C109 /* mongo_build_debug_mongo_db_update_libupdate.a */,
+				1E229BD61F30F05F0045C109 /* mongo_build_debug_mongo_db_views_libviews_mongod.a */,
+				1E229BD71F30F05F0045C109 /* mongo_build_debug_mongo_db_views_libviews.a */,
+				1E229BD81F30F05F0045C109 /* mongo_build_debug_mongo_executor_libasync_stream.a */,
+				1E229BD91F30F05F0045C109 /* mongo_build_debug_mongo_executor_libasync_timer_asio.a */,
+				1E229BDA1F30F05F0045C109 /* mongo_build_debug_mongo_executor_libconnection_pool_stats.a */,
+				1E229BDB1F30F05F0045C109 /* mongo_build_debug_mongo_executor_libconnection_pool.a */,
+				1E229BDC1F30F05F0045C109 /* mongo_build_debug_mongo_executor_libnetwork_interface_asio.a */,
+				1E229BDD1F30F05F0045C109 /* mongo_build_debug_mongo_executor_libnetwork_interface_factory.a */,
+				1E229BDE1F30F05F0045C109 /* mongo_build_debug_mongo_executor_libnetwork_interface_thread_pool.a */,
+				1E229BDF1F30F05F0045C109 /* mongo_build_debug_mongo_executor_libnetwork_interface.a */,
+				1E229BE01F30F05F0045C109 /* mongo_build_debug_mongo_executor_libremote_command.a */,
+				1E229BE11F30F05F0045C109 /* mongo_build_debug_mongo_executor_libtask_executor_interface.a */,
+				1E229BE21F30F05F0045C109 /* mongo_build_debug_mongo_executor_libtask_executor_pool.a */,
+				1E229BE31F30F05F0045C109 /* mongo_build_debug_mongo_executor_libthread_pool_task_executor.a */,
+				1E229BE41F30F05F0045C109 /* mongo_build_debug_mongo_idl_libidl_parser.a */,
+				1E229BE51F30F05F0045C109 /* mongo_build_debug_mongo_libbase.a */,
+				1E229BE61F30F05F0045C109 /* mongo_build_debug_mongo_liblinenoise_utf8.a */,
+				1E229BE71F30F05F0045C109 /* mongo_build_debug_mongo_libmongodmain.a */,
+				1E229BE81F30F05F0045C109 /* mongo_build_debug_mongo_logger_libparse_log_component_settings.a */,
+				1E229BE91F30F05F0045C109 /* mongo_build_debug_mongo_rpc_libclient_metadata.a */,
+				1E229BEA1F30F05F0045C109 /* mongo_build_debug_mongo_rpc_libcommand_reply.a */,
+				1E229BEB1F30F05F0045C109 /* mongo_build_debug_mongo_rpc_libcommand_request.a */,
+				1E229BEC1F30F05F0045C109 /* mongo_build_debug_mongo_rpc_libcommand_status.a */,
+				1E229BED1F30F05F0045C109 /* mongo_build_debug_mongo_rpc_liblegacy_reply.a */,
+				1E229BEE1F30F05F0045C109 /* mongo_build_debug_mongo_rpc_liblegacy_request.a */,
+				1E229BEF1F30F05F0045C109 /* mongo_build_debug_mongo_rpc_libmetadata.a */,
+				1E229BF01F30F05F0045C109 /* mongo_build_debug_mongo_rpc_libobject_check.a */,
+				1E229BF11F30F05F0045C109 /* mongo_build_debug_mongo_rpc_libprotocol.a */,
+				1E229BF21F30F05F0045C109 /* mongo_build_debug_mongo_rpc_librpc.a */,
+				1E229BF31F30F05F0045C109 /* mongo_build_debug_mongo_s_catalog_libdist_lock_catalog_impl.a */,
+				1E229BF41F30F05F0045C109 /* mongo_build_debug_mongo_s_catalog_libdist_lock_catalog_interface.a */,
+				1E229BF51F30F05F0045C109 /* mongo_build_debug_mongo_s_catalog_libdist_lock_manager.a */,
+				1E229BF61F30F05F0045C109 /* mongo_build_debug_mongo_s_catalog_libreplset_dist_lock_manager.a */,
+				1E229BF71F30F05F0045C109 /* mongo_build_debug_mongo_s_catalog_libsharding_catalog_client_impl.a */,
+				1E229BF81F30F05F0045C109 /* mongo_build_debug_mongo_s_catalog_libsharding_catalog_client.a */,
+				1E229BF91F30F05F0045C109 /* mongo_build_debug_mongo_s_catalog_libsharding_catalog_manager.a */,
+				1E229BFA1F30F05F0045C109 /* mongo_build_debug_mongo_s_client_libparallel.a */,
+				1E229BFB1F30F05F0045C109 /* mongo_build_debug_mongo_s_client_libshard_interface.a */,
+				1E229BFC1F30F05F0045C109 /* mongo_build_debug_mongo_s_client_libshard_local.a */,
+				1E229BFD1F30F05F0045C109 /* mongo_build_debug_mongo_s_client_libsharding_client.a */,
+				1E229BFE1F30F05F0045C109 /* mongo_build_debug_mongo_s_client_libsharding_connection_hook.a */,
+				1E229BFF1F30F05F0045C109 /* mongo_build_debug_mongo_s_commands_libshared_cluster_commands.a */,
+				1E229C001F30F05F0045C109 /* mongo_build_debug_mongo_s_libasync_requests_sender.a */,
+				1E229C011F30F05F0045C109 /* mongo_build_debug_mongo_s_libcluster_last_error_info.a */,
+				1E229C021F30F05F0045C109 /* mongo_build_debug_mongo_s_libcommon.a */,
+				1E229C031F30F05F0045C109 /* mongo_build_debug_mongo_s_libcoreshard.a */,
+				1E229C041F30F05F0045C109 /* mongo_build_debug_mongo_s_libis_mongos.a */,
+				1E229C051F30F05F0045C109 /* mongo_build_debug_mongo_s_librouting_table.a */,
+				1E229C061F30F05F0045C109 /* mongo_build_debug_mongo_s_libshard_id.a */,
+				1E229C071F30F05F0045C109 /* mongo_build_debug_mongo_s_libsharding_initialization.a */,
+				1E229C081F30F05F0045C109 /* mongo_build_debug_mongo_s_libsharding_request_types.a */,
+				1E229C091F30F05F0045C109 /* mongo_build_debug_mongo_s_query_libasync_results_merger.a */,
+				1E229C0A1F30F05F0045C109 /* mongo_build_debug_mongo_s_query_libcluster_cursor_manager.a */,
+				1E229C0B1F30F05F0045C109 /* mongo_build_debug_mongo_s_write_ops_libbatch_write_types.a */,
+				1E229C0C1F30F05F0045C109 /* mongo_build_debug_mongo_scripting_libbson_template_evaluator.a */,
+				1E229C0D1F30F05F0045C109 /* mongo_build_debug_mongo_scripting_libscripting_common.a */,
+				1E229C0E1F30F05F0045C109 /* mongo_build_debug_mongo_scripting_libscripting_none.a */,
+				1E229C0F1F30F05F0045C109 /* mongo_build_debug_mongo_scripting_libscripting_server.a */,
+				1E229C101F30F05F0045C109 /* mongo_build_debug_mongo_scripting_libscripting.a */,
+				1E229C111F30F05F0045C109 /* mongo_build_debug_mongo_shell_libmongojs.a */,
+				1E229C121F30F05F0045C109 /* mongo_build_debug_mongo_transport_libmessage_compressor.a */,
+				1E229C131F30F0600045C109 /* mongo_build_debug_mongo_transport_libservice_entry_point.a */,
+				1E229C141F30F0600045C109 /* mongo_build_debug_mongo_transport_libservice_executor.a */,
+				1E229C151F30F0600045C109 /* mongo_build_debug_mongo_transport_libtransport_layer_common.a */,
+				1E229C161F30F0600045C109 /* mongo_build_debug_mongo_transport_libtransport_layer_manager.a */,
+				1E229C171F30F0600045C109 /* mongo_build_debug_mongo_transport_libtransport_layer_mock.a */,
+				1E229C181F30F0600045C109 /* mongo_build_debug_mongo_transport_libtransport_layer.a */,
+				1E229C191F30F0600045C109 /* mongo_build_debug_mongo_unittest_libunittest.a */,
+				1E229C1A1F30F0600045C109 /* mongo_build_debug_mongo_util_cmdline_utils_libcmdline_utils.a */,
+				1E229C1B1F30F0600045C109 /* mongo_build_debug_mongo_util_concurrency_libspin_lock.a */,
+				1E229C1C1F30F0600045C109 /* mongo_build_debug_mongo_util_concurrency_libthread_pool.a */,
+				1E229C1D1F30F0600045C109 /* mongo_build_debug_mongo_util_concurrency_libticketholder.a */,
+				1E229C1E1F30F0600045C109 /* mongo_build_debug_mongo_util_libbackground_job.a */,
+				1E229C1F1F30F0600045C109 /* mongo_build_debug_mongo_util_libclock_sources.a */,
+				1E229C201F30F0600045C109 /* mongo_build_debug_mongo_util_libdebugger.a */,
+				1E229C211F30F0600045C109 /* mongo_build_debug_mongo_util_libdecorable.a */,
+				1E229C221F30F0600045C109 /* mongo_build_debug_mongo_util_libelapsed_tracker.a */,
+				1E229C231F30F0600045C109 /* mongo_build_debug_mongo_util_libfail_point.a */,
+				1E229C241F30F0600045C109 /* mongo_build_debug_mongo_util_libintrusive_counter.a */,
+				1E229C251F30F0600045C109 /* mongo_build_debug_mongo_util_libmd5.a */,
+				1E229C261F30F0600045C109 /* mongo_build_debug_mongo_util_libntservice.a */,
+				1E229C271F30F0600045C109 /* mongo_build_debug_mongo_util_libperiodic_runner_asio.a */,
+				1E229C281F30F0600045C109 /* mongo_build_debug_mongo_util_libperiodic_runner_factory.a */,
+				1E229C291F30F0600045C109 /* mongo_build_debug_mongo_util_libperiodic_runner.a */,
+				1E229C2A1F30F0600045C109 /* mongo_build_debug_mongo_util_libprocessinfo.a */,
+				1E229C2B1F30F0600045C109 /* mongo_build_debug_mongo_util_libprogress_meter.a */,
+				1E229C2C1F30F0600045C109 /* mongo_build_debug_mongo_util_libquick_exit.a */,
+				1E229C2D1F30F0600045C109 /* mongo_build_debug_mongo_util_libsafe_num.a */,
+				1E229C2E1F30F0600045C109 /* mongo_build_debug_mongo_util_libsecure_compare_memory.a */,
+				1E229C2F1F30F0600045C109 /* mongo_build_debug_mongo_util_libsecure_zero_memory.a */,
+				1E229C301F30F0600045C109 /* mongo_build_debug_mongo_util_libsignal_handlers.a */,
+				1E229C311F30F0600045C109 /* mongo_build_debug_mongo_util_libsummation.a */,
+				1E229C321F30F0600045C109 /* mongo_build_debug_mongo_util_libuuid.a */,
+				1E229C331F30F0600045C109 /* mongo_build_debug_mongo_util_libversion_impl.a */,
+				1E229C341F30F0600045C109 /* mongo_build_debug_mongo_util_net_libnetwork.a */,
+				1E229C351F30F0600045C109 /* mongo_build_debug_mongo_util_options_parser_liboptions_parser_init.a */,
+				1E229C361F30F0600045C109 /* mongo_build_debug_mongo_util_options_parser_liboptions_parser.a */,
+				1E229C371F30F0600045C109 /* mongo_build_debug_third_party_asio-master_libasio.a */,
+				1E229C381F30F0600045C109 /* mongo_build_debug_third_party_boost-1.60.0_libboost_filesystem.a */,
+				1E229C391F30F0600045C109 /* mongo_build_debug_third_party_boost-1.60.0_libboost_iostreams.a */,
+				1E229C3A1F30F0600045C109 /* mongo_build_debug_third_party_boost-1.60.0_libboost_program_options.a */,
+				1E229C3B1F30F0600045C109 /* mongo_build_debug_third_party_boost-1.60.0_libboost_system.a */,
+				1E229C3C1F30F0600045C109 /* mongo_build_debug_third_party_boost-1.60.0_libboost_thread.a */,
+				1E229C3D1F30F0600045C109 /* mongo_build_debug_third_party_icu4c-57.1_source_libicu_common.a */,
+				1E229C3E1F30F0600045C109 /* mongo_build_debug_third_party_icu4c-57.1_source_libicu_data.a */,
+				1E229C3F1F30F0600045C109 /* mongo_build_debug_third_party_icu4c-57.1_source_libicu_i18n.a */,
+				1E229C401F30F0600045C109 /* mongo_build_debug_third_party_IntelRDFPMathLib20U1_libintel_decimal128.a */,
+				1E229C411F30F0600045C109 /* mongo_build_debug_third_party_libshim_allocator.a */,
+				1E229C421F30F0600045C109 /* mongo_build_debug_third_party_libshim_asio.a */,
+				1E229C431F30F0600045C109 /* mongo_build_debug_third_party_libshim_boost.a */,
+				1E229C441F30F0600045C109 /* mongo_build_debug_third_party_libshim_icu.a */,
+				1E229C451F30F0600045C109 /* mongo_build_debug_third_party_libshim_intel_decimal128.a */,
+				1E229C461F30F0600045C109 /* mongo_build_debug_third_party_libshim_pcrecpp.a */,
+				1E229C471F30F0600045C109 /* mongo_build_debug_third_party_libshim_snappy.a */,
+				1E229C481F30F0600045C109 /* mongo_build_debug_third_party_libshim_stemmer.a */,
+				1E229C491F30F0600045C109 /* mongo_build_debug_third_party_libshim_timelib.a */,
+				1E229C4A1F30F0600045C109 /* mongo_build_debug_third_party_libshim_tomcrypt.a */,
+				1E229C4B1F30F0600045C109 /* mongo_build_debug_third_party_libshim_tz.a */,
+				1E229C4C1F30F0600045C109 /* mongo_build_debug_third_party_libshim_wiredtiger.a */,
+				1E229C4D1F30F0600045C109 /* mongo_build_debug_third_party_libshim_yaml.a */,
+				1E229C4E1F30F0600045C109 /* mongo_build_debug_third_party_libshim_zlib.a */,
+				1E229C4F1F30F0600045C109 /* mongo_build_debug_third_party_libstemmer_c_libstemmer.a */,
+				1E229C501F30F0600045C109 /* mongo_build_debug_third_party_murmurhash3_libmurmurhash3.a */,
+				1E229C511F30F0600045C109 /* mongo_build_debug_third_party_pcre-8.39_libpcrecpp.a */,
+				1E229C521F30F0600045C109 /* mongo_build_debug_third_party_s2_base_libbase.a */,
+				1E229C531F30F0600045C109 /* mongo_build_debug_third_party_s2_libs2.a */,
+				1E229C541F30F0600045C109 /* mongo_build_debug_third_party_s2_strings_libstrings.a */,
+				1E229C551F30F0600045C109 /* mongo_build_debug_third_party_s2_util_coding_libcoding.a */,
+				1E229C561F30F0600045C109 /* mongo_build_debug_third_party_s2_util_math_libmath.a */,
+				1E229C571F30F0600045C109 /* mongo_build_debug_third_party_snappy-1.1.3_libsnappy.a */,
+				1E229C581F30F0600045C109 /* mongo_build_debug_third_party_timelib-2017.05beta5_libtimelib.a */,
+				1E229C591F30F0600045C109 /* mongo_build_debug_third_party_tomcrypt-1.18.0-rc2_libtomcrypt.a */,
+				1E229C5A1F30F0600045C109 /* mongo_build_debug_third_party_wiredtiger_libwiredtiger.a */,
+				1E229C5B1F30F0600045C109 /* mongo_build_debug_third_party_yaml-cpp-0.5.3_libyaml.a */,
+				1E229C5C1F30F0600045C109 /* mongo_build_debug_third_party_zlib-1.2.8_libzlib.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E229E031F30F30A0045C109 /* MongoHelp */ = {
+			isa = PBXGroup;
+			children = (
+				1E229E041F30F3130045C109 /* cheetah_c.c */,
+				1E229E051F30F3130045C109 /* cheetah_c.h */,
+				1E229E061F30F3130045C109 /* cheetah.swift */,
+			);
+			name = MongoHelp;
+			sourceTree = "<group>";
+		};
+		1EC1FF441F30EDC100023E69 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				86FF5BD41A6D697400A017A1 /* TaskManager.swift */,
+				1EC1FF421F30E51B00023E69 /* Task.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1EC1FF451F30EDD500023E69 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1E229E091F31280F0045C109 /* RunCommandsViewController.swift */,
+				86FF5BB41A6D65FB00A017A1 /* FirstViewController.swift */,
+				86FF5BB61A6D65FB00A017A1 /* SecondViewController.swift */,
+				1EC1FF401F30DFAA00023E69 /* DetailViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1EC1FF461F30EDFF00023E69 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86FF5BBD1A6D65FB00A017A1 /* LaunchScreen.xib */,
+				86FF5BB81A6D65FB00A017A1 /* Main.storyboard */,
+				1E39F5E51F321ADE003E7E71 /* TaskTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		86FF5BA41A6D65FB00A017A1 = {
+			isa = PBXGroup;
+			children = (
+				86FF5BAF1A6D65FB00A017A1 /* TaskApplication */,
+				86FF5BC71A6D65FB00A017A1 /* TaskApplicationTests */,
+				86FF5BAE1A6D65FB00A017A1 /* Products */,
+				1E229AB71F30F05E0045C109 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		86FF5BAE1A6D65FB00A017A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86FF5BAD1A6D65FB00A017A1 /* TaskApplication.app */,
+				86FF5BC41A6D65FB00A017A1 /* TaskApplicationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86FF5BAF1A6D65FB00A017A1 /* TaskApplication */ = {
+			isa = PBXGroup;
+			children = (
+				1E229E031F30F30A0045C109 /* MongoHelp */,
+				1EC1FF461F30EDFF00023E69 /* Views */,
+				1EC1FF451F30EDD500023E69 /* Controllers */,
+				1EC1FF441F30EDC100023E69 /* Models */,
+				86FF5BB01A6D65FB00A017A1 /* Supporting Files */,
+			);
+			path = TaskApplication;
+			sourceTree = "<group>";
+		};
+		86FF5BB01A6D65FB00A017A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E229E021F30F2A00045C109 /* TaskApplication-Bridging-Header.h */,
+				86FF5BBB1A6D65FB00A017A1 /* Images.xcassets */,
+				86FF5BB21A6D65FB00A017A1 /* AppDelegate.swift */,
+				86FF5BB11A6D65FB00A017A1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86FF5BC71A6D65FB00A017A1 /* TaskApplicationTests */ = {
+			isa = PBXGroup;
+			children = (
+				86FF5BCA1A6D65FB00A017A1 /* TaskApplicationTests.swift */,
+				86FF5BC81A6D65FB00A017A1 /* Supporting Files */,
+			);
+			path = TaskApplicationTests;
+			sourceTree = "<group>";
+		};
+		86FF5BC81A6D65FB00A017A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				86FF5BC91A6D65FB00A017A1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86FF5BAC1A6D65FB00A017A1 /* TaskApplication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86FF5BCE1A6D65FB00A017A1 /* Build configuration list for PBXNativeTarget "TaskApplication" */;
+			buildPhases = (
+				86FF5BA91A6D65FB00A017A1 /* Sources */,
+				86FF5BAA1A6D65FB00A017A1 /* Frameworks */,
+				86FF5BAB1A6D65FB00A017A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TaskApplication;
+			productName = TaskApplication;
+			productReference = 86FF5BAD1A6D65FB00A017A1 /* TaskApplication.app */;
+			productType = "com.apple.product-type.application";
+		};
+		86FF5BC31A6D65FB00A017A1 /* TaskApplicationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86FF5BD11A6D65FB00A017A1 /* Build configuration list for PBXNativeTarget "TaskApplicationTests" */;
+			buildPhases = (
+				86FF5BC01A6D65FB00A017A1 /* Sources */,
+				86FF5BC11A6D65FB00A017A1 /* Frameworks */,
+				86FF5BC21A6D65FB00A017A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86FF5BC61A6D65FB00A017A1 /* PBXTargetDependency */,
+			);
+			name = TaskApplicationTests;
+			productName = TaskApplicationTests;
+			productReference = 86FF5BC41A6D65FB00A017A1 /* TaskApplicationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86FF5BA51A6D65FB00A017A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Michael Crump";
+				TargetAttributes = {
+					86FF5BAC1A6D65FB00A017A1 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = T8YB9L4SM5;
+						LastSwiftMigration = 0830;
+					};
+					86FF5BC31A6D65FB00A017A1 = {
+						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0830;
+						TestTargetID = 86FF5BAC1A6D65FB00A017A1;
+					};
+				};
+			};
+			buildConfigurationList = 86FF5BA81A6D65FB00A017A1 /* Build configuration list for PBXProject "TaskApplication" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 86FF5BA41A6D65FB00A017A1;
+			productRefGroup = 86FF5BAE1A6D65FB00A017A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86FF5BAC1A6D65FB00A017A1 /* TaskApplication */,
+				86FF5BC31A6D65FB00A017A1 /* TaskApplicationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86FF5BAB1A6D65FB00A017A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86FF5BBA1A6D65FB00A017A1 /* Main.storyboard in Resources */,
+				86FF5BBF1A6D65FB00A017A1 /* LaunchScreen.xib in Resources */,
+				86FF5BBC1A6D65FB00A017A1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86FF5BC21A6D65FB00A017A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86FF5BA91A6D65FB00A017A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E229E0A1F31280F0045C109 /* RunCommandsViewController.swift in Sources */,
+				86FF5BB71A6D65FB00A017A1 /* SecondViewController.swift in Sources */,
+				1E39F5E61F321ADE003E7E71 /* TaskTableViewCell.swift in Sources */,
+				86FF5BB31A6D65FB00A017A1 /* AppDelegate.swift in Sources */,
+				1EC1FF411F30DFAA00023E69 /* DetailViewController.swift in Sources */,
+				1E229E081F30F3130045C109 /* cheetah.swift in Sources */,
+				1E229E071F30F3130045C109 /* cheetah_c.c in Sources */,
+				86FF5BD51A6D697400A017A1 /* TaskManager.swift in Sources */,
+				1EC1FF431F30E51B00023E69 /* Task.swift in Sources */,
+				86FF5BB51A6D65FB00A017A1 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86FF5BC01A6D65FB00A017A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86FF5BCB1A6D65FB00A017A1 /* TaskApplicationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86FF5BC61A6D65FB00A017A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86FF5BAC1A6D65FB00A017A1 /* TaskApplication */;
+			targetProxy = 86FF5BC51A6D65FB00A017A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		86FF5BB81A6D65FB00A017A1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86FF5BB91A6D65FB00A017A1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		86FF5BBD1A6D65FB00A017A1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86FF5BBE1A6D65FB00A017A1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		86FF5BCC1A6D65FB00A017A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		86FF5BCD1A6D65FB00A017A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		86FF5BCF1A6D65FB00A017A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T8YB9L4SM5;
+				HEADER_SEARCH_PATHS = (
+					../mongo/src,
+					../mongo/src/mongo/client/embedded,
+					"../mongo-c-driver/install/include/libbson-1.0",
+					"../mongo-c-driver/install/include/libmongoc-1.0",
+				);
+				INFOPLIST_FILE = TaskApplication/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					../objfiles,
+					"../mongo-c-driver/install/lib",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tkaye.mongodb.com;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TaskApplication-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		86FF5BD01A6D65FB00A017A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T8YB9L4SM5;
+				HEADER_SEARCH_PATHS = (
+					../mongo/src,
+					../mongo/src/mongo/client/embedded,
+					"../mongo-c-driver/install/include/libbson-1.0",
+					"../mongo-c-driver/install/include/libmongoc-1.0",
+				);
+				INFOPLIST_FILE = TaskApplication/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					../objfiles,
+					"../mongo-c-driver/install/lib",
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tkaye.mongodb.com;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TaskApplication-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		86FF5BD21A6D65FB00A017A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TaskApplicationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.michaelcrump.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaskApplication.app/TaskApplication";
+			};
+			name = Debug;
+		};
+		86FF5BD31A6D65FB00A017A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TaskApplicationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.michaelcrump.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaskApplication.app/TaskApplication";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86FF5BA81A6D65FB00A017A1 /* Build configuration list for PBXProject "TaskApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86FF5BCC1A6D65FB00A017A1 /* Debug */,
+				86FF5BCD1A6D65FB00A017A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86FF5BCE1A6D65FB00A017A1 /* Build configuration list for PBXNativeTarget "TaskApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86FF5BCF1A6D65FB00A017A1 /* Debug */,
+				86FF5BD01A6D65FB00A017A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86FF5BD11A6D65FB00A017A1 /* Build configuration list for PBXNativeTarget "TaskApplicationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86FF5BD21A6D65FB00A017A1 /* Debug */,
+				86FF5BD31A6D65FB00A017A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 86FF5BA51A6D65FB00A017A1 /* Project object */;
+}
