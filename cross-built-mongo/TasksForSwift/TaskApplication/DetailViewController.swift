@@ -40,13 +40,19 @@ class DetailViewController: UIViewController {
     @IBAction func updateTask(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         if let t = task {
-            t.name = taskName.text!
-            t.description = taskDesc.text!
-            t.location = taskLoc.text!
-            if let new_pri = Int(taskPri.text!) {
-                t.priority = new_pri
-                cheetah_updateDocumentByOID(db: appDelegate.db!, oid: t.oid, new_doc: t.toBson())
-                _ = navigationController?.popViewController(animated: true)
+            if let np = Int(taskPri.text!) {
+                if let new_task = Task(name: taskName.text!, description: taskDesc.text!, location: taskLoc.text!, priority: np) {
+                    var doc = BSON.Document()
+                    doc["_id"] = .ObjectID(t.oid)
+                    do {
+                        _ = try appDelegate.embeddedBundle?.mongoCollection.update(query: doc, newValue: new_task.toDocument())
+                        _ = navigationController?.popViewController(animated: true)
+
+                    }
+                    catch {
+                        print("ERROR UPDATING")
+                    }
+                }
             }
         }
     }

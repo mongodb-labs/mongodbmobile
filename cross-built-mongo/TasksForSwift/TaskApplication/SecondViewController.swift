@@ -33,9 +33,9 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
             let description: String = txtDesc.text!
             let location: String = txtLoc.text!
             if let priority: Int = Int(txtPri.text!) {
-                if let t = taskMgr.addTask(name: name, desc: description, loc: location, priority: priority) {
+                if let t = taskMgr.createTask(name: name, desc: description, loc: location, priority: priority) {
                     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    cheetah_insertTask(task: t, db: appDelegate.db!)
+                    taskMgr.insertTask(task: t, col: (appDelegate.embeddedBundle?.mongoCollection)!)
                     clearText()
                     self.view.endEditing(true)
                     self.tabBarController?.selectedIndex = 0

@@ -5,7 +5,7 @@
 //  Created by Tyler Kaye on 8/2/17.
 //
 
-
+import Foundation
 
 public extension BSON {
     
@@ -18,6 +18,16 @@ public extension BSON {
         defer { bson_destroy(pointer) }
         
         return toJSONString(unsafePointer: pointer)
+    }
+    
+    static func prettyPrintJson(uglyJsonString: String) -> String {
+        guard let data = uglyJsonString.data(using: .utf8, allowLossyConversion: false) else { return "" }
+        if let obj = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) {
+            if let prettyData = try? JSONSerialization.data(withJSONObject: obj, options: .prettyPrinted) {
+                return String(data: prettyData, encoding: .utf8)!
+            }
+        }
+        return "Failed"
     }
     
     /// Converts the BSON pointer to JSON.

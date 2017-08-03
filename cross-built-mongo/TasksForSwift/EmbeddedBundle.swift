@@ -9,9 +9,9 @@ import Foundation
 public final class EmbeddedBundle {
     
     var embeddedDB: OpaquePointer
-    var mongocDB: OpaquePointer
-    var mongocClient: OpaquePointer
-    var mongocCollection: OpaquePointer
+    var mongoDB: Database
+    var mongoClient: Client
+    var mongoCollection: Collection
     
     public init(databaseName: String, collectionName: String) {
         // call mongoc_init()
@@ -26,24 +26,17 @@ public final class EmbeddedBundle {
         // create the embedded db from CAPI
         embeddedDB = libmongodbcapi_db_new(argc, &cargs, nil)
         
-        // create the mongoc client 
-        mongocClient = embedded_mongoc_client_new(embeddedDB)
+        // create the client
+        mongoClient = Client(client: embedded_mongoc_client_new(embeddedDB))
         
-        // create the mongoc database 
-        mongocDB = mongoc_client_get_database(mongocClient, databaseName)
+        // create the database
+        mongoDB = Database(client: mongoClient, name: databaseName)
         
-        // create the mongoc collection
-        if (mongoc_database_has_collection(mongocDB, collectionName, nil)) {
-            mongocCollection = mongoc_database_get_collection(mongocDB, collectionName)
-        } else {
-            mongocCollection = mongoc_database_create_collection(mongocDB, collectionName, nil, nil)
-        }
+        // create the collection
+        mongoCollection = Collection(database: mongoDB, name: collectionName)
     }
 
     deinit {
-        mongoc_collection_destroy (mongocCollection)
-        mongoc_client_destroy (mongocClient)
-        mongoc_database_destroy(mongocDB)
         libmongodbcapi_db_fini(embeddedDB)
         mongoc_cleanup()
     }

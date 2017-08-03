@@ -24,22 +24,22 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         // Get all of the tasks 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let cursor = cheetah_c_findDocs(appDelegate.db)
-        var doc = cheetah_c_getNextDoc(cursor)
-        while (doc != nil) {
-            let name = String(cString: cheetah_c_getStringValueForKey(doc, "name"), encoding: .utf8)
-            let description = String(cString: cheetah_c_getStringValueForKey(doc, "description"), encoding: .utf8)
-            let location = String(cString: cheetah_c_getStringValueForKey(doc, "location"), encoding: .utf8)
-            let priority = Int(cheetah_c_getIntValueForKey(doc, "priority"))
-            let oid = cheetah_c_getOidForBsonDoc(doc)
-            _ = taskMgr.addTask(name: name!, desc: description!, loc: location!, priority: priority, oid: oid)
-            doc = cheetah_c_getNextDoc(cursor)
+        do {
+            let cursor = try appDelegate.embeddedBundle?.mongoCollection.find()
+            let docs = try cursor?.all()
+            for d in docs! {
+                _ = taskMgr.createTask(doc: d)
+            }
+        } catch {
+            print("ERROR PERFORMING FIND")
         }
         taskMgr.tasks = taskMgr.tasks.sorted(by: {$0.priority > $1.priority})
         
         let tabItems = self.tabBarController?.tabBar.items as NSArray!
         let tabItem = tabItems?[0] as! UITabBarItem
-        tabItem.badgeValue = String(cheetah_getCollectionCount(db: appDelegate.db!))
+        if let i = appDelegate.embeddedBundle?.mongoCollection.count() {
+            tabItem.badgeValue = String(describing: i)
+        }
         
         self.tblTasks.reloadData()
     }
@@ -70,10 +70,12 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
         if (editingStyle == UITableViewCellEditingStyle.delete){
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            taskMgr.deleteTaskAtIndex(index: indexPath.row, db: appDelegate.db!)
+            taskMgr.deleteTaskAtIndex(index: indexPath.row, col: (appDelegate.embeddedBundle?.mongoCollection)!)
             let tabItems = self.tabBarController?.tabBar.items as NSArray!
             let tabItem = tabItems?[0] as! UITabBarItem
-            tabItem.badgeValue = String(cheetah_getCollectionCount(db: appDelegate.db!))
+            if let i = appDelegate.embeddedBundle?.mongoCollection.count() {
+                tabItem.badgeValue = String(describing: i)
+            }
             tblTasks.reloadData()
         }
     }

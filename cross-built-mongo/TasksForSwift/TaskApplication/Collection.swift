@@ -125,25 +125,27 @@ public final class Collection {
 //        return Cursor(cursor: cursor)
 //    }
 
-    public func count(query: BSON.Document = BSON.Document(), flags: QueryFlags = .None, skip: Int = 0, limit: Int = 0) throws -> Int {
-
-        let query = try BSON.AutoReleasingCarrier(doc: query)
-
-        var error = bson_error_t()
-
-        let count = mongoc_collection_count(
-            self.pointer,
-            flags.rawFlag,
-            query.pointer,
-            Int64(skip),
-            Int64(limit),
-            nil,
-            &error
-        )
-
-        try error.throwIfError()
-
-        return Int(count)
+    public func count(query: BSON.Document = BSON.Document(), flags: QueryFlags = .None, skip: Int = 0, limit: Int = 0) -> Int {
+        
+        do {
+            let quer = try BSON.AutoReleasingCarrier(doc: query)
+            var error = bson_error_t()
+            
+            let count = mongoc_collection_count(
+                self.pointer,
+                flags.rawFlag,
+                quer.pointer,
+                Int64(skip),
+                Int64(limit),
+                nil,
+                &error
+            )
+            return Int(count)
+        }
+        catch {
+            print("ERROR AT COUNT FUNCTION FOR COLLECTION")
+            return 0;
+        }
     }
 
     public func drop() throws {
@@ -182,6 +184,8 @@ public final class Collection {
         }
         return res
     }
+    
+    
 
     public func validate(options: BSON.Document) throws -> BSON.Document {
 

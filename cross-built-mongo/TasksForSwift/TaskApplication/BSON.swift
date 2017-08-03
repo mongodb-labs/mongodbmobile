@@ -1,12 +1,10 @@
 //
 //  BSON.swift
-//  Cheetah Swift Driver
+//  BSON
 //
-//  Created by Tyler Kaye on 8/2/17.
+//  Created by Alsey Coleman Miller on 12/13/15.
+//  Copyright © 2015 PureSwift. All rights reserved.
 //
-
-
-import Foundation
 
 /// [Binary JSON](http://bsonspec.org)
 public struct BSON {
@@ -19,7 +17,7 @@ public struct BSON {
     /// BSON Document
     public typealias Document = [String: BSON.Value]
     
-    /// BSON value type.
+    /// BSON value type. 
     public enum Value: RawRepresentable, Equatable, CustomStringConvertible {
         
         case Null
@@ -60,7 +58,7 @@ public struct BSON {
     
     public struct Binary: Equatable {
         
-        public enum Subtype: UInt8 {
+        public enum Subtype: Byte {
             
             case Generic    = 0x00
             case Function   = 0x01
@@ -102,13 +100,13 @@ public struct BSON {
         case Minimum
         case Maximum
     }
-    
+        
     public struct Timestamp: Equatable {
         
         /// Seconds since the Unix epoch.
         public var time: UInt32
         
-        /// Prdinal for operations within a given second.
+        /// Prdinal for operations within a given second. 
         public var oridinal: UInt32
         
         public init(time: UInt32, oridinal: UInt32) {
@@ -280,105 +278,105 @@ extension BSON.Value {
         default: return nil
         }
     }
-    
+
     public var arrayValue: BSON.Array? {
         switch self {
         case .Array(let arr): return arr
         default: return nil
         }
     }
-    
+
     public var documentValue: BSON.Document? {
         switch self {
         case .Document(let doc): return doc
         default: return nil
         }
     }
-    
+
     public var numberValue: BSON.Number? {
         switch self {
         case .Number(let num): return num
         default: return nil
         }
     }
-    
+
     public var intValue: Int? {
         guard let num = self.numberValue else { return nil }
-        
+
         switch num {
         case .Integer32(let i): return Int(i)
         case .Integer64(let i): return Int(i)
         default: return nil
         }
     }
-    
+
     public var doubleValue: Double? {
         guard let num = self.numberValue else { return nil }
-        
+
         switch num {
         case .Double(let d): return d
         default: return nil
         }
     }
-    
+
     public var boolValue: Bool? {
         guard let num = self.numberValue else { return nil }
-        
+
         switch num {
         case .Boolean(let b): return b
         default: return nil
         }
     }
-    
+
     public var stringValue: Swift.String? {
         switch self {
         case .String(let str): return str
         default: return nil
         }
     }
-    
+
     public var dateValue: DateValue? {
         switch self {
         case .Date(let date): return date
         default: return nil
         }
     }
-    
+
     public var timestampValue: BSON.Timestamp? {
         switch self {
         case .Timestamp(let stamp): return stamp
         default: return nil
         }
     }
-    
+
     public var binaryValue: BSON.Binary? {
         switch self {
         case .Binary(let binary): return binary
         default: return nil
         }
     }
-    
+
     public var codeValue: BSON.Code? {
         switch self {
         case .Code(let code): return code
         default: return nil
         }
     }
-    
+
     public var objectIDValue: BSON.ObjectID? {
         switch self {
         case .ObjectID(let id): return id
         default: return nil
         }
     }
-    
+
     public var regularExpressionValue: BSON.RegularExpression? {
         switch self {
         case .RegularExpression(let regex): return regex
         default: return nil
         }
     }
-    
+
     public var keyValue: BSON.Key? {
         switch self {
         case .MaxMinKey(let key): return key
@@ -405,10 +403,10 @@ public extension BSON.Number {
         if let value = rawValue as? Int32           { self = .Integer32(value) }
         if let value = rawValue as? Int64           { self = .Integer64(value) }
         if let value = rawValue as? Swift.Double    { self = .Double(value) }
-        
+
         // use Int32 as a default - maybe check type of IntMax (Int32/Int64)?
         if let value = rawValue as? Int             { self = .Integer32(Int32(value)) }
-        
+
         return nil
     }
 }

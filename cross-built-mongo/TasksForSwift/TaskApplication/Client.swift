@@ -8,20 +8,23 @@ public final class Client {
 
     public let uri: String
 
-    let pointer: _mongoc_client
+    var pointer: _mongoc_client
 
-    public init(uri: String) throws {
+    public init(uri: String)  {
         self.uri = uri
 
         mongoc_init()
 
         self.pointer = mongoc_client_new(uri)
-
-        try checkConnection()
     }
 
-    public convenience init(host: String, port: Int) throws {
-        try self.init(uri: "mongodb://\(host):\(port)")
+    public convenience init(host: String, port: Int)  {
+        self.init(uri: "mongodb://\(host):\(port)")
+    }
+    
+    public init(client: OpaquePointer)  {
+        self.pointer = client
+        self.uri = "EMBEDDED"
     }
 
     /**

@@ -31,21 +31,34 @@ class RunCommandsViewController: UIViewController {
     
     @IBAction func showCollStats(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let collStats = cheetah_getCollectionStats(db: appDelegate.db!)
-        output.text = collStats
+        do {
+            let collStats = try appDelegate.embeddedBundle?.mongoCollection.stats(options: BSON.Document())
+            output.text = BSON.prettyPrintJson(uglyJsonString: BSON.toJSONString(document: collStats!))
+        }
+        catch {
+            print("ERROR GETTING COLL STATS")
+        }
     }
     
     @IBAction func showServerStatus(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let serverStatus = cheetah_getServerStatus(db: appDelegate.db!)
-        output.text = serverStatus
+        do {
+            let serverStats = try appDelegate.embeddedBundle?.mongoClient.getServerStatus()
+            output.text = BSON.prettyPrintJson(uglyJsonString: BSON.toJSONString(document: serverStats!))
+        }
+        catch {
+            print("ERROR GETTING COLL STATS")
+        }
     }
     
     @IBAction func showCount(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let count = Int(cheetah_getCollectionCount(db: appDelegate.db!))
-        let collName = cheetah_getCollectionName(db: appDelegate.db!)
-        output.text = "Collection Name: \(collName) \nCollection Count: \(count)"
+            let dbname = appDelegate.embeddedBundle?.mongoDB.name
+            let count = appDelegate.embeddedBundle?.mongoCollection.count()
+            let collName = appDelegate.embeddedBundle?.mongoCollection.name
+            if let c = count, let n = collName, let d = dbname {
+                output.text = "Database Name: \(d)\nCollection Name: \(n) \nCollection Count: \(c)"
+            }
         
     }
     /*

@@ -13,7 +13,7 @@ class Task {
     var location: String
     var description: String
     var priority: Int
-    var oid: bson_oid_t
+    var oid: BSONObjectID
     
     init?(name: String, description: String, location: String, priority: Int) {
         if (name.isEmpty) {
@@ -23,10 +23,10 @@ class Task {
         self.description = description
         self.location = location
         self.priority = priority
-        self.oid = bson_oid_t()
+        self.oid = BSONObjectID()
     }
     
-    init?(name: String, description: String, location: String, priority: Int, oid:bson_oid_t) {
+    init?(name: String, description: String, location: String, priority: Int, oid:BSONObjectID) {
         if (name.isEmpty) {
             return nil
         }
@@ -37,13 +37,32 @@ class Task {
         self.oid = oid
     }
     
-    func toBson() -> UnsafeMutablePointer<bson_t> {
-        let bson = bson_new()
-        bson_append_utf8(bson, "name", -1, name, -1)
-        bson_append_utf8(bson, "description", -1, description, -1)
-        bson_append_utf8(bson, "location", -1, location, -1)
-        bson_append_int32(bson, "priority", -1, Int32(priority))
-        return bson!
+    init?(doc: BSON.Document) {
+        self.name = "Sample Name"
+        self.location = "Sample Location"
+        self.description = "Sample Description"
+        self.priority = 9
+        self.oid = BSONObjectID()
+        if let n = doc["name"]?.stringValue, let desc = doc["description"]?.stringValue, let loc = doc["location"]?.stringValue, let pri = doc["priority"]?.intValue, let bsonOID = doc["_id"]?.objectIDValue {
+            if (n.isEmpty) {
+                return nil
+            }
+            self.name = n
+            self.description = desc
+            self.location = loc
+            self.priority = pri
+            self.oid = bsonOID
+        }
+    }
+
+    func toDocument() -> BSON.Document {
+        let taskDoc: BSON.Document = [
+            "name": .String(name),
+            "description": .String(description),
+            "location" : .String(location),
+            "priority" : .Number(.Integer32(Int32(priority)))
+        ]
+        return taskDoc
     }
     
 }
