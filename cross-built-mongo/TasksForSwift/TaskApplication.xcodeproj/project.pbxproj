@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E00CB711F33D158004F15DA /* EmbeddedBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E00CB701F33D158004F15DA /* EmbeddedBundle.swift */; };
 		1E229E0A1F31280F0045C109 /* RunCommandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E229E091F31280F0045C109 /* RunCommandsViewController.swift */; };
 		1E39F5E61F321ADE003E7E71 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E39F5E51F321ADE003E7E71 /* TaskTableViewCell.swift */; };
 		1E4F45431F3259D8002D2804 /* ObjectID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F45421F3259D8002D2804 /* ObjectID.swift */; };
@@ -23,7 +24,6 @@
 		1EBC85D11F33632A006FB245 /* Declarations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC85CA1F33632A006FB245 /* Declarations.swift */; };
 		1EBC85D21F33632A006FB245 /* Flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC85CB1F33632A006FB245 /* Flags.swift */; };
 		1EBC85D31F33632A006FB245 /* MongoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC85CC1F33632A006FB245 /* MongoError.swift */; };
-		1EBC85D71F33723C006FB245 /* EmbeddedBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC85D61F33723C006FB245 /* EmbeddedBundle.swift */; };
 		1EBC85DD1F33C353006FB245 /* BSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC85DC1F33C353006FB245 /* BSON.swift */; };
 		1EC1FF411F30DFAA00023E69 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1FF401F30DFAA00023E69 /* DetailViewController.swift */; };
 		1EC1FF431F30E51B00023E69 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1FF421F30E51B00023E69 /* Task.swift */; };
@@ -48,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E00CB701F33D158004F15DA /* EmbeddedBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmbeddedBundle.swift; sourceTree = "<group>"; };
 		1E229AB81F30F05F0045C109 /* libbson-1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libbson-1.0.a"; path = "../objfiles/libbson-1.0.a"; sourceTree = "<group>"; };
 		1E229AB91F30F05F0045C109 /* libmongoc-1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libmongoc-1.0.a"; path = "../objfiles/libmongoc-1.0.a"; sourceTree = "<group>"; };
 		1E229ABA1F30F05F0045C109 /* mongo_build_debug_mongo_base_libsecure_allocator.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = mongo_build_debug_mongo_base_libsecure_allocator.a; path = ../objfiles/mongo_build_debug_mongo_base_libsecure_allocator.a; sourceTree = "<group>"; };
@@ -486,7 +487,6 @@
 		1EBC85CA1F33632A006FB245 /* Declarations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Declarations.swift; sourceTree = "<group>"; };
 		1EBC85CB1F33632A006FB245 /* Flags.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flags.swift; sourceTree = "<group>"; };
 		1EBC85CC1F33632A006FB245 /* MongoError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MongoError.swift; sourceTree = "<group>"; };
-		1EBC85D61F33723C006FB245 /* EmbeddedBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmbeddedBundle.swift; path = ../EmbeddedBundle.swift; sourceTree = "<group>"; };
 		1EBC85DC1F33C353006FB245 /* BSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSON.swift; sourceTree = "<group>"; };
 		1EC1FF401F30DFAA00023E69 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1EC1FF421F30E51B00023E69 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -977,7 +977,7 @@
 		1EBC85C51F33631B006FB245 /* Cheetah */ = {
 			isa = PBXGroup;
 			children = (
-				1EBC85D61F33723C006FB245 /* EmbeddedBundle.swift */,
+				1E00CB701F33D158004F15DA /* EmbeddedBundle.swift */,
 				1EBC85C61F33632A006FB245 /* Client.swift */,
 				1EBC85C71F33632A006FB245 /* Collection.swift */,
 				1EBC85C81F33632A006FB245 /* Cursor.swift */,
@@ -1125,7 +1125,7 @@
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = "Michael Crump";
+				ORGANIZATIONNAME = MongoDB;
 				TargetAttributes = {
 					86FF5BAC1A6D65FB00A017A1 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -1140,7 +1140,7 @@
 				};
 			};
 			buildConfigurationList = 86FF5BA81A6D65FB00A017A1 /* Build configuration list for PBXProject "TaskApplication" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -1200,9 +1200,9 @@
 				1EBC85CE1F33632A006FB245 /* Collection.swift in Sources */,
 				1EBC85DD1F33C353006FB245 /* BSON.swift in Sources */,
 				1E4F454B1F325B57002D2804 /* Reader.swift in Sources */,
-				1EBC85D71F33723C006FB245 /* EmbeddedBundle.swift in Sources */,
 				86FF5BD51A6D697400A017A1 /* TaskManager.swift in Sources */,
 				1E4F454D1F325B64002D2804 /* JSON.swift in Sources */,
+				1E00CB711F33D158004F15DA /* EmbeddedBundle.swift in Sources */,
 				1EBC85CD1F33632A006FB245 /* Client.swift in Sources */,
 				1EC1FF431F30E51B00023E69 /* Task.swift in Sources */,
 				1EBC85D11F33632A006FB245 /* Declarations.swift in Sources */,
@@ -1331,6 +1331,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = T8YB9L4SM5;
 				HEADER_SEARCH_PATHS = (
 					../mongo/src,
@@ -1360,6 +1361,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = T8YB9L4SM5;
 				HEADER_SEARCH_PATHS = (
 					../mongo/src,
