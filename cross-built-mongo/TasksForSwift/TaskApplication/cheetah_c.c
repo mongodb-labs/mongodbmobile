@@ -121,7 +121,6 @@ int cheetah_c_getIntValueForKey(bson_t * bson, const char * key) {
 bson_oid_t cheetah_c_getOidForBsonDoc(bson_t* bson) {
     bson_iter_t iter;
     bson_oid_t oid;
-    char* retStr;
     if (bson_iter_init_find(&iter, bson, "_id")) {
         bson_value_t* val = bson_iter_value(&iter);
         bson_type_t type = bson_iter_type(&iter);
@@ -134,7 +133,6 @@ bson_oid_t cheetah_c_getOidForBsonDoc(bson_t* bson) {
 
 bool cheetah_c_hasOidForBsonDoc(bson_t* bson) {
     bson_iter_t iter;
-    char* retStr;
     if (bson_iter_init_find(&iter, bson, "_id")) {
         bson_value_t* val = bson_iter_value(&iter);
         bson_type_t type = bson_iter_type(&iter);
@@ -148,15 +146,13 @@ bool cheetah_c_hasOidForBsonDoc(bson_t* bson) {
 mongoc_cursor_t* cheetah_c_findDocs(mongocBundle* m) {
     mongoc_collection_t *collection = m->col;
     mongoc_cursor_t *cursor;
-    const bson_t *doc;
     bson_t *query = bson_new();
-    
     cursor = mongoc_collection_find_with_opts (collection, query, NULL, NULL);
     return cursor;
 }
 
 bson_t* cheetah_c_getNextDoc(mongoc_cursor_t* cursor) {
-    const bson_t *doc;
+    bson_t *doc;
     while (mongoc_cursor_next (cursor, &doc)) {
         return doc;
     }

@@ -60,6 +60,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             count = cheetah_getCollectionCount(db: self.db!)
         }
         
+        let subject: BSON.Document = [
+            "name": "Dan",
+            "age": 15,
+            "lovesSwift" : true,
+            "location": [
+                "state": "California"
+            ],
+            "favoriteNumbers" : [1,2,3,4,5]
+        ]
+        let str = subject["name"] ?? "NOT FOUND"
+        print("TESTING DOCUMENT: \(str)")
+        
         print("NUM DOCUMENT IN COLLECTION: \(count)")
         return true
     }
