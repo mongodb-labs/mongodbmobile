@@ -36,8 +36,8 @@ Please read (https://github.com/mongodb/mongo/wiki) for details on our code of c
 
 ## Authors
 
-* **Tyler Kaye** 
-**Ted Tuckman** 
+* **Tyler Kaye,** 
+**Ted Tuckman,** 
 **Ben Shteinfeld**
 
 ## License
