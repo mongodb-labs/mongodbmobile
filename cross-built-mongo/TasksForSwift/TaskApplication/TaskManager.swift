@@ -11,16 +11,8 @@ var taskMgr: TaskManager = TaskManager()
 class TaskManager: NSObject {
     var tasks = [Task]()
     
-    func createTask(name: String, desc: String, loc: String, priority: Int) -> Task? {
-        if let t = Task(name: name, description: desc, location: loc, priority: priority) {
-            tasks.append(t)
-            return t
-        }
-        return nil
-    }
-    
-    func createTask(name: String, desc: String, loc: String, priority: Int, oid: BSONObjectID) -> Task? {
-        if let t = Task(name: name, description: desc, location: loc, priority: priority, oid: oid) {
+    func createTask(name: String, desc: String, loc: String, priority: Int, oid: BSONObjectID = BSONObjectID(), lat: Double = 0.0, long: Double = 0.0) -> Task? {
+        if let t = Task(name: name, description: desc, location: loc, priority: priority, oid: oid, lat: lat, lon: long) {
             tasks.append(t)
             return t
         }

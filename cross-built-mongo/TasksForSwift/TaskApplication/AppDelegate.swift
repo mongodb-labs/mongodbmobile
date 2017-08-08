@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var count = embeddedBundle?.mongoCollection.count()
         
         if (count! <= 0) {
-            if let t1 = taskMgr.createTask(name: "Pick Up Brother", desc: "Or else mom will kill you", loc: "PS 101", priority: 9) {
+            if let t1 = taskMgr.createTask(name: "Pick Up Brother", desc: "Or else mom will kill you", loc: "Shanghai", priority: 9) {
                 taskMgr.insertTask(task: t1, col: (embeddedBundle?.mongoCollection)!)
             }
             if let t2 = taskMgr.createTask(name: "Get Fresh Fruit", desc: "Watermelon, Canteloupe, and Bananas", loc: "Trader Joe's", priority: 3) {
@@ -59,8 +59,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             count = embeddedBundle?.mongoCollection.count()
         }
-        
         print("NUM DOCUMENT IN COLLECTION: \(String(describing: count))")
+        
         return true
     }
     

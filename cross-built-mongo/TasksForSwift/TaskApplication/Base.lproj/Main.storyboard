@@ -240,6 +240,85 @@
             </objects>
             <point key="canvasLocation" x="1695" y="-90"/>
         </scene>
+        <!--Aggregation-->
+        <scene sceneID="JVC-cr-ddH">
+            <objects>
+                <viewController id="10j-bk-VbF" customClass="AggregationViewController" customModule="TaskApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yoz-6D-uqb"/>
+                        <viewControllerLayoutGuide type="bottom" id="E5q-Ph-Jkk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v0G-A5-03i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Query" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DmA-bU-1Ab">
+                                <rect key="frame" x="16" y="113" width="343" height="419"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50533151549999999" green="0.75081813819999998" blue="0.58715432329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14E-Bn-RZl">
+                                <rect key="frame" x="135" y="57" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50533151549999999" green="0.75081813819999998" blue="0.58715432329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Average">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="averageButtonPushed:" destination="10j-bk-VbF" eventType="touchUpInside" id="gPu-5J-arr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAF-AB-Jwf">
+                                <rect key="frame" x="248" y="57" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50533151549999999" green="0.75081813819999998" blue="0.58715432329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Custom">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="custom2ButtonPushed:" destination="10j-bk-VbF" eventType="touchUpInside" id="aO9-V3-BLX"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kg7-jF-IQv">
+                                <rect key="frame" x="44" y="559" width="287" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="Query"/>
+                                    <segment title="Code"/>
+                                    <segment title="Output"/>
+                                </segments>
+                                <color key="tintColor" red="0.50533151549999999" green="0.75081813819999998" blue="0.58715432329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="switchView:" destination="10j-bk-VbF" eventType="valueChanged" id="RAf-Bl-h71"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUx-TV-c07">
+                                <rect key="frame" x="22" y="57" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50533151549999999" green="0.75081813819999998" blue="0.58715432329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Sum">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sumButtonPusshed:" destination="10j-bk-VbF" eventType="touchUpInside" id="aHw-Iv-p4E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Aggregation" image="report_card-50" id="9ln-Vz-5e0"/>
+                    <connections>
+                        <outlet property="output" destination="DmA-bU-1Ab" id="Der-lK-CQ0"/>
+                        <outlet property="segContol" destination="kg7-jF-IQv" id="QkR-1w-rTT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZSD-dx-7Ev" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949.60000000000002" y="-797.45127436281871"/>
+        </scene>
         <!--Add Tasks-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
@@ -330,11 +409,12 @@
                         <segue destination="S0Y-Wl-rtW" kind="relationship" relationship="viewControllers" id="Sjw-Q2-HZq"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="FwB-7j-3xy"/>
                         <segue destination="jCI-6k-kd7" kind="relationship" relationship="viewControllers" id="OGq-eR-VcZ"/>
+                        <segue destination="10j-bk-VbF" kind="relationship" relationship="viewControllers" id="vmS-ld-jvI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-567" y="-90"/>
+            <point key="canvasLocation" x="-678" y="-90"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tgq-SN-HIw">
@@ -358,5 +438,6 @@
     </scenes>
     <resources>
         <image name="create_new-50" width="16" height="16"/>
+        <image name="report_card-50" width="16" height="16"/>
     </resources>
 </document>

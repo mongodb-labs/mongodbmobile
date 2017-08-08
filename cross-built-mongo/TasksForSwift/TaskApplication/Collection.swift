@@ -50,7 +50,7 @@ public final class Collection {
         
         return cursor
     }
-
+    
     public func update(query: BSON.Document, newValue: BSON.Document, flags: UpdateFlags = .None) throws -> Bool {
 
         let query = try BSON.AutoReleasingCarrier(doc: query)
@@ -204,6 +204,8 @@ public final class Collection {
 
         return res
     }
+    
+    
 
     // TODO
     //func mongoc_collection_find_and_modify(collection: OpaquePointer, _ query: UnsafePointer<bson_t>, _ sort: UnsafePointer<bson_t>, _ update: UnsafePointer<bson_t>, _ fields: UnsafePointer<bson_t>, _ _remove: Bool, _ upsert: Bool, _ _new: Bool, _ reply: UnsafeMutablePointer<bson_t>, _ error: UnsafeMutablePointer<bson_error_t>) -> Bool

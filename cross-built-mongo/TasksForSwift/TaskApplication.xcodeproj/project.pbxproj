@@ -17,6 +17,8 @@
 		1E4F454B1F325B57002D2804 /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F454A1F325B57002D2804 /* Reader.swift */; };
 		1E4F454D1F325B64002D2804 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F454C1F325B64002D2804 /* JSON.swift */; };
 		1E4F454F1F325B80002D2804 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F454E1F325B80002D2804 /* Extensions.swift */; };
+		1E5B0D481F3A1416008F5765 /* Aggregation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B0D471F3A1416008F5765 /* Aggregation.swift */; };
+		1EB344811F3A4B7F0098A83C /* AggregationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB344801F3A4B7F0098A83C /* AggregationViewController.swift */; };
 		1EBC85CD1F33632A006FB245 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC85C61F33632A006FB245 /* Client.swift */; };
 		1EBC85CE1F33632A006FB245 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC85C71F33632A006FB245 /* Collection.swift */; };
 		1EBC85CF1F33632A006FB245 /* Cursor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC85C81F33632A006FB245 /* Cursor.swift */; };
@@ -480,6 +482,8 @@
 		1E4F454A1F325B57002D2804 /* Reader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reader.swift; sourceTree = "<group>"; };
 		1E4F454C1F325B64002D2804 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		1E4F454E1F325B80002D2804 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1E5B0D471F3A1416008F5765 /* Aggregation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Aggregation.swift; sourceTree = "<group>"; };
+		1EB344801F3A4B7F0098A83C /* AggregationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AggregationViewController.swift; sourceTree = "<group>"; };
 		1EBC85C61F33632A006FB245 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		1EBC85C71F33632A006FB245 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		1EBC85C81F33632A006FB245 /* Cursor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cursor.swift; sourceTree = "<group>"; };
@@ -980,6 +984,7 @@
 				1E00CB701F33D158004F15DA /* EmbeddedBundle.swift */,
 				1EBC85C61F33632A006FB245 /* Client.swift */,
 				1EBC85C71F33632A006FB245 /* Collection.swift */,
+				1E5B0D471F3A1416008F5765 /* Aggregation.swift */,
 				1EBC85C81F33632A006FB245 /* Cursor.swift */,
 				1EBC85C91F33632A006FB245 /* Database.swift */,
 				1EBC85CA1F33632A006FB245 /* Declarations.swift */,
@@ -1001,6 +1006,7 @@
 		1EC1FF451F30EDD500023E69 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1EB344801F3A4B7F0098A83C /* AggregationViewController.swift */,
 				1E229E091F31280F0045C109 /* RunCommandsViewController.swift */,
 				86FF5BB41A6D65FB00A017A1 /* FirstViewController.swift */,
 				86FF5BB61A6D65FB00A017A1 /* SecondViewController.swift */,
@@ -1190,6 +1196,7 @@
 				1EBC85D21F33632A006FB245 /* Flags.swift in Sources */,
 				1E4F45471F325B0C002D2804 /* UnsafePointer.swift in Sources */,
 				1E4F45431F3259D8002D2804 /* ObjectID.swift in Sources */,
+				1EB344811F3A4B7F0098A83C /* AggregationViewController.swift in Sources */,
 				86FF5BB71A6D65FB00A017A1 /* SecondViewController.swift in Sources */,
 				1E4F45451F325A70002D2804 /* Context.swift in Sources */,
 				1E4F45491F325B22002D2804 /* SwiftFoundation.swift in Sources */,
@@ -1202,6 +1209,7 @@
 				1E4F454B1F325B57002D2804 /* Reader.swift in Sources */,
 				86FF5BD51A6D697400A017A1 /* TaskManager.swift in Sources */,
 				1E4F454D1F325B64002D2804 /* JSON.swift in Sources */,
+				1E5B0D481F3A1416008F5765 /* Aggregation.swift in Sources */,
 				1E00CB711F33D158004F15DA /* EmbeddedBundle.swift in Sources */,
 				1EBC85CD1F33632A006FB245 /* Client.swift in Sources */,
 				1EC1FF431F30E51B00023E69 /* Task.swift in Sources */,
