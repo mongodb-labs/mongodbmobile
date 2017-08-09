@@ -51,6 +51,21 @@ public final class Collection {
         return cursor
     }
     
+    public func findIndexes() throws -> [BSON.Document] {
+        let cursorPointer = mongoc_collection_find_indexes(self.pointer, nil)
+        let cursor = Cursor(pointer: cursorPointer!)
+        let allDocs = try cursor.all()
+        return allDocs
+    }
+    
+    public func setGeoIndex(onField: String) throws {
+        let keyDoc: BSON.Document = [
+            name: "2dsphere"
+        ]
+        let keyB = try BSON.AutoReleasingCarrier(doc: keyDoc)
+        mongoc_collection_create_index(self.pointer, keyB.pointer, nil, nil)
+    }
+    
     public func update(query: BSON.Document, newValue: BSON.Document, flags: UpdateFlags = .None) throws -> Bool {
 
         let query = try BSON.AutoReleasingCarrier(doc: query)

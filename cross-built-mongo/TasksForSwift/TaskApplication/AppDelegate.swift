@@ -16,47 +16,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         embeddedBundle = EmbeddedBundle(databaseName: "CheetahDemo", collectionName: "Tasks")
         var count = embeddedBundle?.mongoCollection.count()
-        
         if (count! <= 0) {
-            if let t1 = taskMgr.createTask(name: "Pick Up Brother", desc: "Or else mom will kill you", loc: "Shanghai", priority: 9) {
+            do {
+                try embeddedBundle?.mongoCollection.setGeoIndex(onField: "geo")
+                print("SET THE INDEX")
+            }catch {
+                print("COULD NOT SET THE INDEX")
+            }
+            if let t1 = taskMgr.createTask(name: "Pick Up Brother", desc: "Or else mom will kill you", loc: "New York", priority: 9, lat: -73.94, long: 40.67) {
                 taskMgr.insertTask(task: t1, col: (embeddedBundle?.mongoCollection)!)
             }
-            if let t2 = taskMgr.createTask(name: "Get Fresh Fruit", desc: "Watermelon, Canteloupe, and Bananas", loc: "Trader Joe's", priority: 3) {
+            if let t2 = taskMgr.createTask(name: "Get Fresh Fruit", desc: "Watermelon, Canteloupe, and Bananas", loc: "Shanghai", priority: 3, lat: 121.47, long: 31.23) {
                 taskMgr.insertTask(task: t2, col: (embeddedBundle?.mongoCollection)!)
             }
-            if let t3 = taskMgr.createTask(name: "Finish  Biology Homework", desc: "Need to map out the human anatomy", loc: "Desk", priority: 8) {
+            if let t3 = taskMgr.createTask(name: "Finish Biology Homework", desc: "Need to map out the human anatomy", loc: "Moscow", priority: 5, lat: 37.62, long: 55.75) {
                 taskMgr.insertTask(task: t3, col: (embeddedBundle?.mongoCollection)!)
             }
-            if let t4 = taskMgr.createTask(name: "Apply for jobs", desc: "Need to polish off resume and write cover letter", loc: "Home", priority: 5) {
+            if let t4 = taskMgr.createTask(name: "Apply for jobs", desc: "Need to polish off resume and write cover letter", loc: "Tokyo", priority: 12, lat: 139.77, long: 35.67) {
                 taskMgr.insertTask(task: t4, col: (embeddedBundle?.mongoCollection)!)
             }
-            if let t5 = taskMgr.createTask(name: "Watch Game of Thrones", desc: "Make sure to write blog post afterwards", loc: "HBO", priority: 2) {
+            if let t5 = taskMgr.createTask(name: "Watch Game of Thrones", desc: "Make sure to write blog post afterwards", loc: "Mexico City", priority: 6, lat: -99.14, long: 19.43) {
                 taskMgr.insertTask(task: t5, col: (embeddedBundle?.mongoCollection)!)
             }
-            if let t6 = taskMgr.createTask(name: "Complement MongoDB Mobile", desc: "It is a pretty impressive project", loc: "MongoDB", priority: 100) {
+            if let t6 = taskMgr.createTask(name: "Complement MongoDB Mobile", desc: "It is a pretty impressive project", loc: "London", priority: 100 , lat: -0.1, long: 51.52) {
                 taskMgr.insertTask(task: t6, col: (embeddedBundle?.mongoCollection)!)
             }
-            if let t7 = taskMgr.createTask(name: "Name the swift driver cheetah", desc: "It is fast, sleek, and not without its spots", loc: "MongoDB", priority: 99) {
+            if let t7 = taskMgr.createTask(name: "Name the swift driver cheetah", desc: "It is fast, sleek, and not without its spots", loc: "Rio de Janeiro", priority:99 , lat: -43.2, long: -22.91) {
                 taskMgr.insertTask(task: t7, col: (embeddedBundle?.mongoCollection)!)
             }
-            if let t8 = taskMgr.createTask(name: "Hire back all of the interns", desc: "Note to campus recruiters", loc: "Mongo", priority: 98) {
+            if let t8 = taskMgr.createTask(name: "Hire back all of the interns", desc: "Note to campus recruiters", loc: "Toronto", priority: 98, lat: -79.38, long: 43.65) {
                 taskMgr.insertTask(task: t8, col: (embeddedBundle?.mongoCollection)!)
             }
-            if let t9 = taskMgr.createTask(name: "Remember to take pill", desc: "Only every other day", loc: "", priority: 6) {
+            if let t9 = taskMgr.createTask(name: "Remember to take pill", desc: "Only every other day", loc: "Los Angeles", priority: 6, lat: -118.41, long: 34.11) {
                 taskMgr.insertTask(task: t9, col: (embeddedBundle?.mongoCollection)!)
             }
-            if let t10 = taskMgr.createTask(name: "Write thank you note to Chip", desc: "He got you that cool new backpack", loc: "Home", priority: 4) {
+            if let t10 = taskMgr.createTask(name: "Write thank you note to Chip", desc: "He got you that cool new backpack", loc: "Sydney", priority: 4, lat: 151.21, long: -33.87) {
                 taskMgr.insertTask(task: t10, col: (embeddedBundle?.mongoCollection)!)
             }
-            if let t11 = taskMgr.createTask(name: "Change the sheets", desc: "The are getting quite disgusting", loc: "Bed", priority: 5) {
+            if let t11 = taskMgr.createTask(name: "Change the sheets", desc: "The are getting quite disgusting", loc: "Cape Town", priority: 5, lat: 18.46, long: -33.93) {
                 taskMgr.insertTask(task: t11, col: (embeddedBundle?.mongoCollection)!)
             }
-            if let t12 = taskMgr.createTask(name: "Finish out the internship on a good note", desc: "Dont break everything please, that would be embarrassng", loc: "New York, NY", priority: 97) {
+            if let t12 = taskMgr.createTask(name: "Finish out the internship on a good note", desc: "Dont break everything please, that would be embarrassing", loc: "Berlin", priority: 95, lat: 13.38, long: 52.52) {
                 taskMgr.insertTask(task: t12, col: (embeddedBundle?.mongoCollection)!)
             }
-            if let t13 = taskMgr.createTask(name: "Buy new shoes", desc: "Olds ones are disgusting and dirty", loc: "Shoe store", priority: 7) {
+            if let t13 = taskMgr.createTask(name: "Buy new shoes", desc: "Olds ones are disgusting and dirty", loc: "Chicago", priority: 9, lat: -87.68, long: 41.84) {
                 taskMgr.insertTask(task: t13, col: (embeddedBundle?.mongoCollection)!)
+                print(BSON.prettyPrintJson(uglyJsonString: BSON.toJSONString(document: t13.toDocument())))
             }
+
             count = embeddedBundle?.mongoCollection.count()
         }
         print("NUM DOCUMENT IN COLLECTION: \(String(describing: count))")

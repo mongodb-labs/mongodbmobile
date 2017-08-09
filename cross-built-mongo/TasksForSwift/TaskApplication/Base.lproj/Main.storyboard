@@ -253,14 +253,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Query" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DmA-bU-1Ab">
-                                <rect key="frame" x="16" y="113" width="343" height="419"/>
+                                <rect key="frame" x="16" y="123" width="343" height="409"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.50533151549999999" green="0.75081813819999998" blue="0.58715432329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14E-Bn-RZl">
-                                <rect key="frame" x="135" y="57" width="105" height="30"/>
+                                <rect key="frame" x="135" y="35" width="105" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.50533151549999999" green="0.75081813819999998" blue="0.58715432329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Average">
@@ -270,8 +270,30 @@
                                     <action selector="averageButtonPushed:" destination="10j-bk-VbF" eventType="touchUpInside" id="gPu-5J-arr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDv-ag-v0f">
+                                <rect key="frame" x="191" y="79" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50533151549999999" green="0.75081813819999998" blue="0.58715432329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Geo">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="geoTouched:" destination="10j-bk-VbF" eventType="touchUpInside" id="eui-FE-TI4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUx-TV-c07">
+                                <rect key="frame" x="16" y="35" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50533151549999999" green="0.75081813819999998" blue="0.58715432329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Sum">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sumButtonPusshed:" destination="10j-bk-VbF" eventType="touchUpInside" id="aHw-Iv-p4E"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAF-AB-Jwf">
-                                <rect key="frame" x="248" y="57" width="105" height="30"/>
+                                <rect key="frame" x="254" y="35" width="105" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.50533151549999999" green="0.75081813819999998" blue="0.58715432329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Custom">
@@ -295,15 +317,15 @@
                                     <action selector="switchView:" destination="10j-bk-VbF" eventType="valueChanged" id="RAf-Bl-h71"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUx-TV-c07">
-                                <rect key="frame" x="22" y="57" width="105" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROW-hK-c4K">
+                                <rect key="frame" x="70" y="79" width="105" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.50533151549999999" green="0.75081813819999998" blue="0.58715432329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Sum">
+                                <state key="normal" title="Indexes">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="sumButtonPusshed:" destination="10j-bk-VbF" eventType="touchUpInside" id="aHw-Iv-p4E"/>
+                                    <action selector="indexesTouched:" destination="10j-bk-VbF" eventType="touchUpInside" id="4T1-uf-oWy"/>
                                 </connections>
                             </button>
                         </subviews>
