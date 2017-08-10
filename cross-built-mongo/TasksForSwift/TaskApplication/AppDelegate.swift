@@ -65,9 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
 
             count = embeddedBundle?.mongoCollection.count()
-        }
-        print("NUM DOCUMENT IN COLLECTION: \(String(describing: count))")
-        
+        }        
         return true
     }
     

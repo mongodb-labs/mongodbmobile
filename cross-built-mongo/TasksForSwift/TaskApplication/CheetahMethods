@@ -1,0 +1,105 @@
+Client:
+    Initializers:
+        1. init(uri:String)
+        2. init(host: String, port: Int)
+        3. init(client: Opaque Pointer) <- used for embedded
+
+    Methods:
+        1. checkConnection()
+        2. basicCommand(command: BSON.Document, dbname: String) -> BSON.Document
+        3. command(command: BSON.Document, fields: BSON.Document? = nil, databaseName: String, flags: QueryFlags, options: QueryOptions) -> Cursor
+        4. getDatabasesCursor() -> Cursor
+        5. getServerStatus() -> BSON.Document
+
+
+Database:
+    Initializers:
+        1. init(client: Client, name: String)
+
+    Methods:
+        1. removeUser(username: String) throws -> Bool
+        2. removeAllUsers() throws -> Bool
+        3. drop() throws -> Bool
+        4. hasCollection(name: String) throws -> Bool
+        5. createCollection(name: String, options: BSON.Document) throws -> Collection
+        6. findCollections(filter: BSON.Document) throws -> Cursor
+        7. basicCommand(command: BSON.Document) throws -> BSON.Document
+        8. addUser(username username: String, password: String, roles: [String], customData: BSON.Document) throws -> Bool (NOT WORKING)
+
+
+Collection:
+    Initializers:
+        1. init(database: Database, name: String)
+
+    Methods:
+        1.  insert(document: BSON.Document, flags: InsertFlags = .None) throws
+        2.  renameCollection(to newName: String) throws
+        3.  find(query: BSON.Document = BSON.Document(), opts: BSON.Document = BSON.Document()) throws -> Cursor
+        4.  findIndexes() throws -> [BSON.Document]
+        5.  setGeoIndex(onField: String) throws
+        6.  update(query: BSON.Document, newValue: BSON.Document, flags: UpdateFlags = .None) throws -> Bool
+        7.  remove(query: BSON.Document = BSON.Document(), flags: RemoveFlags = .None) throws -> Bool
+        8.  basicCommand(command: BSON.Document) throws -> BSON.Document
+        9.  destroy()
+        10. count(query: BSON.Document = BSON.Document(), flags: QueryFlags = .None, skip: Int = 0, limit: Int = 0) -> Int
+        11. drop() throws
+        12. rename(newDatabaseName: String, newCollectionName: String, dropBeforeRename: Bool) throws -> Bool
+        13. stats(options: BSON.Document) throws -> BSON.Document
+        14. validate(options: BSON.Document) throws -> BSON.Document
+        15. aggregate(pipeline: BSON.Document, options: BSON.Document = BSON.Document()) throws -> Cursor
+
+Aggregation:
+    Initializers:
+        1. Default initialization
+
+    Methods:
+        1. addStage(stage: BSON.Document)
+        2. toDocument() throws -> BSON.Document
+
+Cursor:
+    Initializers:
+        1. init(pointer: _mongoc_cursor)
+
+    Methods:
+        1. next() -> BSON.Document?
+        2. nextDocument() throws -> BSON.Document?
+        3. all() throws -> [BSON.Document]
+        4. destroy()
+
+EmbeddedBundle:
+    Initializers:
+        1. init(databaseName: String, collectionName: String)
+
+
+
+Using the BSON Methods:
+
+    1. Creating BSON Documents:
+        let doc: BSON.Document = [
+            "name": .String(name),
+            "description": .String(description),
+            "location" : .String(location),
+            "priority" : .Number(.Integer32(Int32(priority))),
+            "geo": [
+                "type": "Point",
+                "coordinates": [.Number(.Double(latitude)), .Number(.Double(longitude))]
+            ]
+        ]
+
+        let doc: BSON.Document = [
+            "$match": [
+                "priority": [
+                    "$lte": 10
+                ]
+            ]
+        ]
+
+    2. Converting them to bson_t structs to send into MONGOC
+        let swift_bson_doc = BSON.Document()
+        let c_bson_doc     = try BSON.AutoReleasingCarrier(doc: swift_bson_doc).pointer
+
+
+
+
+
+
