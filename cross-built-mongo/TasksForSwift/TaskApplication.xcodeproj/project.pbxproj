@@ -29,6 +29,7 @@
 		1EBC85DD1F33C353006FB245 /* BSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC85DC1F33C353006FB245 /* BSON.swift */; };
 		1EC1FF411F30DFAA00023E69 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1FF401F30DFAA00023E69 /* DetailViewController.swift */; };
 		1EC1FF431F30E51B00023E69 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC1FF421F30E51B00023E69 /* Task.swift */; };
+		1EC8B4941F3CAA0A00A1EDA3 /* CheetahMethods in Resources */ = {isa = PBXBuildFile; fileRef = 1EC8B4931F3CAA0A00A1EDA3 /* CheetahMethods */; };
 		86FF5BB31A6D65FB00A017A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FF5BB21A6D65FB00A017A1 /* AppDelegate.swift */; };
 		86FF5BB51A6D65FB00A017A1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FF5BB41A6D65FB00A017A1 /* FirstViewController.swift */; };
 		86FF5BB71A6D65FB00A017A1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FF5BB61A6D65FB00A017A1 /* SecondViewController.swift */; };
@@ -494,6 +495,7 @@
 		1EBC85DC1F33C353006FB245 /* BSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSON.swift; sourceTree = "<group>"; };
 		1EC1FF401F30DFAA00023E69 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1EC1FF421F30E51B00023E69 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		1EC8B4931F3CAA0A00A1EDA3 /* CheetahMethods */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CheetahMethods; sourceTree = "<group>"; };
 		86FF5BAD1A6D65FB00A017A1 /* TaskApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86FF5BB11A6D65FB00A017A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86FF5BB21A6D65FB00A017A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -981,6 +983,7 @@
 		1EBC85C51F33631B006FB245 /* Cheetah */ = {
 			isa = PBXGroup;
 			children = (
+				1EC8B4931F3CAA0A00A1EDA3 /* CheetahMethods */,
 				1E00CB701F33D158004F15DA /* EmbeddedBundle.swift */,
 				1EBC85C61F33632A006FB245 /* Client.swift */,
 				1EBC85C71F33632A006FB245 /* Collection.swift */,
@@ -1169,6 +1172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EC8B4941F3CAA0A00A1EDA3 /* CheetahMethods in Resources */,
 				86FF5BBA1A6D65FB00A017A1 /* Main.storyboard in Resources */,
 				86FF5BBF1A6D65FB00A017A1 /* LaunchScreen.xib in Resources */,
 				86FF5BBC1A6D65FB00A017A1 /* Images.xcassets in Resources */,
