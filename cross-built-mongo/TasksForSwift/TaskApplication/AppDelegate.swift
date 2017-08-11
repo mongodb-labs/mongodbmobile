@@ -61,9 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             if let t13 = taskMgr.createTask(name: "Buy new shoes", desc: "Olds ones are disgusting and dirty", loc: "Chicago", priority: 9, lat: -87.68, long: 41.84) {
                 taskMgr.insertTask(task: t13, col: (embeddedBundle?.mongoCollection)!)
-                print(BSON.prettyPrintJson(uglyJsonString: BSON.toJSONString(document: t13.toDocument())))
             }
-
             count = embeddedBundle?.mongoCollection.count()
         }        
         return true

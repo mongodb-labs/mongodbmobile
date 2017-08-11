@@ -60,7 +60,7 @@ public final class Collection {
     
     public func setGeoIndex(onField: String) throws {
         let keyDoc: BSON.Document = [
-            name: "2dsphere"
+            onField: "2dsphere"
         ]
         let keyB = try BSON.AutoReleasingCarrier(doc: keyDoc)
         mongoc_collection_create_index(self.pointer, keyB.pointer, nil, nil)

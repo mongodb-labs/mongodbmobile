@@ -79,7 +79,7 @@ Using the BSON Methods:
             "name": .String(name),
             "description": .String(description),
             "location" : .String(location),
-            "priority" : .Number(.Integer32(Int32(priority))),
+            "priority" : .Number(.Integer32(32)),
             "geo": [
                 "type": "Point",
                 "coordinates": [.Number(.Double(latitude)), .Number(.Double(longitude))]
