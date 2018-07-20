@@ -1,3 +1,8 @@
+
+# WARNING
+
+This repository is *OUT OF DATE* and is no longer maintained. The code found here should *not be used*. It is built against an early prototype of what has since become MongoDB Mobile. For up-to-date information on MongoDB Mobile, please visit https://www.mongodb.com/products/mobile
+
 # MongoDB Mobile
 
 This repository contains sample applications for the MongoDB Mobile project to create an embedded database capable of running locally on a smartphone. The repository contains two iOS applications: one written in Objective-C and the other in Swift using a prototype Swift driver. Furthermore, the repositry contains a script (runSetup.sh) that will pull a tagged version of Mongo and the C-Driver and then cross compile them for the iOS platform. Currently, the application will only build on a physical phone or ipad as opposed to the xCode simulator. 
